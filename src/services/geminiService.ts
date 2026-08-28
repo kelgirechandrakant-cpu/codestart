@@ -50,7 +50,7 @@ export class GeminiService {
     }
 
     const chatConfig: any = {
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.6-flash',
       config: {
         systemInstruction: `You are LearnerCraft AI, an expert Software Engineering & Coding Tutor specializing in interactive practice (Coddy/LeetCode style), system design, and programming languages. 
         Your goal is to help students write clean, efficient code, understand complex algorithms, and master their course curriculum.
@@ -140,7 +140,7 @@ export class GeminiService {
     }
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.6-flash',
       contents: contents,
       config: { temperature: 0.8 }
     });
@@ -176,7 +176,7 @@ export class GeminiService {
     }
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.6-flash',
       contents: contents,
       config: { temperature: 0.7 }
     });
@@ -207,7 +207,7 @@ export class GeminiService {
     }
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.6-flash',
       contents: contents,
       config: { temperature: 0.7 }
     });
@@ -231,7 +231,7 @@ export class GeminiService {
     }
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.6-flash',
       contents: contents,
       config: {
         responseMimeType: "application/json",
@@ -260,7 +260,7 @@ export class GeminiService {
   public async evaluateAnswer(question: QuizQuestion | { title: string; problemStatement?: string; question?: string; example?: string }, userAnswer: string): Promise<QuizResult> {
     const ai = this.getAI();
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.6-flash',
       contents: `You are an expert code reviewer and tutor. A student has submitted code for the following problem:
       
       Problem Title: ${question.title || (question as any).question}

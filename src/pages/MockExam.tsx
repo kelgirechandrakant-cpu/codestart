@@ -41,7 +41,7 @@ Return ONLY a valid JSON array with this exact structure (no markdown, no code f
 ]`;
     
     const response = await genai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.6-flash',
       contents: prompt
     });
     
