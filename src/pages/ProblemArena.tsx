@@ -149,11 +149,12 @@ export default function ProblemArena() {
         });
         toast.error(`Solution needs improvement. ${newLives} lives left!`);
       }
-    } catch (err) {
+    } catch (err: any) {
+      console.error(err);
       setIsSubmitting(false);
       setExecutionOutput({
         success: false,
-        error: "Execution evaluation error. Please ensure your code syntax is valid and try again."
+        error: `Execution evaluation error: ${err.message || 'Unknown error'}. Please ensure your API key is valid and code syntax is correct.`
       });
     }
   };

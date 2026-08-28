@@ -289,9 +289,11 @@ export class GeminiService {
     });
 
     try {
-      return JSON.parse(response.text || "{}") as QuizResult;
+      const rawText = response.text || "{}";
+      const cleanedText = rawText.replace(/```json/gi, '').replace(/```/g, '').trim();
+      return JSON.parse(cleanedText) as QuizResult;
     } catch (error) {
-      console.error("Failed to parse evaluation:", error);
+      console.error("Failed to parse evaluation. Raw response:", response.text);
       throw new Error("Failed to evaluate the answer.");
     }
   }
