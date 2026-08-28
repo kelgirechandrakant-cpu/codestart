@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Play, RotateCcw, CheckCircle2, XCircle, Terminal, Cpu, Loader2 } from "lucide-react";
+import { Play, RotateCcw, CheckCircle2, XCircle, Terminal, Cpu, Loader2, Sparkles } from "lucide-react";
 import { Language } from "@/types/coding";
 
 interface CodeEditorProps {
@@ -15,6 +15,8 @@ interface CodeEditorProps {
     success?: boolean;
     output?: string;
     error?: string;
+    feedback?: string;
+    explanation?: string;
     testCaseResults?: { input: string; expected: string; actual: string; passed: boolean }[];
   } | null;
 }
@@ -162,6 +164,27 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
               {executionOutput.output && (
                 <div className="p-2.5 rounded-lg bg-background border border-border text-foreground whitespace-pre-wrap">
                   {executionOutput.output}
+                </div>
+              )}
+
+              {executionOutput.feedback && (
+                <div className={`p-4 rounded-xl border flex flex-col gap-2 ${executionOutput.success ? 'bg-emerald-500/10 border-emerald-500/20' : 'bg-rose-500/10 border-rose-500/20'}`}>
+                  <div className={`flex items-center gap-2 font-semibold text-sm ${executionOutput.success ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>
+                    {executionOutput.success ? <CheckCircle2 className="w-4 h-4" /> : <XCircle className="w-4 h-4" />}
+                    <span>{executionOutput.success ? 'AI Evaluation: Accepted' : 'AI Evaluation: Needs Work'}</span>
+                  </div>
+                  <p className="text-foreground text-sm font-sans">{executionOutput.feedback}</p>
+                </div>
+              )}
+
+              {executionOutput.explanation && (
+                <div className="p-4 rounded-xl bg-background border border-border mt-3 shadow-sm">
+                  <div className="font-semibold text-muted-foreground mb-2 text-xs uppercase tracking-wider flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-primary" /> Explanation & Complexity
+                  </div>
+                  <div className="text-foreground text-sm font-sans leading-relaxed whitespace-pre-wrap">
+                    {executionOutput.explanation}
+                  </div>
                 </div>
               )}
 

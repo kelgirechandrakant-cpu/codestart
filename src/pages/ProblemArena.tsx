@@ -135,7 +135,8 @@ export default function ProblemArena() {
 
         setExecutionOutput({
           success: true,
-          output: `✨ ACCEPTED SOLUTION!\n\nFeedback: ${evaluation.feedback}\n\nExplanation & Complexity:\n${evaluation.explanation}`
+          feedback: evaluation.feedback,
+          explanation: evaluation.explanation,
         });
         toast.success("🎉 Problem solved! +50 XP");
       } else {
@@ -145,7 +146,8 @@ export default function ProblemArena() {
 
         setExecutionOutput({
           success: false,
-          error: `❌ INCORRECT LOGIC\n\nFeedback: ${evaluation.feedback}\n\nExplanation:\n${evaluation.explanation}`
+          feedback: evaluation.feedback,
+          explanation: evaluation.explanation,
         });
         toast.error(`Solution needs improvement. ${newLives} lives left!`);
       }
