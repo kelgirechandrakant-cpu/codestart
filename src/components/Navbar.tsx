@@ -2,6 +2,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Code2, LayoutDashboard, GraduationCap, Target, Bot, LogOut } from "lucide-react";
 import { useUserProfile } from "@/contexts/UserProfileContext";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Navbar = () => {
   const { user, profile, logout } = useUserProfile();
@@ -39,7 +40,7 @@ export const Navbar = () => {
               <Link 
                 key={link.to} 
                 to={link.to} 
-                className={`flex items-center gap-2 text-sm font-medium transition-all px-4 py-2 rounded-full ${
+                className={`flex items-center gap-2 text-sm font-medium transition-all px-4 py-2 rounded-md ${
                   isActive 
                     ? "bg-primary/10 text-primary" 
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
@@ -52,9 +53,10 @@ export const Navbar = () => {
           })}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
           {user ? (
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 ml-2">
               <span className="text-sm font-medium hidden sm:inline-block">
                 {profile?.name || user.email}
               </span>
@@ -64,8 +66,8 @@ export const Navbar = () => {
               </Button>
             </div>
           ) : (
-            <Button asChild variant="default" className="rounded-full px-6">
-              <Link to="/login">Sign In / Save Progress</Link>
+            <Button asChild variant="default" className="rounded-md ml-2 px-6">
+              <Link to="/login">Sign In</Link>
             </Button>
           )}
         </div>

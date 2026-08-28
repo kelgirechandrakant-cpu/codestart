@@ -98,7 +98,7 @@ export default function Dashboard() {
 
         {/* Top Stats Row: Asymmetric Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          <div className="md:col-span-2 p-8 rounded-[2rem] bg-muted/30 flex flex-col justify-between group hover:bg-muted/50 transition-colors">
+          <div className="md:col-span-2 p-8 rounded-xl bg-muted/30 flex flex-col justify-between group hover:bg-muted/50 transition-colors">
             <Trophy className="h-8 w-8 text-primary mb-12" />
             <div>
               <h3 className="text-5xl font-bold tracking-tight">{xp}</h3>
@@ -106,7 +106,7 @@ export default function Dashboard() {
             </div>
           </div>
           
-          <div className="p-8 rounded-[2rem] bg-muted/30 flex flex-col justify-between group hover:bg-muted/50 transition-colors">
+          <div className="p-8 rounded-xl bg-muted/30 flex flex-col justify-between group hover:bg-muted/50 transition-colors">
             <Flame className="h-8 w-8 text-primary mb-12" />
             <div>
               <h3 className="text-5xl font-bold tracking-tight">{streak}</h3>
@@ -115,7 +115,7 @@ export default function Dashboard() {
           </div>
           
           <div className="grid grid-rows-2 gap-6">
-            <div className="px-6 py-4 rounded-[2rem] bg-muted/30 flex flex-col justify-center group hover:bg-muted/50 transition-colors h-full">
+            <div className="px-6 py-4 rounded-xl bg-muted/30 flex flex-col justify-center group hover:bg-muted/50 transition-colors h-full">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-muted-foreground mb-1">Solved</p>
@@ -124,7 +124,7 @@ export default function Dashboard() {
                 <Code2 className="h-6 w-6 text-primary opacity-80" />
               </div>
             </div>
-            <div className="px-6 py-4 rounded-[2rem] bg-muted/30 flex flex-col justify-center group hover:bg-muted/50 transition-colors h-full">
+            <div className="px-6 py-4 rounded-xl bg-muted/30 flex flex-col justify-center group hover:bg-muted/50 transition-colors h-full">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-muted-foreground mb-1">Exams</p>
@@ -139,7 +139,7 @@ export default function Dashboard() {
         {/* Middle Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
           {/* Left Column: Topic Accuracy Radar Chart */}
-          <div className="lg:col-span-7 p-8 rounded-[2rem] bg-muted/30 flex flex-col min-h-[400px]">
+          <div className="lg:col-span-7 p-8 rounded-xl bg-muted/30 flex flex-col min-h-[400px]">
             <div className="mb-8">
               <h2 className="text-2xl font-semibold tracking-tight">Topic Mastery</h2>
               {!hasRealData && (
@@ -182,7 +182,7 @@ export default function Dashboard() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 flex-1">
               
               {/* SMART ACTION: Context-aware continue button */}
-              <Link to={`/practice`} className="group p-6 rounded-[2rem] bg-primary/10 border border-primary/20 hover:bg-primary/20 hover:-translate-y-1 transition-all flex items-start gap-4">
+              <Link to={`/practice`} className="group p-6 rounded-xl bg-primary/10 border border-primary/20 hover:bg-primary/20 hover:-translate-y-1 transition-all flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
                   <ArrowRight className="h-6 w-6" />
                 </div>
@@ -192,7 +192,7 @@ export default function Dashboard() {
                 </div>
               </Link>
 
-              <Link to="/mock-exam" className="group p-6 rounded-[2rem] bg-muted/30 hover:bg-muted/50 hover:-translate-y-1 transition-all flex items-start gap-4">
+              <Link to="/mock-exam" className="group p-6 rounded-xl bg-muted/30 hover:bg-muted/50 hover:-translate-y-1 transition-all flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <GraduationCap className="h-6 w-6" />
                 </div>
@@ -202,7 +202,7 @@ export default function Dashboard() {
                 </div>
               </Link>
 
-              <Link to="/study-plan" className="group p-6 rounded-[2rem] bg-muted/30 hover:bg-muted/50 hover:-translate-y-1 transition-all flex items-start gap-4">
+              <Link to="/study-plan" className="group p-6 rounded-xl bg-muted/30 hover:bg-muted/50 hover:-translate-y-1 transition-all flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <BookOpen className="h-6 w-6" />
                 </div>
@@ -212,7 +212,7 @@ export default function Dashboard() {
                 </div>
               </Link>
 
-              <Link to="/ai-tutor" className="group p-6 rounded-[2rem] bg-muted/30 hover:bg-muted/50 hover:-translate-y-1 transition-all flex items-start gap-4">
+              <Link to="/ai-tutor" className="group p-6 rounded-xl bg-muted/30 hover:bg-muted/50 hover:-translate-y-1 transition-all flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <Bot className="h-6 w-6" />
                 </div>
@@ -232,7 +232,7 @@ export default function Dashboard() {
             <h2 className="text-2xl font-semibold tracking-tight">Recent Activity</h2>
           </div>
           
-          <div className="p-4 sm:p-6 rounded-[2rem] bg-muted/30">
+          <div className="p-4 sm:p-6 rounded-xl bg-muted/30">
             {activityLog.length > 0 ? (
               <div className="flex flex-col gap-3">
                 {activityLog.slice(0, 5).map((activity, index) => (

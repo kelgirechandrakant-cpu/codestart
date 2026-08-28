@@ -34,14 +34,17 @@ import { Footer } from "@/components/Footer";
 import { PageSkeleton } from "@/components/PageSkeleton";
 import { UserProfileProvider } from "@/contexts/UserProfileContext";
 
+import { ThemeProvider } from "@/components/ThemeProvider";
+
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <UserProfileProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
+    <ThemeProvider defaultTheme="system" storageKey="learnercraft-theme">
+      <UserProfileProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
         <BrowserRouter>
           <div className="flex flex-col min-h-screen">
             <Navbar />
@@ -79,6 +82,7 @@ const App = () => (
         </BrowserRouter>
       </TooltipProvider>
     </UserProfileProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 
