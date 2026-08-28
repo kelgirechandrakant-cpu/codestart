@@ -300,7 +300,7 @@ export default function PracticeDirectory() {
                 </div>
               ) : (
                 filteredQuestions.map((q) => {
-                  const isSolved = solvedProblems?.includes(q.id);
+                  const isSolved = solvedProblems?.includes(String(q.id));
                   return (
                     <Link
                       key={q.id}

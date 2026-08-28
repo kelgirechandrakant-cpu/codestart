@@ -128,7 +128,8 @@ export default function ProblemArena() {
       setIsSubmitting(false);
 
       if (evaluation.isCorrect) {
-        const isAlreadySolved = solvedProblems ? solvedProblems.includes(question.id) : false;
+        const questionIdStr = String(question.id);
+        const isAlreadySolved = solvedProblems ? solvedProblems.includes(questionIdStr) : false;
 
         if (!isAlreadySolved) {
           const newScore = score + 50;
@@ -138,7 +139,7 @@ export default function ProblemArena() {
           localStorage.setItem('codeStart_score', newScore.toString());
           localStorage.setItem('codeStart_dailyStreak', newStreak.toString());
           
-          if (markProblemSolved) markProblemSolved(question.id);
+          if (markProblemSolved) markProblemSolved(questionIdStr);
           if (logActivity) logActivity(`Solved Challenge: ${question.title}`, `Earned 50 XP`, 50, 'practice');
           
           toast.success("🎉 Problem solved! +50 XP");

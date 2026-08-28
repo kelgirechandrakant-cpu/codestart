@@ -118,7 +118,7 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
   const [solvedProblems, setSolvedProblemsState] = useState<string[]>(() => {
     try {
       const stored = localStorage.getItem(SOLVED_KEY);
-      return stored ? JSON.parse(stored) : [];
+      return stored ? JSON.parse(stored).map(String) : [];
     } catch { return []; }
   });
 
@@ -215,10 +215,11 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
     });
   }, [user]);
 
-  const markProblemSolved = useCallback((id: string) => {
+  const markProblemSolved = useCallback((id: string | number) => {
+    const stringId = String(id);
     setSolvedProblemsState(prev => {
-      if (prev.includes(id)) return prev;
-      const updated = [...prev, id];
+      if (prev.includes(stringId)) return prev;
+      const updated = [...prev, stringId];
       localStorage.setItem(SOLVED_KEY, JSON.stringify(updated));
       
       // Also increment total problems solved count for legacy tracking
