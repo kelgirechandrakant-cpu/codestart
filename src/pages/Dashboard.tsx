@@ -79,10 +79,10 @@ export default function Dashboard() {
 
   const getActivityIcon = (type: string) => {
     switch (type) {
-      case 'exam': return <GraduationCap className="h-5 w-5 text-primary" />;
-      case 'practice': return <Code2 className="h-5 w-5 text-primary" />;
-      case 'plan': return <BookOpen className="h-5 w-5 text-primary" />;
-      default: return <Zap className="h-5 w-5 text-primary" />;
+      case 'exam': return <GraduationCap className="h-5 w-5 text-blue-500" />;
+      case 'practice': return <Code2 className="h-5 w-5 text-emerald-500" />;
+      case 'plan': return <BookOpen className="h-5 w-5 text-purple-500" />;
+      default: return <Zap className="h-5 w-5 text-yellow-500" />;
     }
   };
 
@@ -96,10 +96,9 @@ export default function Dashboard() {
           <h1 className="text-4xl font-semibold tracking-tight">Overview</h1>
         </div>
 
-        {/* Top Stats Row: Asymmetric Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <div className="md:col-span-2 p-8 rounded-xl bg-muted/30 flex flex-col justify-between group hover:bg-muted/50 transition-colors">
-            <Trophy className="h-8 w-8 text-primary mb-12" />
+            <Trophy className="h-8 w-8 text-yellow-500 mb-12 drop-shadow-sm" />
             <div>
               <h3 className="text-5xl font-bold tracking-tight">{xp}</h3>
               <p className="text-muted-foreground mt-2 text-lg">Total Experience</p>
@@ -107,7 +106,7 @@ export default function Dashboard() {
           </div>
           
           <div className="p-8 rounded-xl bg-muted/30 flex flex-col justify-between group hover:bg-muted/50 transition-colors">
-            <Flame className="h-8 w-8 text-primary mb-12" />
+            <Flame className="h-8 w-8 text-orange-500 mb-12 drop-shadow-sm" />
             <div>
               <h3 className="text-5xl font-bold tracking-tight">{streak}</h3>
               <p className="text-muted-foreground mt-2 text-lg">Day Streak</p>
@@ -121,7 +120,7 @@ export default function Dashboard() {
                   <p className="text-muted-foreground mb-1">Solved</p>
                   <h3 className="text-3xl font-bold">{problemsSolved}</h3>
                 </div>
-                <Code2 className="h-6 w-6 text-primary opacity-80" />
+                <Code2 className="h-6 w-6 text-emerald-500 opacity-80" />
               </div>
             </div>
             <div className="px-6 py-4 rounded-xl bg-muted/30 flex flex-col justify-center group hover:bg-muted/50 transition-colors h-full">
@@ -130,15 +129,13 @@ export default function Dashboard() {
                   <p className="text-muted-foreground mb-1">Exams</p>
                   <h3 className="text-3xl font-bold">{examsTaken}</h3>
                 </div>
-                <GraduationCap className="h-6 w-6 text-primary opacity-80" />
+                <GraduationCap className="h-6 w-6 text-blue-500 opacity-80" />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Middle Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
-          {/* Left Column: Topic Accuracy Radar Chart */}
           <div className="lg:col-span-7 p-8 rounded-xl bg-muted/30 flex flex-col min-h-[400px]">
             <div className="mb-8">
               <h2 className="text-2xl font-semibold tracking-tight">Topic Mastery</h2>
@@ -148,27 +145,18 @@ export default function Dashboard() {
                 </p>
               )}
             </div>
-            <div className="flex-1 min-h-[300px] w-full">
+            
+            <div className="flex-1 w-full min-h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
                 <RadarChart cx="50%" cy="50%" outerRadius="75%" data={topicAccuracy}>
-                  <PolarGrid stroke="hsl(var(--muted-foreground))" strokeOpacity={0.15} />
-                  <PolarAngleAxis 
-                    dataKey="topic" 
-                    tick={{ fill: "hsl(var(--foreground))", fontSize: 13, fontWeight: 500 }} 
-                  />
-                  <PolarRadiusAxis 
-                    angle={30} 
-                    domain={[0, 100]} 
-                    tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 11 }} 
-                    axisLine={false}
-                    tickLine={false}
-                  />
+                  <PolarGrid stroke="hsl(var(--muted-foreground))" strokeOpacity={0.2} />
+                  <PolarAngleAxis dataKey="topic" tick={{ fill: 'hsl(var(--foreground))', fontSize: 13 }} />
+                  <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
                   <Radar
-                    name="Accuracy"
+                    name="Score"
                     dataKey="score"
-                    stroke="hsl(var(--primary))"
-                    strokeWidth={2}
-                    fill="hsl(var(--primary))"
+                    stroke="hsl(var(--foreground))"
+                    fill="hsl(var(--foreground))"
                     fillOpacity={0.15}
                   />
                 </RadarChart>
@@ -176,48 +164,49 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Right Column: Quick Actions */}
-          <div className="lg:col-span-5 flex flex-col">
-            <h2 className="text-2xl font-semibold tracking-tight mb-6">Jump Back In</h2>
+          <div className="lg:col-span-5 flex flex-col min-h-[400px]">
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold tracking-tight">Quick Actions</h2>
+            </div>
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 flex-1">
               
-              {/* SMART ACTION: Context-aware continue button */}
-              <Link to={`/practice`} className="group p-6 rounded-xl bg-primary/10 border border-primary/20 hover:bg-primary/20 hover:-translate-y-1 transition-all flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
+              <Link to={`/practice`} className="group p-6 rounded-xl bg-primary text-primary-foreground hover:opacity-90 hover:-translate-y-1 transition-all flex items-start gap-4 shadow-sm border border-border/50">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-background/20 text-primary-foreground">
                   <ArrowRight className="h-6 w-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-medium text-lg text-primary transition-colors">Continue: {currentChapterData.title}</h3>
-                  <p className="text-primary/80 mt-1 leading-relaxed">Resume your guided practice path</p>
+                  <h3 className="font-medium text-lg">Continue Learning</h3>
+                  <p className="text-primary-foreground/80 mt-1 leading-relaxed">Resume your journey</p>
                 </div>
               </Link>
 
               <Link to="/mock-exam" className="group p-6 rounded-xl bg-muted/30 hover:bg-muted/50 hover:-translate-y-1 transition-all flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
                   <GraduationCap className="h-6 w-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-medium text-lg group-hover:text-primary transition-colors">Start Mock Exam</h3>
+                  <h3 className="font-medium text-lg group-hover:text-blue-500 transition-colors">Start Mock Exam</h3>
                   <p className="text-muted-foreground mt-1 leading-relaxed">Test your knowledge with an AI assessment</p>
                 </div>
               </Link>
 
               <Link to="/study-plan" className="group p-6 rounded-xl bg-muted/30 hover:bg-muted/50 hover:-translate-y-1 transition-all flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-500/10 text-purple-500">
                   <BookOpen className="h-6 w-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-medium text-lg group-hover:text-primary transition-colors">Study Plan</h3>
+                  <h3 className="font-medium text-lg group-hover:text-purple-500 transition-colors">Study Plan</h3>
                   <p className="text-muted-foreground mt-1 leading-relaxed">View your personalized schedule</p>
                 </div>
               </Link>
 
               <Link to="/ai-tutor" className="group p-6 rounded-xl bg-muted/30 hover:bg-muted/50 hover:-translate-y-1 transition-all flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500">
                   <Bot className="h-6 w-6" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-medium text-lg group-hover:text-primary transition-colors">AI Mentor</h3>
+                  <h3 className="font-medium text-lg group-hover:text-emerald-500 transition-colors">AI Mentor</h3>
                   <p className="text-muted-foreground mt-1 leading-relaxed">Get unblocked on difficult concepts</p>
                 </div>
               </Link>
@@ -225,7 +214,6 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Bottom Section: Recent Activity Feed */}
         <div>
           <div className="flex items-center gap-3 mb-6">
             <Clock className="h-6 w-6 text-primary" />
@@ -247,29 +235,27 @@ export default function Dashboard() {
                       </div>
                     </div>
                     {activity.xpEarned && (
-                      <div className="px-4 py-1.5 rounded-full bg-primary/10 text-primary font-medium flex items-center gap-2">
-                        +{activity.xpEarned} <Trophy className="h-4 w-4" />
+                      <div className="px-4 py-1.5 rounded-full bg-yellow-500/15 text-yellow-600 dark:text-yellow-400 font-medium flex items-center gap-2">
+                        <Zap className="h-4 w-4" />
+                        +{activity.xpEarned} XP
                       </div>
                     )}
                   </div>
                 ))}
               </div>
             ) : (
-              <div className="flex flex-col items-start justify-center py-16 px-8">
-                <div className="h-16 w-16 rounded-2xl bg-background shadow-sm flex items-center justify-center mb-6">
-                  <Zap className="h-8 w-8 text-primary" />
+              <div className="text-center py-12">
+                <div className="mx-auto w-16 h-16 bg-muted rounded-full flex items-center justify-center mb-4">
+                  <Zap className="h-8 w-8 text-muted-foreground" />
                 </div>
-                <h3 className="text-2xl font-medium tracking-tight mb-2">No activity yet</h3>
-                <p className="text-muted-foreground text-lg max-w-md mb-8">
-                  Start your learning journey. Build your first project, take a mock exam, or practice some coding challenges.
+                <h3 className="text-xl font-medium text-foreground mb-2">No activity yet</h3>
+                <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+                  Start your learning journey! Try a mock exam or practice coding to see your progress here.
                 </p>
-                <div className="flex gap-6">
-                  <Link to="/mock-exam" className="group flex items-center gap-2 text-lg font-medium text-primary hover:text-primary/80 transition-colors">
-                    Take Mock Exam <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <Link to="/practice" className="group flex items-center gap-2 text-lg font-medium text-primary hover:text-primary/80 transition-colors">
-                    Practice Coding <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                <div className="flex items-center justify-center gap-4">
+                  <Link to="/practice" className="text-primary hover:underline font-medium">Practice Coding</Link>
+                  <span className="text-muted-foreground">•</span>
+                  <Link to="/mock-exam" className="text-primary hover:underline font-medium">Take Exam</Link>
                 </div>
               </div>
             )}
