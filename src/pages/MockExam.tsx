@@ -240,8 +240,8 @@ export default function MockExam() {
               </p>
             </div>
             
-            <div className="rounded-[2rem] bg-muted/30 p-2">
-              <div className="bg-background rounded-[1.75rem] p-6 md:p-10 shadow-sm border border-border/50">
+            <div className="rounded-2xl bg-muted/30 p-2">
+              <div className="bg-background rounded-xl p-6 md:p-10 shadow-sm border border-border/50">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                   <div className="space-y-4">
                     <Label className="text-foreground text-base">Subject</Label>
@@ -439,11 +439,11 @@ export default function MockExam() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="col-span-1 rounded-[2rem] bg-muted/30 p-8 flex flex-col justify-center border border-border/50">
+              <div className="col-span-1 rounded-xl bg-muted/30 p-8 flex flex-col justify-center border border-border/50">
                 <div className="text-sm font-medium text-muted-foreground mb-4">Final Score</div>
                 <div className={`text-7xl font-semibold tracking-tighter ${
-                  (attempt.score / attempt.totalQuestions) > 0.7 ? 'text-primary' :
-                  (attempt.score / attempt.totalQuestions) >= 0.4 ? 'text-amber-600' : 'text-destructive'
+                  (attempt.score / attempt.totalQuestions) > 0.7 ? 'text-emerald-500' :
+                  (attempt.score / attempt.totalQuestions) >= 0.4 ? 'text-amber-500' : 'text-red-500'
                 }`}>
                   {Math.round((attempt.score / attempt.totalQuestions) * 100)}<span className="text-3xl text-muted-foreground">%</span>
                 </div>
@@ -452,7 +452,7 @@ export default function MockExam() {
                 </div>
               </div>
 
-              <div className="col-span-1 md:col-span-2 rounded-[2rem] bg-muted/30 p-8 border border-border/50">
+              <div className="col-span-1 md:col-span-2 rounded-xl bg-muted/30 p-8 border border-border/50">
                 <h3 className="font-medium mb-6 text-foreground">Topic Breakdown</h3>
                 <div className="h-[200px] w-full">
                   <ResponsiveContainer width="100%" height="100%">
@@ -465,9 +465,16 @@ export default function MockExam() {
                         contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                       />
                       <Bar dataKey="percentage" radius={[0, 4, 4, 0]} barSize={24}>
-                        {attempt.topicBreakdown.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill="hsl(var(--primary))" className="opacity-80 hover:opacity-100 transition-opacity" />
-                        ))}
+                        {attempt.topicBreakdown.map((entry, index) => {
+                          const val = (entry as any).percentage;
+                          let barColor = '#10b981'; // emerald-500
+                          if (val < 40) barColor = '#ef4444'; // red-500
+                          else if (val <= 70) barColor = '#f59e0b'; // amber-500
+
+                          return (
+                            <Cell key={`cell-${index}`} fill={barColor} className="opacity-80 hover:opacity-100 transition-opacity" />
+                          );
+                        })}
                       </Bar>
                     </BarChart>
                   </ResponsiveContainer>
