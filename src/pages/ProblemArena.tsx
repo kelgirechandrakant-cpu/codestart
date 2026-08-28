@@ -15,10 +15,12 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import ReactMarkdown from "react-markdown";
+import { useUserProfile } from "@/contexts/UserProfileContext";
 
 export default function ProblemArena() {
   const { problemId } = useParams<{ problemId: string }>();
   const navigate = useNavigate();
+  const { solvedProblems, markProblemSolved, logActivity } = useUserProfile() || {};
   const [question, setQuestion] = useState<Question | null>(null);
   const [activeTab, setActiveTab] = useState<string>("statement");
   
@@ -126,19 +128,29 @@ export default function ProblemArena() {
       setIsSubmitting(false);
 
       if (evaluation.isCorrect) {
-        const newScore = score + 50;
-        const newStreak = streak + 1;
-        setScore(newScore);
-        setStreak(newStreak);
-        localStorage.setItem('codeStart_score', newScore.toString());
-        localStorage.setItem('codeStart_dailyStreak', newStreak.toString());
+        const isAlreadySolved = solvedProblems ? solvedProblems.includes(question.id) : false;
+
+        if (!isAlreadySolved) {
+          const newScore = score + 50;
+          const newStreak = streak + 1;
+          setScore(newScore);
+          setStreak(newStreak);
+          localStorage.setItem('codeStart_score', newScore.toString());
+          localStorage.setItem('codeStart_dailyStreak', newStreak.toString());
+          
+          if (markProblemSolved) markProblemSolved(question.id);
+          if (logActivity) logActivity(`Solved Challenge: ${question.title}`, `Earned 50 XP`, 50, 'practice');
+          
+          toast.success("🎉 Problem solved! +50 XP");
+        } else {
+          toast.success("✅ Correct! (Already solved, no XP awarded)");
+        }
 
         setExecutionOutput({
           success: true,
           feedback: evaluation.feedback,
           explanation: evaluation.explanation,
         });
-        toast.success("🎉 Problem solved! +50 XP");
       } else {
         const newLives = Math.max(0, lives - 1);
         setLives(newLives);

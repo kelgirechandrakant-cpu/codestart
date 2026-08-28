@@ -45,7 +45,7 @@ export default function PracticeDirectory() {
   }, []);
 
   // Guided mode
-  const { profile, progress, updateProgress } = useUserProfile();
+  const { profile, progress, updateProgress, solvedProblems } = useUserProfile();
   const [guidedMode, setGuidedMode] = useState(() => {
     return progress.guidedMode ?? (profile?.level === 'beginner');
   });
@@ -299,21 +299,30 @@ export default function PracticeDirectory() {
                   <p className="text-base">No coding problems found matching your filters.</p>
                 </div>
               ) : (
-                filteredQuestions.map((q) => (
-                  <Link
-                    key={q.id}
-                    to={`/practice/${q.id}`}
-                    className="group flex flex-col justify-between p-6 bg-muted/20 hover:bg-muted/30 border border-transparent hover:border-primary/20 rounded-[2rem] transition-all hover:-translate-y-1 hover:shadow-md"
-                  >
-                    <div>
-                      <div className="flex items-start justify-between mb-5">
-                        <span className="text-xs font-mono text-muted-foreground bg-background px-3 py-1.5 rounded-lg shadow-sm">
-                          #{q.id}
-                        </span>
-                        <Badge variant="outline" className="text-xs bg-background shadow-sm border-transparent font-normal px-3 py-1">
-                          {q.difficulty}
-                        </Badge>
-                      </div>
+                filteredQuestions.map((q) => {
+                  const isSolved = solvedProblems?.includes(q.id);
+                  return (
+                    <Link
+                      key={q.id}
+                      to={`/practice/${q.id}`}
+                      className={`group flex flex-col justify-between p-6 bg-muted/20 hover:bg-muted/30 border border-transparent hover:border-primary/20 rounded-[2rem] transition-all hover:-translate-y-1 hover:shadow-md ${isSolved ? 'ring-1 ring-emerald-500/30' : ''}`}
+                    >
+                      <div>
+                        <div className="flex items-start justify-between mb-5">
+                          <span className="text-xs font-mono text-muted-foreground bg-background px-3 py-1.5 rounded-lg shadow-sm">
+                            #{q.id}
+                          </span>
+                          <div className="flex items-center gap-2">
+                            {isSolved && (
+                              <Badge className="text-xs bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/20 shadow-none border-transparent font-normal px-3 py-1 flex items-center gap-1">
+                                <CheckCircle2 className="w-3 h-3" /> Solved
+                              </Badge>
+                            )}
+                            <Badge variant="outline" className="text-xs bg-background shadow-sm border-transparent font-normal px-3 py-1">
+                              {q.difficulty}
+                            </Badge>
+                          </div>
+                        </div>
                       
                       <h3 className="font-medium text-foreground text-lg mb-3 group-hover:text-primary transition-colors">
                         {q.question || q.title}
@@ -331,7 +340,8 @@ export default function PracticeDirectory() {
                       <span className="bg-background px-3 py-1.5 rounded-lg shadow-sm truncate max-w-[120px]">{q.topic}</span>
                     </div>
                   </Link>
-                ))
+                );
+              })}
               )}
             </div>
           </>

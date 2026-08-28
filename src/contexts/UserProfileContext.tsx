@@ -59,12 +59,14 @@ interface UserProfileContextType {
   profile: UserProfile | null;
   progress: LearningProgress;
   activityLog: ActivityLogEntry[];
+  solvedProblems: string[];
   setProfile: (profile: UserProfile) => void;
   updateProfile: (updates: Partial<UserProfile>) => void;
   clearProfile: () => void;
   setProgress: (progress: LearningProgress) => void;
   updateProgress: (updates: Partial<LearningProgress>) => void;
   logActivity: (title: string, description: string, xpEarned: number, type: ActivityLogEntry['type']) => void;
+  markProblemSolved: (id: string) => void;
   logout: () => Promise<void>;
   isReturningUser: boolean;
   hasStartedCoding: boolean;
@@ -86,6 +88,7 @@ const UserProfileContext = createContext<UserProfileContextType | undefined>(und
 const PROFILE_KEY = 'learnercraft_profile';
 const PROGRESS_KEY = 'learnercraft_learning_progress';
 const ACTIVITY_KEY = 'learnercraft_activity';
+const SOLVED_KEY = 'learnercraft_solved_problems';
 
 export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
@@ -108,6 +111,13 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
   const [activityLog, setActivityLogState] = useState<ActivityLogEntry[]>(() => {
     try {
       const stored = localStorage.getItem(ACTIVITY_KEY);
+      return stored ? JSON.parse(stored) : [];
+    } catch { return []; }
+  });
+
+  const [solvedProblems, setSolvedProblemsState] = useState<string[]>(() => {
+    try {
+      const stored = localStorage.getItem(SOLVED_KEY);
       return stored ? JSON.parse(stored) : [];
     } catch { return []; }
   });
@@ -205,6 +215,22 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
     });
   }, [user]);
 
+  const markProblemSolved = useCallback((id: string) => {
+    setSolvedProblemsState(prev => {
+      if (prev.includes(id)) return prev;
+      const updated = [...prev, id];
+      localStorage.setItem(SOLVED_KEY, JSON.stringify(updated));
+      
+      // Also increment total problems solved count for legacy tracking
+      const currentCount = parseInt(localStorage.getItem('learnercraft_problems_solved') || '0', 10);
+      localStorage.setItem('learnercraft_problems_solved', (currentCount + 1).toString());
+      
+      // We could sync this to the cloud here if we update Firebase types, 
+      // but for now, localStorage + auth sync is a great start.
+      return updated;
+    });
+  }, []);
+
   const clearProfile = useCallback(() => {
     localStorage.removeItem(PROFILE_KEY);
     localStorage.removeItem(PROGRESS_KEY);
@@ -227,12 +253,14 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
         profile,
         progress,
         activityLog,
+        solvedProblems,
         setProfile,
         updateProfile,
         clearProfile,
         setProgress,
         updateProgress,
         logActivity,
+        markProblemSolved,
         logout,
         isReturningUser,
         hasStartedCoding,
