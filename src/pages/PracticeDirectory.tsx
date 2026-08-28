@@ -341,7 +341,7 @@ export default function PracticeDirectory() {
                     </div>
                   </Link>
                 );
-              })}
+              })
               )}
             </div>
           </>
