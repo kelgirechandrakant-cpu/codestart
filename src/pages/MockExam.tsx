@@ -28,11 +28,13 @@ const generateExamQuestions = async (config: ExamConfig): Promise<MockExamQuesti
     const prompt = `Generate ${config.numQuestions} multiple choice questions about ${subjectText}.
 Difficulty: ${config.difficulty}
 
-Return ONLY a valid JSON array with this exact structure (no markdown, no code fences):
+IMPORTANT: If your question includes a code snippet, wrap the code snippet in triple backticks (e.g. \`\`\`c\\n...\\n\`\`\`) inside the JSON string. Use explicit \\n characters for line breaks within the string.
+
+Return ONLY a valid JSON array with this exact structure (no markdown wrapper outside the JSON):
 [
   {
     "id": 1,
-    "question": "What is the output of...?",
+    "question": "What is the output of the following code?\\n\\n\`\`\`c\\nint main() {\\n  return 0;\\n}\\n\`\`\`",
     "options": ["Option A", "Option B", "Option C", "Option D"],
     "correctIndex": 0,
     "explanation": "Because...",
@@ -366,7 +368,27 @@ export default function MockExam() {
                   {currentQ.topic}
                 </div>
                 <h2 className="text-2xl font-medium leading-relaxed text-foreground max-w-[65ch]">
-                  {currentQ.question}
+                  {(() => {
+                    const text = currentQ.question;
+                    if (!text.includes('```')) {
+                      return <span className="whitespace-pre-wrap">{text}</span>;
+                    }
+                    const parts = text.split('```');
+                    return parts.map((part, index) => {
+                      if (index % 2 === 1) {
+                        const lines = part.trim().split('\n');
+                        if (lines.length > 0 && lines[0].trim().match(/^[a-z]+$/i)) {
+                          lines.shift();
+                        }
+                        return (
+                          <pre key={index} className="bg-muted/20 p-4 rounded-xl text-[15px] font-mono text-muted-foreground my-4 overflow-x-auto border border-border/50">
+                            <code>{lines.join('\n')}</code>
+                          </pre>
+                        );
+                      }
+                      return <span key={index} className="whitespace-pre-wrap">{part}</span>;
+                    });
+                  })()}
                 </h2>
               </div>
               
@@ -511,7 +533,23 @@ export default function MockExam() {
                         <div className="flex-1 space-y-2">
                           <p className="font-medium text-foreground max-w-[65ch] leading-relaxed">
                             <span className="text-muted-foreground mr-2">{idx + 1}.</span>
-                            {q.question}
+                            {(() => {
+                              const text = q.question;
+                              if (!text.includes('```')) return <span className="whitespace-pre-wrap">{text}</span>;
+                              const parts = text.split('```');
+                              return parts.map((part, index) => {
+                                if (index % 2 === 1) {
+                                  const lines = part.trim().split('\n');
+                                  if (lines.length > 0 && lines[0].trim().match(/^[a-z]+$/i)) lines.shift();
+                                  return (
+                                    <pre key={index} className="bg-background/50 p-4 rounded-xl text-[14px] font-mono text-muted-foreground my-3 overflow-x-auto border border-border/50">
+                                      <code>{lines.join('\n')}</code>
+                                    </pre>
+                                  );
+                                }
+                                return <span key={index} className="whitespace-pre-wrap">{part}</span>;
+                              });
+                            })()}
                           </p>
                           {!isExpanded && (
                             <div className="flex items-center gap-6 text-sm">
