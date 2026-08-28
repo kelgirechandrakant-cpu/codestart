@@ -9,6 +9,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, ResponsiveCont
 import { GraduationCap, Clock, ArrowRight, ArrowLeft, CheckCircle2, XCircle, Loader2, ChevronDown, ChevronUp, RotateCcw, LayoutDashboard } from 'lucide-react';
 import { ExamConfig, ExamSubject, ExamDifficulty, MockExamQuestion, ExamAttempt, TopicScore } from '@/types/learnercraft';
 import { toast } from 'sonner';
+import { useUserProfile } from '@/contexts/UserProfileContext';
 
 const generateExamQuestions = async (config: ExamConfig): Promise<MockExamQuestion[]> => {
   try {
@@ -74,6 +75,7 @@ const timeLimits = [
 
 export default function MockExam() {
   const navigate = useNavigate();
+  const { logActivity } = useUserProfile();
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [isLoading, setIsLoading] = useState(false);
   
@@ -189,9 +191,26 @@ export default function MockExam() {
     const examsTaken = parseInt(localStorage.getItem('learnercraft_exams_taken') || '0', 10);
     localStorage.setItem('learnercraft_exams_taken', (examsTaken + 1).toString());
     
+    // Log the activity!
+    const percentage = Math.round((score / questions.length) * 100);
+    const xpEarned = Math.round((score / questions.length) * 100) + (questions.length * 2); // basic formula
+    
+    if (logActivity) {
+      logActivity(
+        `Completed ${config.subject} Mock Exam`,
+        `Scored ${score}/${questions.length} (${percentage}%) in ${Math.floor(timeTaken / 60)}m ${timeTaken % 60}s`,
+        xpEarned,
+        'exam'
+      );
+    }
+    
+    // Give some global XP for the dashboard too (for guest mode backward compatibility)
+    const currentXp = parseInt(localStorage.getItem('codeStart_score') || '0', 10);
+    localStorage.setItem('codeStart_score', (currentXp + xpEarned).toString());
+
     setStep(3);
     toast.success('Exam completed!');
-  }, [questions, userAnswers, startTime, config]);
+  }, [questions, userAnswers, startTime, config, logActivity]);
 
   const toggleQuestionExpanded = (idx: number) => {
     setExpandedQuestions(prev => 

@@ -6,6 +6,7 @@ import {
   syncLocalDataToFirestore, 
   updateCloudProfile, 
   updateCloudProgress,
+  updateCloudActivityLog,
   signOut
 } from '@/integrations/firebase/auth';
 
@@ -39,6 +40,15 @@ export interface LearningProgress {
   guidedMode: boolean;
 }
 
+export interface ActivityLogEntry {
+  id: string;
+  title: string;
+  description: string;
+  xpEarned: number;
+  type: 'exam' | 'practice' | 'plan' | 'tutor' | 'system';
+  timestamp: number;
+}
+
 // ============================================================
 // Context
 // ============================================================
@@ -48,11 +58,13 @@ interface UserProfileContextType {
   isLoadingAuth: boolean;
   profile: UserProfile | null;
   progress: LearningProgress;
+  activityLog: ActivityLogEntry[];
   setProfile: (profile: UserProfile) => void;
   updateProfile: (updates: Partial<UserProfile>) => void;
   clearProfile: () => void;
   setProgress: (progress: LearningProgress) => void;
   updateProgress: (updates: Partial<LearningProgress>) => void;
+  logActivity: (title: string, description: string, xpEarned: number, type: ActivityLogEntry['type']) => void;
   logout: () => Promise<void>;
   isReturningUser: boolean;
   hasStartedCoding: boolean;
@@ -73,31 +85,33 @@ const UserProfileContext = createContext<UserProfileContextType | undefined>(und
 
 const PROFILE_KEY = 'learnercraft_profile';
 const PROGRESS_KEY = 'learnercraft_learning_progress';
+const ACTIVITY_KEY = 'learnercraft_activity';
 
 export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoadingAuth, setIsLoadingAuth] = useState(true);
 
-  // Initial load from local storage (for guest users)
   const [profile, setProfileState] = useState<UserProfile | null>(() => {
     try {
       const stored = localStorage.getItem(PROFILE_KEY);
       return stored ? JSON.parse(stored) : null;
-    } catch {
-      return null;
-    }
+    } catch { return null; }
   });
 
   const [progress, setProgressState] = useState<LearningProgress>(() => {
     try {
       const stored = localStorage.getItem(PROGRESS_KEY);
       return stored ? { ...defaultProgress, ...JSON.parse(stored) } : defaultProgress;
-    } catch {
-      return defaultProgress;
-    }
+    } catch { return defaultProgress; }
   });
 
-  // Check if user has any coding history (from the old gamification system)
+  const [activityLog, setActivityLogState] = useState<ActivityLogEntry[]>(() => {
+    try {
+      const stored = localStorage.getItem(ACTIVITY_KEY);
+      return stored ? JSON.parse(stored) : [];
+    } catch { return []; }
+  });
+
   const hasStartedCoding = Boolean(
     localStorage.getItem('codeStart_score') ||
     localStorage.getItem('learnercraft_problems_solved')
@@ -105,26 +119,26 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
   const isReturningUser = Boolean(profile) || hasStartedCoding;
 
-  // Listen to Firebase Auth state
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(async (firebaseUser) => {
       if (firebaseUser) {
         setUser(firebaseUser);
         
-        // When a user logs in, try to sync local data up (if it's a new account)
         const localXp = parseInt(localStorage.getItem('codeStart_score') || '0', 10);
         const localStreak = parseInt(localStorage.getItem('codeStart_dailyStreak') || '0', 10);
         
-        await syncLocalDataToFirestore(firebaseUser.uid, profile, progress, {
+        await syncLocalDataToFirestore(firebaseUser.uid, profile, progress, activityLog, {
           xp: localXp,
           streak: localStreak
         });
 
-        // Pull canonical data from cloud
         const cloudData = await getUserData(firebaseUser.uid);
         if (cloudData) {
           setProfileState(cloudData.profile);
           setProgressState(cloudData.progress);
+          if (cloudData.activityLog) {
+            setActivityLogState(cloudData.activityLog);
+          }
         }
       } else {
         setUser(null);
@@ -133,19 +147,19 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
     });
 
     return () => unsubscribe();
-  }, []); // Run once on mount
+  }, []);
 
-  // Persist profile locally (always fallback)
   useEffect(() => {
-    if (profile) {
-      localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
-    }
+    if (profile) localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
   }, [profile]);
 
-  // Persist progress locally (always fallback)
   useEffect(() => {
     localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
   }, [progress]);
+
+  useEffect(() => {
+    localStorage.setItem(ACTIVITY_KEY, JSON.stringify(activityLog));
+  }, [activityLog]);
 
   const setProfile = useCallback((newProfile: UserProfile) => {
     const fullProfile = { ...newProfile, lastActiveAt: Date.now() };
@@ -162,13 +176,6 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
     });
   }, [user]);
 
-  const clearProfile = useCallback(() => {
-    localStorage.removeItem(PROFILE_KEY);
-    localStorage.removeItem(PROGRESS_KEY);
-    setProfileState(null);
-    setProgressState(defaultProgress);
-  }, []);
-
   const setProgress = useCallback((newProgress: LearningProgress) => {
     setProgressState(newProgress);
     if (user) updateCloudProgress(user.uid, newProgress);
@@ -182,6 +189,31 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
     });
   }, [user]);
 
+  const logActivity = useCallback((title: string, description: string, xpEarned: number, type: ActivityLogEntry['type']) => {
+    setActivityLogState(prev => {
+      const newEntry: ActivityLogEntry = {
+        id: Math.random().toString(36).substring(7),
+        title,
+        description,
+        xpEarned,
+        type,
+        timestamp: Date.now()
+      };
+      const updated = [newEntry, ...prev].slice(0, 50); // Keep last 50 locally
+      if (user) updateCloudActivityLog(user.uid, updated);
+      return updated;
+    });
+  }, [user]);
+
+  const clearProfile = useCallback(() => {
+    localStorage.removeItem(PROFILE_KEY);
+    localStorage.removeItem(PROGRESS_KEY);
+    localStorage.removeItem(ACTIVITY_KEY);
+    setProfileState(null);
+    setProgressState(defaultProgress);
+    setActivityLogState([]);
+  }, []);
+
   const logout = useCallback(async () => {
     await signOut();
     clearProfile();
@@ -194,11 +226,13 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
         isLoadingAuth,
         profile,
         progress,
+        activityLog,
         setProfile,
         updateProfile,
         clearProfile,
         setProgress,
         updateProgress,
+        logActivity,
         logout,
         isReturningUser,
         hasStartedCoding,
@@ -209,14 +243,8 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
   );
 };
 
-// ============================================================
-// Hook
-// ============================================================
-
 export const useUserProfile = (): UserProfileContextType => {
   const context = useContext(UserProfileContext);
-  if (!context) {
-    throw new Error('useUserProfile must be used within a UserProfileProvider');
-  }
+  if (!context) throw new Error('useUserProfile must be used within a UserProfileProvider');
   return context;
 };

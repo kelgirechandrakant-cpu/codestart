@@ -68,7 +68,7 @@ export const getUserData = async (uid: string) => {
     const userDoc = await getDoc(userDocRef);
     
     if (userDoc.exists()) {
-      return userDoc.data() as { profile: UserProfile; progress: LearningProgress };
+      return userDoc.data() as { profile: UserProfile; progress: LearningProgress; activityLog?: any[] };
     }
     return null;
   } catch (error) {
@@ -79,13 +79,12 @@ export const getUserData = async (uid: string) => {
 
 /**
  * Syncs the local profile and progress to Firestore.
- * This is called right after a new user signs up, so their "Try It Free"
- * progress isn't lost.
  */
 export const syncLocalDataToFirestore = async (
   uid: string, 
   localProfile: UserProfile | null, 
   localProgress: LearningProgress,
+  localActivityLog: any[] = [],
   additionalStats: any = {}
 ) => {
   if (!db) return;
@@ -94,7 +93,6 @@ export const syncLocalDataToFirestore = async (
     const userDocRef = doc(db, "users", uid);
     const userDoc = await getDoc(userDocRef);
     
-    // If the document doesn't exist, this is a new signup. We push local data.
     if (!userDoc.exists()) {
       await setDoc(userDocRef, {
         profile: localProfile || {
@@ -107,22 +105,31 @@ export const syncLocalDataToFirestore = async (
           lastActiveAt: Date.now()
         },
         progress: localProgress,
-        stats: additionalStats, // e.g. xp, streak
+        activityLog: localActivityLog,
+        stats: additionalStats,
         createdAt: new Date().toISOString()
       });
-      return true; // Indicates new sync happened
+      return true;
     }
     
-    return false; // User already exists, we should use cloud data instead
+    return false;
   } catch (error) {
     console.error("Error syncing local data to Firestore:", error);
     return false;
   }
 };
 
-/**
- * Updates just the profile in Firestore
- */
+export const updateCloudActivityLog = async (uid: string, activityLog: any[]) => {
+  if (!db) return;
+  try {
+    const userDocRef = doc(db, "users", uid);
+    // Keep max 20 activities in cloud to avoid bloated docs
+    await updateDoc(userDocRef, { activityLog: activityLog.slice(0, 20) });
+  } catch (error) {
+    console.error("Error updating cloud activity log:", error);
+  }
+};
+
 export const updateCloudProfile = async (uid: string, profileUpdates: Partial<UserProfile>) => {
   if (!db) return;
   try {

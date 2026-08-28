@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer } from 'recharts';
 import { Trophy, Flame, Code2, GraduationCap, Bot, BookOpen, ArrowRight, LayoutDashboard, Clock, Zap } from 'lucide-react';
 import { ActivityLogEntry, TopicScore } from '@/types/learnercraft';
+import { useUserProfile } from '@/contexts/UserProfileContext';
+import { CURRICULUM } from '@/data/curriculum';
 
 const DEFAULT_TOPICS: TopicScore[] = [
   { topic: "Arrays", score: 45 },
@@ -14,6 +16,8 @@ const DEFAULT_TOPICS: TopicScore[] = [
 ];
 
 export default function Dashboard() {
+  const { profile, progress, activityLog } = useUserProfile();
+  
   const [xp, setXp] = useState(0);
   const [streak, setStreak] = useState(0);
   const [problemsSolved, setProblemsSolved] = useState(0);
@@ -21,10 +25,10 @@ export default function Dashboard() {
   
   const [topicAccuracy, setTopicAccuracy] = useState<TopicScore[]>(DEFAULT_TOPICS);
   const [hasRealData, setHasRealData] = useState(false);
-  const [recentActivity, setRecentActivity] = useState<ActivityLogEntry[]>([]);
 
   useEffect(() => {
-    // Read stats
+    // Basic stats are still stored in localStorage by individual features,
+    // though in a full prod app these would be in the user profile context.
     const storedXp = localStorage.getItem('codeStart_score');
     if (storedXp) setXp(parseInt(storedXp, 10));
 
@@ -50,20 +54,11 @@ export default function Dashboard() {
         console.error("Failed to parse topic accuracy", e);
       }
     }
-
-    // Read activity
-    const storedActivity = localStorage.getItem('learnercraft_activity');
-    if (storedActivity) {
-      try {
-        const parsed = JSON.parse(storedActivity);
-        if (Array.isArray(parsed)) {
-          setRecentActivity(parsed.slice(0, 5));
-        }
-      } catch (e) {
-        console.error("Failed to parse activity log", e);
-      }
-    }
   }, []);
+
+  // Determine Smart Actions based on progress
+  const currentChapterData = CURRICULUM.find(c => c.id === progress.currentChapter) || CURRICULUM[0];
+
 
   const formatRelativeTime = (timestamp: string) => {
     const date = new Date(timestamp);
@@ -184,13 +179,25 @@ export default function Dashboard() {
           <div className="lg:col-span-5 flex flex-col">
             <h2 className="text-2xl font-semibold tracking-tight mb-6">Jump Back In</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 flex-1">
+              
+              {/* SMART ACTION: Context-aware continue button */}
+              <Link to={`/practice`} className="group p-6 rounded-[2rem] bg-primary/10 border border-primary/20 hover:bg-primary/20 hover:-translate-y-1 transition-all flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-sm">
+                  <ArrowRight className="h-6 w-6" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-medium text-lg text-primary transition-colors">Continue: {currentChapterData.title}</h3>
+                  <p className="text-primary/80 mt-1 leading-relaxed">Resume your guided practice path</p>
+                </div>
+              </Link>
+
               <Link to="/mock-exam" className="group p-6 rounded-[2rem] bg-muted/30 hover:bg-muted/50 hover:-translate-y-1 transition-all flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <GraduationCap className="h-6 w-6" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-medium text-lg group-hover:text-primary transition-colors">Start Mock Exam</h3>
-                  <p className="text-muted-foreground mt-1 leading-relaxed">Test your knowledge with an AI-generated assessment</p>
+                  <p className="text-muted-foreground mt-1 leading-relaxed">Test your knowledge with an AI assessment</p>
                 </div>
               </Link>
 
@@ -200,17 +207,7 @@ export default function Dashboard() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-medium text-lg group-hover:text-primary transition-colors">Study Plan</h3>
-                  <p className="text-muted-foreground mt-1 leading-relaxed">View your personalized learning schedule</p>
-                </div>
-              </Link>
-
-              <Link to="/practice" className="group p-6 rounded-[2rem] bg-muted/30 hover:bg-muted/50 hover:-translate-y-1 transition-all flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <Code2 className="h-6 w-6" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-medium text-lg group-hover:text-primary transition-colors">Practice</h3>
-                  <p className="text-muted-foreground mt-1 leading-relaxed">Solve targeted algorithmic challenges</p>
+                  <p className="text-muted-foreground mt-1 leading-relaxed">View your personalized schedule</p>
                 </div>
               </Link>
 
@@ -235,9 +232,9 @@ export default function Dashboard() {
           </div>
           
           <div className="p-4 sm:p-6 rounded-[2rem] bg-muted/30">
-            {recentActivity.length > 0 ? (
+            {activityLog.length > 0 ? (
               <div className="flex flex-col gap-3">
-                {recentActivity.map((activity, index) => (
+                {activityLog.slice(0, 5).map((activity, index) => (
                   <div key={activity.id || index} className="flex items-center justify-between p-4 rounded-2xl hover:bg-muted/50 transition-colors">
                     <div className="flex items-center gap-5">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-background shadow-sm">
@@ -245,7 +242,7 @@ export default function Dashboard() {
                       </div>
                       <div>
                         <p className="font-medium text-lg">{activity.title}</p>
-                        <p className="text-muted-foreground mt-0.5">{formatRelativeTime(activity.timestamp)}</p>
+                        <p className="text-muted-foreground mt-0.5">{formatRelativeTime(activity.timestamp.toString())}</p>
                       </div>
                     </div>
                     {activity.xpEarned && (
