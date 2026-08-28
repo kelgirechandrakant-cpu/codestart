@@ -10,10 +10,11 @@ import { GraduationCap, Clock, ArrowRight, ArrowLeft, CheckCircle2, XCircle, Loa
 import { ExamConfig, ExamSubject, ExamDifficulty, MockExamQuestion, ExamAttempt, TopicScore } from '@/types/learnercraft';
 import { toast } from 'sonner';
 import { useUserProfile } from '@/contexts/UserProfileContext';
+import { getGeminiApiKey } from '@/services/geminiService';
 
 const generateExamQuestions = async (config: ExamConfig): Promise<MockExamQuestion[]> => {
   try {
-    const apiKey = localStorage.getItem('gemini_api_key') || import.meta.env.VITE_GEMINI_API_KEY;
+    const apiKey = getGeminiApiKey();
     if (!apiKey) throw new Error('No API key');
     
     const { GoogleGenAI } = await import('@google/genai');

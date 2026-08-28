@@ -1,6 +1,28 @@
 import { GoogleGenAI, Chat, Type } from "@google/genai";
 import { Message, ExamTopic, QuizQuestion, QuizResult } from "../types/coding";
 
+export const getGeminiApiKey = (): string => {
+  // Check local storage override first
+  const localKey = localStorage.getItem('gemini_api_key');
+  if (localKey) return localKey;
+
+  // Pool of keys from env
+  const keys = [
+    import.meta.env.VITE_GEMINI_API_KEY,
+    import.meta.env.VITE_GEMINI_API_KEY_1,
+    import.meta.env.VITE_GEMINI_API_KEY_2,
+    import.meta.env.VITE_GEMINI_API_KEY_3,
+    import.meta.env.VITE_GEMINI_API_KEY_4,
+    import.meta.env.VITE_GEMINI_API_KEY_5,
+    import.meta.env.VITE_API_KEY
+  ].filter(Boolean) as string[];
+
+  if (keys.length === 0) return '';
+  
+  // Pick a random key to distribute load
+  return keys[Math.floor(Math.random() * keys.length)];
+};
+
 export class GeminiService {
   private ai: GoogleGenAI | null = null;
   private chatInstance: Chat | null = null;
@@ -8,9 +30,9 @@ export class GeminiService {
 
   private getAI(): GoogleGenAI {
     if (!this.ai) {
-      const apiKey = import.meta.env.VITE_GEMINI_API_KEY || import.meta.env.VITE_API_KEY || localStorage.getItem('gemini_api_key') || '';
+      const apiKey = getGeminiApiKey();
       if (!apiKey) {
-        console.warn("No Gemini API key found in VITE_GEMINI_API_KEY or localStorage.");
+        console.warn("No Gemini API key found in env or localStorage.");
       }
       this.ai = new GoogleGenAI({ apiKey: apiKey || 'dummy-key' });
     }

@@ -21,9 +21,10 @@ import {
 import { StudyPlanConfig, StudyPlan, StudyPlanWeek } from '@/types/learnercraft';
 import { toast } from 'sonner';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getGeminiApiKey } from '@/services/geminiService';
 
 const generatePlan = async (config: StudyPlanConfig): Promise<StudyPlan> => {
-  const apiKey = localStorage.getItem('gemini_api_key') || import.meta.env.VITE_GEMINI_API_KEY;
+  const apiKey = getGeminiApiKey();
   if (!apiKey) throw new Error('No API key');
   
   const { GoogleGenAI } = await import('@google/genai');
