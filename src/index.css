@@ -16,8 +16,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Clean Crisp White */
-    --background: 0 0% 100%;
+    /* LearnerCraft Crisp Background */
+    --background: 210 40% 98%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
@@ -26,8 +26,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    /* Government Blue (#1a56db) */
-    --primary: 221 83% 53%;
+    /* LearnerCraft EdTech Indigo (Solid, Premium) */
+    --primary: 238 87% 65%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96%;
@@ -36,8 +36,8 @@ All colors MUST be HSL.
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Saffron Accent (#f97316) */
-    --accent: 25 95% 53%;
+    /* Energetic Coral/Amber Accent */
+    --accent: 12 90% 63%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -45,51 +45,51 @@ All colors MUST be HSL.
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 221 83% 53%;
+    --ring: 238 87% 65%;
 
     /* Crisp borders */
     --radius: 0.5rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(221, 83%, 53%), hsl(221, 83%, 40%));
+    --hero-gradient: linear-gradient(135deg, hsl(238, 87%, 65%), hsl(238, 87%, 50%));
     
-    /* Ultra-subtle shadows */
+    /* Clean, structured shadows (no glowing) */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
     --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
   }
 
   .dark {
-    /* Strict Neutral Dark */
-    --background: 222 47% 11%;
+    /* LearnerCraft Premium Slate Dark Mode */
+    --background: 222 47% 7%;
     --foreground: 0 0% 98%;
 
-    --card: 222 47% 14%;
+    --card: 222 47% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 222 47% 14%;
+    --popover: 222 47% 10%;
     --popover-foreground: 0 0% 98%;
 
-    /* Bright Government Blue for Dark Mode */
-    --primary: 221 83% 65%;
+    /* Vivid Indigo for Dark Mode */
+    --primary: 238 87% 75%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 47% 20%;
+    --secondary: 222 47% 15%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 222 47% 20%;
+    --muted: 222 47% 15%;
     --muted-foreground: 215 16% 65%;
 
-    --accent: 25 95% 60%;
+    --accent: 12 90% 70%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 222 47% 25%;
-    --input: 222 47% 25%;
-    --ring: 221 83% 65%;
+    --border: 222 47% 20%;
+    --input: 222 47% 20%;
+    --ring: 238 87% 75%;
     
-    --hero-gradient: linear-gradient(135deg, hsl(221, 83%, 65%), hsl(221, 83%, 50%));
+    --hero-gradient: linear-gradient(135deg, hsl(238, 87%, 75%), hsl(238, 87%, 60%));
   }
 }
 
@@ -104,8 +104,8 @@ All colors MUST be HSL.
     
     background-color: hsl(var(--background));
     
-    /* Clean, colorless structural grid */
-    background-image: radial-gradient(hsl(var(--foreground) / 0.05) 1px, transparent 1px);
+    /* Clean dot grid ONLY. Absolutely NO glowing or blurred radial gradients (no AI slop). */
+    background-image: radial-gradient(hsl(var(--foreground) / 0.06) 1px, transparent 1px);
     background-size: 24px 24px;
     background-attachment: fixed;
     background-position: center center;
