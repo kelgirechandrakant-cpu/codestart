@@ -4,7 +4,7 @@ import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Responsi
 import { Trophy, Flame, Code2, GraduationCap, Bot, BookOpen, ArrowRight, LayoutDashboard, Clock, Zap } from 'lucide-react';
 import { ActivityLogEntry, TopicScore } from '@/types/learnercraft';
 import { useUserProfile } from '@/contexts/UserProfileContext';
-import { CURRICULUM } from '@/data/curriculum';
+import { curriculum } from '@/data/curriculum';
 
 const DEFAULT_TOPICS: TopicScore[] = [
   { topic: "Arrays", score: 45 },
@@ -57,7 +57,7 @@ export default function Dashboard() {
   }, []);
 
   // Determine Smart Actions based on progress
-  const currentChapterData = CURRICULUM.find(c => c.id === progress.currentChapter) || CURRICULUM[0];
+  const currentChapterData = curriculum.find(c => c.id === progress.currentChapter) || curriculum[0];
 
 
   const formatRelativeTime = (timestamp: string) => {
