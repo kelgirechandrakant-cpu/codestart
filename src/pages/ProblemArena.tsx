@@ -140,7 +140,7 @@ export default function ProblemArena() {
           localStorage.setItem('codeStart_dailyStreak', newStreak.toString());
           
           if (markProblemSolved) markProblemSolved(questionIdStr);
-          if (logActivity) logActivity(`Solved Challenge: ${question.title}`, `Earned 50 XP`, 50, 'practice');
+          if (logActivity) logActivity(`Solved Challenge: ${question.question}`, `Earned 50 XP`, 50, 'practice');
           
           toast.success("🎉 Problem solved! +50 XP");
         } else {

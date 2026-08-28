@@ -61,7 +61,8 @@ export default function Dashboard() {
 
 
   const formatRelativeTime = (timestamp: string) => {
-    const date = new Date(timestamp);
+    const parsedTime = parseInt(timestamp, 10);
+    const date = new Date(isNaN(parsedTime) ? timestamp : parsedTime);
     const now = new Date();
     const diffInMs = now.getTime() - date.getTime();
     
