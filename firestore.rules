@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // -------------------------------------------------------------------------
+    // LearnerCraft User Profiles & Progress
+    // -------------------------------------------------------------------------
+    match /users/{userId} {
+      // Users can only read and write their own data
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Future collections (e.g. public exams, global leaderboards)
+    match /public_exams/{examId} {
+      allow read: if true; // public read
+      allow write: if false; // only admin can write (to be added)
+    }
+  }
+}

@@ -1,0 +1,2535 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 245,
+  "totalBatches": 15,
+  "exportsByPath": {
+    ".agents/skills/understand-domain/extract-domain-context.py": [
+      "resolve_ua_dir",
+      "parse_gitignore",
+      "is_ignored",
+      "scan_file_tree",
+      "detect_entry_points",
+      "extract_file_signatures",
+      "extract_metadata",
+      "_truncate_to_fit",
+      "main"
+    ],
+    ".agents/skills/understand-figma/figma-merge.mjs": [],
+    ".agents/skills/understand-figma/figma-scan.mjs": [],
+    ".agents/skills/understand-knowledge/merge-knowledge-graph.py": [
+      "resolve_ua_dir",
+      "_find_markdown_case_insensitive",
+      "normalize_node_type",
+      "normalize_edge_type",
+      "normalize_entity_name",
+      "merge",
+      "main"
+    ],
+    ".agents/skills/understand-knowledge/parse-knowledge-base.py": [
+      "resolve_ua_dir",
+      "find_markdown_case_insensitive",
+      "detect_format",
+      "extract_frontmatter",
+      "extract_wikilinks",
+      "extract_headings",
+      "extract_code_blocks",
+      "extract_first_paragraph",
+      "extract_h1",
+      "parse_index",
+      "parse_log",
+      "build_name_to_stem_map",
+      "resolve_wikilink",
+      "parse_wiki",
+      "main"
+    ],
+    ".agents/skills/understand/build-fingerprints.mjs": [],
+    ".agents/skills/understand/compute-batches.mjs": [],
+    ".agents/skills/understand/extract-import-map.mjs": [
+      "resolveTsJsImport",
+      "resolvePythonImport",
+      "resolveGoImport",
+      "resolveJavaImport",
+      "resolveKotlinImport",
+      "resolveScalaImport",
+      "resolveCSharpImport",
+      "resolveSwiftImport",
+      "resolveRubyImport",
+      "resolvePhpImport",
+      "resolveRustImport",
+      "resolveCppImport"
+    ],
+    ".agents/skills/understand/extract-structure-result.mjs": [
+      "analyzeFileWithOutcomes",
+      "buildResult"
+    ],
+    ".agents/skills/understand/extract-structure.mjs": [
+      "analyzeFileWithOutcomes",
+      "buildResult"
+    ],
+    ".agents/skills/understand/generate-ignore.mjs": [],
+    ".agents/skills/understand/merge-batch-graphs.py": [
+      "resolve_ua_dir",
+      "normalize_direction",
+      "_num",
+      "parse_batch_filename",
+      "batch_sort_key",
+      "load_batch",
+      "classify_id_fix",
+      "normalize_node_id",
+      "normalize_complexity",
+      "_path_segments",
+      "_basename",
+      "is_test_path",
+      "_strip_test_infix",
+      "_join",
+      "_add_unique",
+      "_js_ts_sibling_candidates",
+      "production_candidates",
+      "_file_node_path",
+      "_swap_tested_by_in_place",
+      "_ensure_tested_tag",
+      "link_tests",
+      "merge_and_normalize",
+      "recover_imports_from_scan",
+      "main"
+    ],
+    ".agents/skills/understand/merge-subdomain-graphs.py": [
+      "resolve_ua_dir",
+      "_num",
+      "load_graph",
+      "merge_graphs",
+      "load_pending_structural_edges",
+      "write_merge_report",
+      "main"
+    ],
+    ".agents/skills/understand/scan-project.mjs": [
+      "detectLanguage",
+      "detectCategory",
+      "estimateComplexity"
+    ],
+    ".codebase-memory/.gitattributes": [],
+    ".codebase-memory/graph.db.zst": [],
+    ".ua/.understandignore": [],
+    "SIH26101_Idea_Submission.pptx": [],
+    "bun.lockb": [],
+    "eslint.config.js": [],
+    "postcss.config.js": [],
+    "src/App.tsx": [],
+    "src/Simple.test.tsx": [],
+    "src/components/DocumentViewer.tsx": [
+      "DocumentViewer"
+    ],
+    "src/components/ErrorBoundary.tsx": [
+      "ErrorBoundary"
+    ],
+    "src/components/Footer.tsx": [
+      "Footer"
+    ],
+    "src/components/NavLink.tsx": [
+      "NavLink"
+    ],
+    "src/components/Navbar.tsx": [
+      "Navbar"
+    ],
+    "src/components/ResourceBrowser.tsx": [
+      "ResourceBrowser"
+    ],
+    "src/components/ResourceCard.tsx": [
+      "ResourceCard"
+    ],
+    "src/components/StudyAssistant.tsx": [
+      "StudyAssistant"
+    ],
+    "src/components/admin/DepartmentManager.tsx": [
+      "DepartmentManager"
+    ],
+    "src/components/admin/MigrationTool.tsx": [
+      "MigrationTool"
+    ],
+    "src/components/admin/ResourceManager.tsx": [
+      "ResourceManager"
+    ],
+    "src/components/admin/ResourceTypeManager.tsx": [
+      "ResourceTypeManager"
+    ],
+    "src/components/admin/ResourceUploader.tsx": [
+      "ResourceUploader"
+    ],
+    "src/components/admin/SubjectManager.tsx": [
+      "SubjectManager"
+    ],
+    "src/components/admin/UnsortedManager.tsx": [
+      "UnsortedManager"
+    ],
+    "src/components/practice/CodeEditor.tsx": [
+      "CodeEditor"
+    ],
+    "src/components/statsarthi/CompetencyRadar.tsx": [
+      "CompetencyRadar"
+    ],
+    "src/components/statsarthi/CourseCard.tsx": [
+      "CourseCard"
+    ],
+    "src/components/statsarthi/FloatingAssistant.tsx": [
+      "FloatingAssistant"
+    ],
+    "src/components/statsarthi/Navbar.tsx": [
+      "Navbar"
+    ],
+    "src/components/statsarthi/QuizTaker.tsx": [
+      "QuizTaker"
+    ],
+    "src/components/statsarthi/RoleSelector.tsx": [
+      "RoleSelector"
+    ],
+    "src/components/study-assistant/ConversationHistory.tsx": [
+      "ConversationHistory"
+    ],
+    "src/components/ui/accordion.tsx": [
+      "Accordion",
+      "AccordionItem",
+      "AccordionTrigger",
+      "AccordionContent"
+    ],
+    "src/components/ui/alert-dialog.tsx": [
+      "AlertDialog",
+      "AlertDialogPortal",
+      "AlertDialogOverlay",
+      "AlertDialogTrigger",
+      "AlertDialogContent",
+      "AlertDialogHeader",
+      "AlertDialogFooter",
+      "AlertDialogTitle",
+      "AlertDialogDescription",
+      "AlertDialogAction",
+      "AlertDialogCancel"
+    ],
+    "src/components/ui/alert.tsx": [
+      "Alert",
+      "AlertTitle",
+      "AlertDescription"
+    ],
+    "src/components/ui/aspect-ratio.tsx": [
+      "AspectRatio"
+    ],
+    "src/components/ui/avatar.tsx": [
+      "Avatar",
+      "AvatarImage",
+      "AvatarFallback"
+    ],
+    "src/components/ui/badge.tsx": [
+      "Badge",
+      "badgeVariants"
+    ],
+    "src/components/ui/breadcrumb.tsx": [
+      "Breadcrumb",
+      "BreadcrumbList",
+      "BreadcrumbItem",
+      "BreadcrumbLink",
+      "BreadcrumbPage",
+      "BreadcrumbSeparator",
+      "BreadcrumbEllipsis"
+    ],
+    "src/components/ui/button.tsx": [
+      "Button",
+      "buttonVariants"
+    ],
+    "src/components/ui/calendar.tsx": [
+      "Calendar"
+    ],
+    "src/components/ui/card.tsx": [
+      "Card",
+      "CardHeader",
+      "CardFooter",
+      "CardTitle",
+      "CardDescription",
+      "CardContent"
+    ],
+    "src/components/ui/carousel.tsx": [
+      "CarouselApi",
+      "Carousel",
+      "CarouselContent",
+      "CarouselItem",
+      "CarouselPrevious",
+      "CarouselNext"
+    ],
+    "src/components/ui/chart.tsx": [
+      "ChartContainer",
+      "ChartTooltip",
+      "ChartTooltipContent",
+      "ChartLegend",
+      "ChartLegendContent",
+      "ChartStyle"
+    ],
+    "src/components/ui/checkbox.tsx": [
+      "Checkbox"
+    ],
+    "src/components/ui/collapsible.tsx": [
+      "Collapsible",
+      "CollapsibleTrigger",
+      "CollapsibleContent"
+    ],
+    "src/components/ui/command.tsx": [
+      "Command",
+      "CommandDialog",
+      "CommandInput",
+      "CommandList",
+      "CommandEmpty",
+      "CommandGroup",
+      "CommandItem",
+      "CommandShortcut",
+      "CommandSeparator"
+    ],
+    "src/components/ui/context-menu.tsx": [
+      "ContextMenu",
+      "ContextMenuTrigger",
+      "ContextMenuContent",
+      "ContextMenuItem",
+      "ContextMenuCheckboxItem",
+      "ContextMenuRadioItem",
+      "ContextMenuLabel",
+      "ContextMenuSeparator",
+      "ContextMenuShortcut",
+      "ContextMenuGroup",
+      "ContextMenuPortal",
+      "ContextMenuSub",
+      "ContextMenuSubContent",
+      "ContextMenuSubTrigger",
+      "ContextMenuRadioGroup"
+    ],
+    "src/components/ui/dialog.tsx": [
+      "Dialog",
+      "DialogPortal",
+      "DialogOverlay",
+      "DialogClose",
+      "DialogTrigger",
+      "DialogContent",
+      "DialogHeader",
+      "DialogFooter",
+      "DialogTitle",
+      "DialogDescription"
+    ],
+    "src/components/ui/drawer.tsx": [
+      "Drawer",
+      "DrawerPortal",
+      "DrawerOverlay",
+      "DrawerTrigger",
+      "DrawerClose",
+      "DrawerContent",
+      "DrawerHeader",
+      "DrawerFooter",
+      "DrawerTitle",
+      "DrawerDescription"
+    ],
+    "src/components/ui/dropdown-menu.tsx": [
+      "DropdownMenu",
+      "DropdownMenuTrigger",
+      "DropdownMenuContent",
+      "DropdownMenuItem",
+      "DropdownMenuCheckboxItem",
+      "DropdownMenuRadioItem",
+      "DropdownMenuLabel",
+      "DropdownMenuSeparator",
+      "DropdownMenuShortcut",
+      "DropdownMenuGroup",
+      "DropdownMenuPortal",
+      "DropdownMenuSub",
+      "DropdownMenuSubContent",
+      "DropdownMenuSubTrigger",
+      "DropdownMenuRadioGroup"
+    ],
+    "src/components/ui/form.tsx": [
+      "useFormField",
+      "Form",
+      "FormItem",
+      "FormLabel",
+      "FormControl",
+      "FormDescription",
+      "FormMessage",
+      "FormField"
+    ],
+    "src/components/ui/hover-card.tsx": [
+      "HoverCard",
+      "HoverCardTrigger",
+      "HoverCardContent"
+    ],
+    "src/components/ui/input-otp.tsx": [
+      "InputOTP",
+      "InputOTPGroup",
+      "InputOTPSlot",
+      "InputOTPSeparator"
+    ],
+    "src/components/ui/input.tsx": [
+      "Input"
+    ],
+    "src/components/ui/label.tsx": [
+      "Label"
+    ],
+    "src/components/ui/menubar.tsx": [
+      "Menubar",
+      "MenubarMenu",
+      "MenubarTrigger",
+      "MenubarContent",
+      "MenubarItem",
+      "MenubarSeparator",
+      "MenubarLabel",
+      "MenubarCheckboxItem",
+      "MenubarRadioGroup",
+      "MenubarRadioItem",
+      "MenubarPortal",
+      "MenubarSubContent",
+      "MenubarSubTrigger",
+      "MenubarGroup",
+      "MenubarSub",
+      "MenubarShortcut"
+    ],
+    "src/components/ui/navigation-menu.tsx": [
+      "navigationMenuTriggerStyle",
+      "NavigationMenu",
+      "NavigationMenuList",
+      "NavigationMenuItem",
+      "NavigationMenuContent",
+      "NavigationMenuTrigger",
+      "NavigationMenuLink",
+      "NavigationMenuIndicator",
+      "NavigationMenuViewport"
+    ],
+    "src/components/ui/pagination.tsx": [
+      "Pagination",
+      "PaginationContent",
+      "PaginationEllipsis",
+      "PaginationItem",
+      "PaginationLink",
+      "PaginationNext",
+      "PaginationPrevious"
+    ],
+    "src/components/ui/popover.tsx": [
+      "Popover",
+      "PopoverTrigger",
+      "PopoverContent"
+    ],
+    "src/components/ui/progress.tsx": [
+      "Progress"
+    ],
+    "src/components/ui/radio-group.tsx": [
+      "RadioGroup",
+      "RadioGroupItem"
+    ],
+    "src/components/ui/resizable.tsx": [
+      "ResizablePanelGroup",
+      "ResizablePanel",
+      "ResizableHandle"
+    ],
+    "src/components/ui/scroll-area.tsx": [
+      "ScrollArea",
+      "ScrollBar"
+    ],
+    "src/components/ui/select.tsx": [
+      "Select",
+      "SelectGroup",
+      "SelectValue",
+      "SelectTrigger",
+      "SelectContent",
+      "SelectLabel",
+      "SelectItem",
+      "SelectSeparator",
+      "SelectScrollUpButton",
+      "SelectScrollDownButton"
+    ],
+    "src/components/ui/separator.tsx": [
+      "Separator"
+    ],
+    "src/components/ui/sheet.tsx": [
+      "Sheet",
+      "SheetClose",
+      "SheetContent",
+      "SheetDescription",
+      "SheetFooter",
+      "SheetHeader",
+      "SheetOverlay",
+      "SheetPortal",
+      "SheetTitle",
+      "SheetTrigger"
+    ],
+    "src/components/ui/sidebar.tsx": [
+      "Sidebar",
+      "SidebarContent",
+      "SidebarFooter",
+      "SidebarGroup",
+      "SidebarGroupAction",
+      "SidebarGroupContent",
+      "SidebarGroupLabel",
+      "SidebarHeader",
+      "SidebarInput",
+      "SidebarInset",
+      "SidebarMenu",
+      "SidebarMenuAction",
+      "SidebarMenuBadge",
+      "SidebarMenuButton",
+      "SidebarMenuItem",
+      "SidebarMenuSkeleton",
+      "SidebarMenuSub",
+      "SidebarMenuSubButton",
+      "SidebarMenuSubItem",
+      "SidebarProvider",
+      "SidebarRail",
+      "SidebarSeparator",
+      "SidebarTrigger",
+      "useSidebar"
+    ],
+    "src/components/ui/skeleton.tsx": [
+      "Skeleton"
+    ],
+    "src/components/ui/slider.tsx": [
+      "Slider"
+    ],
+    "src/components/ui/sonner.tsx": [
+      "Toaster",
+      "toast"
+    ],
+    "src/components/ui/switch.tsx": [
+      "Switch"
+    ],
+    "src/components/ui/table.tsx": [
+      "Table",
+      "TableHeader",
+      "TableBody",
+      "TableFooter",
+      "TableHead",
+      "TableRow",
+      "TableCell",
+      "TableCaption"
+    ],
+    "src/components/ui/tabs.tsx": [
+      "Tabs",
+      "TabsList",
+      "TabsTrigger",
+      "TabsContent"
+    ],
+    "src/components/ui/textarea.tsx": [
+      "Textarea"
+    ],
+    "src/components/ui/toast.tsx": [
+      "ToastProps",
+      "ToastActionElement",
+      "ToastProvider",
+      "ToastViewport",
+      "Toast",
+      "ToastTitle",
+      "ToastDescription",
+      "ToastClose",
+      "ToastAction"
+    ],
+    "src/components/ui/toaster.tsx": [
+      "Toaster"
+    ],
+    "src/components/ui/toggle-group.tsx": [
+      "ToggleGroup",
+      "ToggleGroupItem"
+    ],
+    "src/components/ui/toggle.tsx": [
+      "Toggle",
+      "toggleVariants"
+    ],
+    "src/components/ui/tooltip.tsx": [
+      "Tooltip",
+      "TooltipTrigger",
+      "TooltipContent",
+      "TooltipProvider"
+    ],
+    "src/components/ui/use-toast.ts": [
+      "useToast",
+      "toast"
+    ],
+    "src/data/codingQuestions.ts": [
+      "codingQuestions"
+    ],
+    "src/data/competencyFramework.ts": [
+      "competencyDomains"
+    ],
+    "src/data/igotCourses.ts": [
+      "igotCourses"
+    ],
+    "src/data/nsstaCourses.ts": [
+      "nsstaCourses"
+    ],
+    "src/data/roleProfiles.ts": [
+      "roleProfiles"
+    ],
+    "src/hooks/use-mobile.tsx": [
+      "useIsMobile"
+    ],
+    "src/hooks/use-toast.ts": [
+      "reducer",
+      "useToast",
+      "toast"
+    ],
+    "src/hooks/useChatPersistence.ts": [
+      "useChatPersistence"
+    ],
+    "src/hooks/useDirectPdfDownloadLink.ts": [
+      "useDirectPdfDownloadLink"
+    ],
+    "src/hooks/useHierarchyData.ts": [
+      "useHierarchyData",
+      "generateNormalizedFilename",
+      "generateStoragePath"
+    ],
+    "src/integrations/firebase/auth.tsx": [
+      "AuthProvider",
+      "useFirebaseAuth"
+    ],
+    "src/integrations/firebase/config.ts": [
+      "auth",
+      "db",
+      "storage"
+    ],
+    "src/integrations/supabase/client.ts": [
+      "supabase"
+    ],
+    "src/integrations/supabase/types.ts": [
+      "Constants"
+    ],
+    "src/lib/constants.ts": [
+      "SITE_URL",
+      "AUTH_CALLBACK_URL"
+    ],
+    "src/lib/utils.ts": [
+      "cn"
+    ],
+    "src/main.tsx": [],
+    "src/pages/AITutor.tsx": [
+      "AITutor"
+    ],
+    "src/pages/About.tsx": [
+      "About"
+    ],
+    "src/pages/Admin.tsx": [
+      "Admin"
+    ],
+    "src/pages/Assignments.tsx": [
+      "Assignments"
+    ],
+    "src/pages/Auth.tsx": [
+      "Auth"
+    ],
+    "src/pages/AuthCallback.tsx": [],
+    "src/pages/Contact.tsx": [
+      "Contact"
+    ],
+    "src/pages/Index.tsx": [
+      "Index"
+    ],
+    "src/pages/NotFound.tsx": [],
+    "src/pages/Notes.tsx": [
+      "Notes"
+    ],
+    "src/pages/OTPAuth.tsx": [],
+    "src/pages/PYQs.tsx": [
+      "PYQs"
+    ],
+    "src/pages/PracticeDirectory.tsx": [
+      "PracticeDirectory"
+    ],
+    "src/pages/PrivacyPolicy.tsx": [
+      "PrivacyPolicy"
+    ],
+    "src/pages/ProblemArena.tsx": [
+      "ProblemArena"
+    ],
+    "src/pages/Resources.tsx": [
+      "Resources"
+    ],
+    "src/pages/UserAuth.tsx": [
+      "UserAuth"
+    ],
+    "src/pages/statsarthi/AboutMission.tsx": [
+      "AboutMission"
+    ],
+    "src/pages/statsarthi/AdminDashboard.tsx": [
+      "AdminDashboard"
+    ],
+    "src/pages/statsarthi/DiagnosticAssessment.tsx": [
+      "DiagnosticAssessment"
+    ],
+    "src/pages/statsarthi/Landing.tsx": [
+      "Landing"
+    ],
+    "src/pages/statsarthi/LearnerDashboard.tsx": [
+      "LearnerDashboard"
+    ],
+    "src/pages/statsarthi/LearningPathway.tsx": [
+      "LearningPathway"
+    ],
+    "src/pages/statsarthi/Login.tsx": [
+      "Login"
+    ],
+    "src/pages/statsarthi/Onboarding.tsx": [
+      "Onboarding"
+    ],
+    "src/pages/statsarthi/QuizGenerator.tsx": [
+      "QuizGenerator"
+    ],
+    "src/services/gapUtils.ts": [
+      "GAP_SEVERITY_CONFIG",
+      "getGapSeverity",
+      "scoreToFRACLevel",
+      "computeGapReport"
+    ],
+    "src/services/geminiService.ts": [
+      "GeminiService",
+      "geminiService"
+    ],
+    "src/services/recommendationEngine.ts": [
+      "generateLearningPathway"
+    ],
+    "src/setupTests.ts": [],
+    "src/types/coding.ts": [],
+    "src/types/statsarthi.ts": [
+      "FRAC_LEVEL_LABELS"
+    ],
+    "src/vite-env.d.ts": [],
+    "supabase/functions/download-resource/index.ts": [],
+    "supabase/functions/study-assistant/index.ts": [],
+    "tailwind.config.ts": [],
+    "vite.config.ts": []
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "supabase/migrations/20251116174450_784f9679-7940-461d-9dc7-9ca539687aab.sql",
+          "language": "sql",
+          "sizeLines": 100,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20251116174500_6f416acf-d92b-4a98-9b65-c938783928e7.sql",
+          "language": "sql",
+          "sizeLines": 11,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20251116175245_38722476-f231-40b5-8b0f-5d973eb5e65a.sql",
+          "language": "sql",
+          "sizeLines": 76,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20251117030921_55ab1f35-745d-4c5b-8e23-ab9bd85feade.sql",
+          "language": "sql",
+          "sizeLines": 1,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20251118143952_2a291fb0-3fe1-410c-8dba-2d2e8276dd89.sql",
+          "language": "sql",
+          "sizeLines": 30,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20251119004545_77e7357a-9325-419a-b3db-07145594860b.sql",
+          "language": "sql",
+          "sizeLines": 17,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20251223101204_1729919f-fb11-45a2-8a7e-553d53e9c4fd.sql",
+          "language": "sql",
+          "sizeLines": 90,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20251224063518_df4a1328-27dd-4ae6-8b57-4ebd824bfa3b.sql",
+          "language": "sql",
+          "sizeLines": 46,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20260119174407_18991e52-d5f2-4af4-ad66-1196efb1ea37.sql",
+          "language": "sql",
+          "sizeLines": 122,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20260121111400_7780ce2e-95d5-4eed-bf9a-f002f518f385.sql",
+          "language": "sql",
+          "sizeLines": 7,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20260125161421_7fffde6d-3b94-4d9e-a7a8-cd29e1b0e722.sql",
+          "language": "sql",
+          "sizeLines": 17,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20260203131305_7e027062-6d54-4bd8-acc3-fe955330937f.sql",
+          "language": "sql",
+          "sizeLines": 67,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20260507202910_5f3e435b-41e5-48b6-ac66-178a4af7feda.sql",
+          "language": "sql",
+          "sizeLines": 27,
+          "fileCategory": "data"
+        },
+        {
+          "path": "supabase/migrations/20260528195651_74f1da5c-e3e9-4d63-b55f-5bedb6b84b2b.sql",
+          "language": "sql",
+          "sizeLines": 14,
+          "fileCategory": "data"
+        }
+      ],
+      "batchImportData": {
+        "supabase/migrations/20251116174450_784f9679-7940-461d-9dc7-9ca539687aab.sql": [],
+        "supabase/migrations/20251116174500_6f416acf-d92b-4a98-9b65-c938783928e7.sql": [],
+        "supabase/migrations/20251116175245_38722476-f231-40b5-8b0f-5d973eb5e65a.sql": [],
+        "supabase/migrations/20251117030921_55ab1f35-745d-4c5b-8e23-ab9bd85feade.sql": [],
+        "supabase/migrations/20251118143952_2a291fb0-3fe1-410c-8dba-2d2e8276dd89.sql": [],
+        "supabase/migrations/20251119004545_77e7357a-9325-419a-b3db-07145594860b.sql": [],
+        "supabase/migrations/20251223101204_1729919f-fb11-45a2-8a7e-553d53e9c4fd.sql": [],
+        "supabase/migrations/20251224063518_df4a1328-27dd-4ae6-8b57-4ebd824bfa3b.sql": [],
+        "supabase/migrations/20260119174407_18991e52-d5f2-4af4-ad66-1196efb1ea37.sql": [],
+        "supabase/migrations/20260121111400_7780ce2e-95d5-4eed-bf9a-f002f518f385.sql": [],
+        "supabase/migrations/20260125161421_7fffde6d-3b94-4d9e-a7a8-cd29e1b0e722.sql": [],
+        "supabase/migrations/20260203131305_7e027062-6d54-4bd8-acc3-fe955330937f.sql": [],
+        "supabase/migrations/20260507202910_5f3e435b-41e5-48b6-ac66-178a4af7feda.sql": [],
+        "supabase/migrations/20260528195651_74f1da5c-e3e9-4d63-b55f-5bedb6b84b2b.sql": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": ".agents/AGENTS.md",
+          "language": "markdown",
+          "sizeLines": 175,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/DEBUGGING.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/gstack_README.md",
+          "language": "markdown",
+          "sizeLines": 537,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        ".agents/AGENTS.md": [],
+        ".agents/DEBUGGING.md": [],
+        ".agents/gstack_README.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": ".agents/skills/understand/frameworks/django.md",
+          "language": "markdown",
+          "sizeLines": 67,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/frameworks/express.md",
+          "language": "markdown",
+          "sizeLines": 57,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/frameworks/fastapi.md",
+          "language": "markdown",
+          "sizeLines": 58,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/frameworks/flask.md",
+          "language": "markdown",
+          "sizeLines": 53,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/frameworks/gin.md",
+          "language": "markdown",
+          "sizeLines": 59,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/frameworks/nextjs.md",
+          "language": "markdown",
+          "sizeLines": 59,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/frameworks/rails.md",
+          "language": "markdown",
+          "sizeLines": 65,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/frameworks/react.md",
+          "language": "markdown",
+          "sizeLines": 55,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/frameworks/spring.md",
+          "language": "markdown",
+          "sizeLines": 59,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/frameworks/vue.md",
+          "language": "markdown",
+          "sizeLines": 59,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        ".agents/skills/understand/frameworks/django.md": [],
+        ".agents/skills/understand/frameworks/express.md": [],
+        ".agents/skills/understand/frameworks/fastapi.md": [],
+        ".agents/skills/understand/frameworks/flask.md": [],
+        ".agents/skills/understand/frameworks/gin.md": [],
+        ".agents/skills/understand/frameworks/nextjs.md": [],
+        ".agents/skills/understand/frameworks/rails.md": [],
+        ".agents/skills/understand/frameworks/react.md": [],
+        ".agents/skills/understand/frameworks/spring.md": [],
+        ".agents/skills/understand/frameworks/vue.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": ".agents/skills/understand/languages/cpp.md",
+          "language": "markdown",
+          "sizeLines": 47,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/csharp.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/css.md",
+          "language": "markdown",
+          "sizeLines": 37,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/dockerfile.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/go.md",
+          "language": "markdown",
+          "sizeLines": 47,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/graphql.md",
+          "language": "markdown",
+          "sizeLines": 35,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/html.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/java.md",
+          "language": "markdown",
+          "sizeLines": 45,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/javascript.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/json.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/kotlin.md",
+          "language": "markdown",
+          "sizeLines": 45,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/markdown.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/php.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/protobuf.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/python.md",
+          "language": "markdown",
+          "sizeLines": 48,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/ruby.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/rust.md",
+          "language": "markdown",
+          "sizeLines": 47,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/scala.md",
+          "language": "markdown",
+          "sizeLines": 51,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/shell.md",
+          "language": "markdown",
+          "sizeLines": 35,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/sql.md",
+          "language": "markdown",
+          "sizeLines": 36,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        ".agents/skills/understand/languages/cpp.md": [],
+        ".agents/skills/understand/languages/csharp.md": [],
+        ".agents/skills/understand/languages/css.md": [],
+        ".agents/skills/understand/languages/dockerfile.md": [],
+        ".agents/skills/understand/languages/go.md": [],
+        ".agents/skills/understand/languages/graphql.md": [],
+        ".agents/skills/understand/languages/html.md": [],
+        ".agents/skills/understand/languages/java.md": [],
+        ".agents/skills/understand/languages/javascript.md": [],
+        ".agents/skills/understand/languages/json.md": [],
+        ".agents/skills/understand/languages/kotlin.md": [],
+        ".agents/skills/understand/languages/markdown.md": [],
+        ".agents/skills/understand/languages/php.md": [],
+        ".agents/skills/understand/languages/protobuf.md": [],
+        ".agents/skills/understand/languages/python.md": [],
+        ".agents/skills/understand/languages/ruby.md": [],
+        ".agents/skills/understand/languages/rust.md": [],
+        ".agents/skills/understand/languages/scala.md": [],
+        ".agents/skills/understand/languages/shell.md": [],
+        ".agents/skills/understand/languages/sql.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": ".agents/skills/understand/languages/swift.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/terraform.md",
+          "language": "markdown",
+          "sizeLines": 38,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/typescript.md",
+          "language": "markdown",
+          "sizeLines": 46,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/languages/yaml.md",
+          "language": "markdown",
+          "sizeLines": 35,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        ".agents/skills/understand/languages/swift.md": [],
+        ".agents/skills/understand/languages/terraform.md": [],
+        ".agents/skills/understand/languages/typescript.md": [],
+        ".agents/skills/understand/languages/yaml.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": ".agents/skills/understand/locales/en.md",
+          "language": "markdown",
+          "sizeLines": 43,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/locales/ja.md",
+          "language": "markdown",
+          "sizeLines": 48,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/locales/ko.md",
+          "language": "markdown",
+          "sizeLines": 48,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/locales/ru.md",
+          "language": "markdown",
+          "sizeLines": 49,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/locales/zh-TW.md",
+          "language": "markdown",
+          "sizeLines": 48,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/locales/zh.md",
+          "language": "markdown",
+          "sizeLines": 48,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        ".agents/skills/understand/locales/en.md": [],
+        ".agents/skills/understand/locales/ja.md": [],
+        ".agents/skills/understand/locales/ko.md": [],
+        ".agents/skills/understand/locales/ru.md": [],
+        ".agents/skills/understand/locales/zh-TW.md": [],
+        ".agents/skills/understand/locales/zh.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": ".env",
+          "language": "config",
+          "sizeLines": 4,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".env.example",
+          "language": "config",
+          "sizeLines": 10,
+          "fileCategory": "config"
+        },
+        {
+          "path": "PROJECT_CONTEXT.md",
+          "language": "markdown",
+          "sizeLines": 156,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 53,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "SIH26101_CONTEXT.md",
+          "language": "markdown",
+          "sizeLines": 322,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "components.json",
+          "language": "json",
+          "sizeLines": 20,
+          "fileCategory": "config"
+        },
+        {
+          "path": "index.html",
+          "language": "html",
+          "sizeLines": 44,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "package.json",
+          "language": "json",
+          "sizeLines": 106,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tsconfig.app.json",
+          "language": "json",
+          "sizeLines": 31,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tsconfig.json",
+          "language": "json",
+          "sizeLines": 23,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tsconfig.node.json",
+          "language": "json",
+          "sizeLines": 22,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".env": [],
+        ".env.example": [],
+        "PROJECT_CONTEXT.md": [],
+        "README.md": [],
+        "SIH26101_CONTEXT.md": [],
+        "components.json": [],
+        "index.html": [],
+        "package.json": [],
+        "tsconfig.app.json": [],
+        "tsconfig.json": [],
+        "tsconfig.node.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": ".agents/skills/adapt-gemini/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 162,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/code-review/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 73,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/design-review/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 98,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/gap-finder/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 218,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/gov-theme/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 144,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/idea-submission/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 128,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/investigate/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 68,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/learning-pathway/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 161,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/perf-audit/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 63,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/plan-review/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 89,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/quiz-generator/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 147,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/security-audit/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 92,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/ship/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 97,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/strip-and-fork/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 112,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand-chat/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 70,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand-dashboard/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 155,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand-diff/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 85,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand-domain/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 160,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand-domain/extract-domain-context.py",
+          "language": "python",
+          "sizeLines": 435,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand-explain/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 73,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand-figma/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 69,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand-figma/figma-merge.mjs",
+          "language": "javascript",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand-figma/figma-scan.mjs",
+          "language": "javascript",
+          "sizeLines": 105,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand-knowledge/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 137,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand-knowledge/merge-knowledge-graph.py",
+          "language": "python",
+          "sizeLines": 426,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".agents/skills/adapt-gemini/SKILL.md": [],
+        ".agents/skills/code-review/SKILL.md": [],
+        ".agents/skills/design-review/SKILL.md": [],
+        ".agents/skills/gap-finder/SKILL.md": [],
+        ".agents/skills/gov-theme/SKILL.md": [],
+        ".agents/skills/idea-submission/SKILL.md": [],
+        ".agents/skills/investigate/SKILL.md": [],
+        ".agents/skills/learning-pathway/SKILL.md": [],
+        ".agents/skills/perf-audit/SKILL.md": [],
+        ".agents/skills/plan-review/SKILL.md": [],
+        ".agents/skills/quiz-generator/SKILL.md": [],
+        ".agents/skills/security-audit/SKILL.md": [],
+        ".agents/skills/ship/SKILL.md": [],
+        ".agents/skills/strip-and-fork/SKILL.md": [],
+        ".agents/skills/understand-chat/SKILL.md": [],
+        ".agents/skills/understand-dashboard/SKILL.md": [],
+        ".agents/skills/understand-diff/SKILL.md": [],
+        ".agents/skills/understand-domain/SKILL.md": [],
+        ".agents/skills/understand-domain/extract-domain-context.py": [],
+        ".agents/skills/understand-explain/SKILL.md": [],
+        ".agents/skills/understand-figma/SKILL.md": [],
+        ".agents/skills/understand-figma/figma-merge.mjs": [],
+        ".agents/skills/understand-figma/figma-scan.mjs": [],
+        ".agents/skills/understand-knowledge/SKILL.md": [],
+        ".agents/skills/understand-knowledge/merge-knowledge-graph.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": ".agents/skills/understand-knowledge/parse-knowledge-base.py",
+          "language": "python",
+          "sizeLines": 563,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand-onboard/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 70,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 858,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/understand/build-fingerprints.mjs",
+          "language": "javascript",
+          "sizeLines": 93,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand/compute-batches.mjs",
+          "language": "javascript",
+          "sizeLines": 670,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand/extract-import-map.mjs",
+          "language": "javascript",
+          "sizeLines": 1991,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand/extract-structure-result.mjs",
+          "language": "javascript",
+          "sizeLines": 358,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand/extract-structure.mjs",
+          "language": "javascript",
+          "sizeLines": 170,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand/generate-ignore.mjs",
+          "language": "javascript",
+          "sizeLines": 69,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand/merge-batch-graphs.py",
+          "language": "python",
+          "sizeLines": 1248,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand/merge-subdomain-graphs.py",
+          "language": "python",
+          "sizeLines": 404,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".agents/skills/understand/scan-project.mjs",
+          "language": "javascript",
+          "sizeLines": 913,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".codebase-memory/.gitattributes",
+          "language": "unknown",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".codebase-memory/artifact.json",
+          "language": "json",
+          "sizeLines": 10,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".codebase-memory/graph.db.zst",
+          "language": "zst",
+          "sizeLines": 772,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".ua/.understandignore",
+          "language": "unknown",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "SIH26101_Idea_Submission.pptx",
+          "language": "pptx",
+          "sizeLines": 104,
+          "fileCategory": "code"
+        },
+        {
+          "path": "bun.lockb",
+          "language": "lockb",
+          "sizeLines": 346,
+          "fileCategory": "code"
+        },
+        {
+          "path": "eslint.config.js",
+          "language": "javascript",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "postcss.config.js",
+          "language": "javascript",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "public/robots.txt",
+          "language": "txt",
+          "sizeLines": 14,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "src/App.css",
+          "language": "css",
+          "sizeLines": 42,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/App.tsx",
+          "language": "typescript",
+          "sizeLines": 98,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/Simple.test.tsx",
+          "language": "typescript",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/DocumentViewer.tsx",
+          "language": "typescript",
+          "sizeLines": 180,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".agents/skills/understand-knowledge/parse-knowledge-base.py": [],
+        ".agents/skills/understand-onboard/SKILL.md": [],
+        ".agents/skills/understand/SKILL.md": [],
+        ".agents/skills/understand/build-fingerprints.mjs": [],
+        ".agents/skills/understand/compute-batches.mjs": [],
+        ".agents/skills/understand/extract-import-map.mjs": [],
+        ".agents/skills/understand/extract-structure-result.mjs": [],
+        ".agents/skills/understand/extract-structure.mjs": [],
+        ".agents/skills/understand/generate-ignore.mjs": [],
+        ".agents/skills/understand/merge-batch-graphs.py": [],
+        ".agents/skills/understand/merge-subdomain-graphs.py": [],
+        ".agents/skills/understand/scan-project.mjs": [],
+        ".codebase-memory/.gitattributes": [],
+        ".codebase-memory/artifact.json": [],
+        ".codebase-memory/graph.db.zst": [],
+        ".ua/.understandignore": [],
+        "SIH26101_Idea_Submission.pptx": [],
+        "bun.lockb": [],
+        "eslint.config.js": [],
+        "postcss.config.js": [],
+        "public/robots.txt": [],
+        "src/App.css": [],
+        "src/App.tsx": [],
+        "src/Simple.test.tsx": [],
+        "src/components/DocumentViewer.tsx": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "src/components/ErrorBoundary.tsx",
+          "language": "typescript",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/Footer.tsx",
+          "language": "typescript",
+          "sizeLines": 98,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/NavLink.tsx",
+          "language": "typescript",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/Navbar.tsx",
+          "language": "typescript",
+          "sizeLines": 103,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ResourceBrowser.tsx",
+          "language": "typescript",
+          "sizeLines": 324,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ResourceCard.tsx",
+          "language": "typescript",
+          "sizeLines": 127,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/StudyAssistant.tsx",
+          "language": "typescript",
+          "sizeLines": 409,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/admin/DepartmentManager.tsx",
+          "language": "typescript",
+          "sizeLines": 152,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/admin/MigrationTool.tsx",
+          "language": "typescript",
+          "sizeLines": 269,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/admin/ResourceManager.tsx",
+          "language": "typescript",
+          "sizeLines": 190,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/admin/ResourceTypeManager.tsx",
+          "language": "typescript",
+          "sizeLines": 167,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/admin/ResourceUploader.tsx",
+          "language": "typescript",
+          "sizeLines": 297,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/admin/SubjectManager.tsx",
+          "language": "typescript",
+          "sizeLines": 212,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/admin/UnsortedManager.tsx",
+          "language": "typescript",
+          "sizeLines": 394,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/practice/CodeEditor.tsx",
+          "language": "typescript",
+          "sizeLines": 206,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/statsarthi/CompetencyRadar.tsx",
+          "language": "typescript",
+          "sizeLines": 55,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/statsarthi/CourseCard.tsx",
+          "language": "typescript",
+          "sizeLines": 75,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/statsarthi/FloatingAssistant.tsx",
+          "language": "typescript",
+          "sizeLines": 173,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/statsarthi/Navbar.tsx",
+          "language": "typescript",
+          "sizeLines": 129,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/statsarthi/QuizTaker.tsx",
+          "language": "typescript",
+          "sizeLines": 168,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/statsarthi/RoleSelector.tsx",
+          "language": "typescript",
+          "sizeLines": 83,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/study-assistant/ConversationHistory.tsx",
+          "language": "typescript",
+          "sizeLines": 86,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/accordion.tsx",
+          "language": "typescript",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/alert-dialog.tsx",
+          "language": "typescript",
+          "sizeLines": 104,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/alert.tsx",
+          "language": "typescript",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/ErrorBoundary.tsx": [],
+        "src/components/Footer.tsx": [],
+        "src/components/NavLink.tsx": [],
+        "src/components/Navbar.tsx": [],
+        "src/components/ResourceBrowser.tsx": [],
+        "src/components/ResourceCard.tsx": [],
+        "src/components/StudyAssistant.tsx": [],
+        "src/components/admin/DepartmentManager.tsx": [],
+        "src/components/admin/MigrationTool.tsx": [],
+        "src/components/admin/ResourceManager.tsx": [],
+        "src/components/admin/ResourceTypeManager.tsx": [],
+        "src/components/admin/ResourceUploader.tsx": [],
+        "src/components/admin/SubjectManager.tsx": [],
+        "src/components/admin/UnsortedManager.tsx": [],
+        "src/components/practice/CodeEditor.tsx": [],
+        "src/components/statsarthi/CompetencyRadar.tsx": [],
+        "src/components/statsarthi/CourseCard.tsx": [],
+        "src/components/statsarthi/FloatingAssistant.tsx": [],
+        "src/components/statsarthi/Navbar.tsx": [],
+        "src/components/statsarthi/QuizTaker.tsx": [],
+        "src/components/statsarthi/RoleSelector.tsx": [],
+        "src/components/study-assistant/ConversationHistory.tsx": [],
+        "src/components/ui/accordion.tsx": [],
+        "src/components/ui/alert-dialog.tsx": [],
+        "src/components/ui/alert.tsx": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": "src/components/ui/aspect-ratio.tsx",
+          "language": "typescript",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/avatar.tsx",
+          "language": "typescript",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/badge.tsx",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/breadcrumb.tsx",
+          "language": "typescript",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/button.tsx",
+          "language": "typescript",
+          "sizeLines": 47,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/calendar.tsx",
+          "language": "typescript",
+          "sizeLines": 54,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/card.tsx",
+          "language": "typescript",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/carousel.tsx",
+          "language": "typescript",
+          "sizeLines": 224,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/chart.tsx",
+          "language": "typescript",
+          "sizeLines": 303,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/checkbox.tsx",
+          "language": "typescript",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/collapsible.tsx",
+          "language": "typescript",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/command.tsx",
+          "language": "typescript",
+          "sizeLines": 132,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/context-menu.tsx",
+          "language": "typescript",
+          "sizeLines": 178,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/dialog.tsx",
+          "language": "typescript",
+          "sizeLines": 95,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/drawer.tsx",
+          "language": "typescript",
+          "sizeLines": 87,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/dropdown-menu.tsx",
+          "language": "typescript",
+          "sizeLines": 179,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/form.tsx",
+          "language": "typescript",
+          "sizeLines": 129,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/hover-card.tsx",
+          "language": "typescript",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/input-otp.tsx",
+          "language": "typescript",
+          "sizeLines": 61,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/input.tsx",
+          "language": "typescript",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/label.tsx",
+          "language": "typescript",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/menubar.tsx",
+          "language": "typescript",
+          "sizeLines": 207,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/navigation-menu.tsx",
+          "language": "typescript",
+          "sizeLines": 120,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/pagination.tsx",
+          "language": "typescript",
+          "sizeLines": 81,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/popover.tsx",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/ui/aspect-ratio.tsx": [],
+        "src/components/ui/avatar.tsx": [],
+        "src/components/ui/badge.tsx": [],
+        "src/components/ui/breadcrumb.tsx": [],
+        "src/components/ui/button.tsx": [],
+        "src/components/ui/calendar.tsx": [],
+        "src/components/ui/card.tsx": [],
+        "src/components/ui/carousel.tsx": [],
+        "src/components/ui/chart.tsx": [],
+        "src/components/ui/checkbox.tsx": [],
+        "src/components/ui/collapsible.tsx": [],
+        "src/components/ui/command.tsx": [],
+        "src/components/ui/context-menu.tsx": [],
+        "src/components/ui/dialog.tsx": [],
+        "src/components/ui/drawer.tsx": [],
+        "src/components/ui/dropdown-menu.tsx": [],
+        "src/components/ui/form.tsx": [],
+        "src/components/ui/hover-card.tsx": [],
+        "src/components/ui/input-otp.tsx": [],
+        "src/components/ui/input.tsx": [],
+        "src/components/ui/label.tsx": [],
+        "src/components/ui/menubar.tsx": [],
+        "src/components/ui/navigation-menu.tsx": [],
+        "src/components/ui/pagination.tsx": [],
+        "src/components/ui/popover.tsx": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 12,
+      "files": [
+        {
+          "path": "src/components/ui/progress.tsx",
+          "language": "typescript",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/radio-group.tsx",
+          "language": "typescript",
+          "sizeLines": 36,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/resizable.tsx",
+          "language": "typescript",
+          "sizeLines": 37,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/scroll-area.tsx",
+          "language": "typescript",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/select.tsx",
+          "language": "typescript",
+          "sizeLines": 143,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/separator.tsx",
+          "language": "typescript",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/sheet.tsx",
+          "language": "typescript",
+          "sizeLines": 107,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/sidebar.tsx",
+          "language": "typescript",
+          "sizeLines": 637,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/skeleton.tsx",
+          "language": "typescript",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/slider.tsx",
+          "language": "typescript",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/sonner.tsx",
+          "language": "typescript",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/switch.tsx",
+          "language": "typescript",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/table.tsx",
+          "language": "typescript",
+          "sizeLines": 72,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/tabs.tsx",
+          "language": "typescript",
+          "sizeLines": 53,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/textarea.tsx",
+          "language": "typescript",
+          "sizeLines": 21,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/toast.tsx",
+          "language": "typescript",
+          "sizeLines": 111,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/toaster.tsx",
+          "language": "typescript",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/toggle-group.tsx",
+          "language": "typescript",
+          "sizeLines": 49,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/toggle.tsx",
+          "language": "typescript",
+          "sizeLines": 37,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/tooltip.tsx",
+          "language": "typescript",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ui/use-toast.ts",
+          "language": "typescript",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/data/codingQuestions.ts",
+          "language": "typescript",
+          "sizeLines": 108,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/data/competencyFramework.ts",
+          "language": "typescript",
+          "sizeLines": 228,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/data/igotCourses.ts",
+          "language": "typescript",
+          "sizeLines": 183,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/data/nsstaCourses.ts",
+          "language": "typescript",
+          "sizeLines": 187,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/ui/progress.tsx": [],
+        "src/components/ui/radio-group.tsx": [],
+        "src/components/ui/resizable.tsx": [],
+        "src/components/ui/scroll-area.tsx": [],
+        "src/components/ui/select.tsx": [],
+        "src/components/ui/separator.tsx": [],
+        "src/components/ui/sheet.tsx": [],
+        "src/components/ui/sidebar.tsx": [],
+        "src/components/ui/skeleton.tsx": [],
+        "src/components/ui/slider.tsx": [],
+        "src/components/ui/sonner.tsx": [],
+        "src/components/ui/switch.tsx": [],
+        "src/components/ui/table.tsx": [],
+        "src/components/ui/tabs.tsx": [],
+        "src/components/ui/textarea.tsx": [],
+        "src/components/ui/toast.tsx": [],
+        "src/components/ui/toaster.tsx": [],
+        "src/components/ui/toggle-group.tsx": [],
+        "src/components/ui/toggle.tsx": [],
+        "src/components/ui/tooltip.tsx": [],
+        "src/components/ui/use-toast.ts": [],
+        "src/data/codingQuestions.ts": [],
+        "src/data/competencyFramework.ts": [],
+        "src/data/igotCourses.ts": [],
+        "src/data/nsstaCourses.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 13,
+      "files": [
+        {
+          "path": "src/data/roleProfiles.ts",
+          "language": "typescript",
+          "sizeLines": 73,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/hooks/use-mobile.tsx",
+          "language": "typescript",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/hooks/use-toast.ts",
+          "language": "typescript",
+          "sizeLines": 186,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/hooks/useChatPersistence.ts",
+          "language": "typescript",
+          "sizeLines": 206,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/hooks/useDirectPdfDownloadLink.ts",
+          "language": "typescript",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/hooks/useHierarchyData.ts",
+          "language": "typescript",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/index.css",
+          "language": "css",
+          "sizeLines": 147,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "src/integrations/firebase/auth.tsx",
+          "language": "typescript",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/integrations/firebase/config.ts",
+          "language": "typescript",
+          "sizeLines": 36,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/integrations/supabase/client.ts",
+          "language": "typescript",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/integrations/supabase/types.ts",
+          "language": "typescript",
+          "sizeLines": 484,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/lib/constants.ts",
+          "language": "typescript",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/lib/utils.ts",
+          "language": "typescript",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main.tsx",
+          "language": "typescript",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/AITutor.tsx",
+          "language": "typescript",
+          "sizeLines": 542,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/About.tsx",
+          "language": "typescript",
+          "sizeLines": 179,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Admin.tsx",
+          "language": "typescript",
+          "sizeLines": 199,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Assignments.tsx",
+          "language": "typescript",
+          "sizeLines": 98,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Auth.tsx",
+          "language": "typescript",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/AuthCallback.tsx",
+          "language": "typescript",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Contact.tsx",
+          "language": "typescript",
+          "sizeLines": 243,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Index.tsx",
+          "language": "typescript",
+          "sizeLines": 140,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/NotFound.tsx",
+          "language": "typescript",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Notes.tsx",
+          "language": "typescript",
+          "sizeLines": 98,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/OTPAuth.tsx",
+          "language": "typescript",
+          "sizeLines": 245,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/data/roleProfiles.ts": [],
+        "src/hooks/use-mobile.tsx": [],
+        "src/hooks/use-toast.ts": [],
+        "src/hooks/useChatPersistence.ts": [],
+        "src/hooks/useDirectPdfDownloadLink.ts": [],
+        "src/hooks/useHierarchyData.ts": [],
+        "src/index.css": [],
+        "src/integrations/firebase/auth.tsx": [],
+        "src/integrations/firebase/config.ts": [],
+        "src/integrations/supabase/client.ts": [],
+        "src/integrations/supabase/types.ts": [],
+        "src/lib/constants.ts": [],
+        "src/lib/utils.ts": [],
+        "src/main.tsx": [],
+        "src/pages/AITutor.tsx": [],
+        "src/pages/About.tsx": [],
+        "src/pages/Admin.tsx": [],
+        "src/pages/Assignments.tsx": [],
+        "src/pages/Auth.tsx": [],
+        "src/pages/AuthCallback.tsx": [],
+        "src/pages/Contact.tsx": [],
+        "src/pages/Index.tsx": [],
+        "src/pages/NotFound.tsx": [],
+        "src/pages/Notes.tsx": [],
+        "src/pages/OTPAuth.tsx": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 14,
+      "files": [
+        {
+          "path": "src/pages/PYQs.tsx",
+          "language": "typescript",
+          "sizeLines": 98,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/PracticeDirectory.tsx",
+          "language": "typescript",
+          "sizeLines": 247,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/PrivacyPolicy.tsx",
+          "language": "typescript",
+          "sizeLines": 170,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/ProblemArena.tsx",
+          "language": "typescript",
+          "sizeLines": 442,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/Resources.tsx",
+          "language": "typescript",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/UserAuth.tsx",
+          "language": "typescript",
+          "sizeLines": 274,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/statsarthi/AboutMission.tsx",
+          "language": "typescript",
+          "sizeLines": 155,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/statsarthi/AdminDashboard.tsx",
+          "language": "typescript",
+          "sizeLines": 252,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/statsarthi/DiagnosticAssessment.tsx",
+          "language": "typescript",
+          "sizeLines": 234,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/statsarthi/Landing.tsx",
+          "language": "typescript",
+          "sizeLines": 101,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/statsarthi/LearnerDashboard.tsx",
+          "language": "typescript",
+          "sizeLines": 279,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/statsarthi/LearningPathway.tsx",
+          "language": "typescript",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/statsarthi/Login.tsx",
+          "language": "typescript",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/statsarthi/Onboarding.tsx",
+          "language": "typescript",
+          "sizeLines": 137,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/pages/statsarthi/QuizGenerator.tsx",
+          "language": "typescript",
+          "sizeLines": 295,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/services/gapUtils.ts",
+          "language": "typescript",
+          "sizeLines": 273,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/services/geminiService.ts",
+          "language": "typescript",
+          "sizeLines": 619,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/services/recommendationEngine.ts",
+          "language": "typescript",
+          "sizeLines": 76,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/setupTests.ts",
+          "language": "typescript",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/types/coding.ts",
+          "language": "typescript",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/types/statsarthi.ts",
+          "language": "typescript",
+          "sizeLines": 173,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/vite-env.d.ts",
+          "language": "typescript",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "supabase/config.toml",
+          "language": "toml",
+          "sizeLines": 3,
+          "fileCategory": "config"
+        },
+        {
+          "path": "supabase/functions/download-resource/index.ts",
+          "language": "typescript",
+          "sizeLines": 116,
+          "fileCategory": "code"
+        },
+        {
+          "path": "supabase/functions/study-assistant/index.ts",
+          "language": "typescript",
+          "sizeLines": 136,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/pages/PYQs.tsx": [],
+        "src/pages/PracticeDirectory.tsx": [],
+        "src/pages/PrivacyPolicy.tsx": [],
+        "src/pages/ProblemArena.tsx": [],
+        "src/pages/Resources.tsx": [],
+        "src/pages/UserAuth.tsx": [],
+        "src/pages/statsarthi/AboutMission.tsx": [],
+        "src/pages/statsarthi/AdminDashboard.tsx": [],
+        "src/pages/statsarthi/DiagnosticAssessment.tsx": [],
+        "src/pages/statsarthi/Landing.tsx": [],
+        "src/pages/statsarthi/LearnerDashboard.tsx": [],
+        "src/pages/statsarthi/LearningPathway.tsx": [],
+        "src/pages/statsarthi/Login.tsx": [],
+        "src/pages/statsarthi/Onboarding.tsx": [],
+        "src/pages/statsarthi/QuizGenerator.tsx": [],
+        "src/services/gapUtils.ts": [],
+        "src/services/geminiService.ts": [],
+        "src/services/recommendationEngine.ts": [],
+        "src/setupTests.ts": [],
+        "src/types/coding.ts": [],
+        "src/types/statsarthi.ts": [],
+        "src/vite-env.d.ts": [],
+        "supabase/config.toml": [],
+        "supabase/functions/download-resource/index.ts": [],
+        "supabase/functions/study-assistant/index.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 15,
+      "files": [
+        {
+          "path": "tailwind.config.ts",
+          "language": "typescript",
+          "sizeLines": 134,
+          "fileCategory": "code"
+        },
+        {
+          "path": "vite.config.ts",
+          "language": "typescript",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "tailwind.config.ts": [],
+        "vite.config.ts": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

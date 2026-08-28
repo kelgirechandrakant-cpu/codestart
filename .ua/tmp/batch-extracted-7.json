@@ -1,0 +1,3114 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 25,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 4,
+      "failed": 0,
+      "skipped": 21
+    }
+  },
+  "results": [
+    {
+      "path": ".agents/skills/adapt-gemini/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 162,
+      "nonEmptyLines": 138,
+      "sections": [
+        {
+          "heading": "Adapt Gemini Service — Add MoSPI Competency Methods",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Step 1: Read the Existing Service",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Step 2: Add New System Instruction for StatSarthi Chat Sessions",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Step 3: Add New Methods",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "`generateDiagnosticQuestions()`",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "`generateMCQsFromDocument()`",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "`evaluateCompetency()`",
+          "level": 3,
+          "line": 109
+        },
+        {
+          "heading": "Step 4: Summary of Changes",
+          "level": 2,
+          "line": 132
+        },
+        {
+          "heading": "Step 5: Add New Types",
+          "level": 2,
+          "line": 148
+        },
+        {
+          "heading": "Step 6: Verify",
+          "level": 2,
+          "line": 161
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": ".agents/skills/code-review/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 73,
+      "nonEmptyLines": 59,
+      "sections": [
+        {
+          "heading": "Code Review — StatSarthi",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Review Checklist",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "1. React Patterns",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "2. TypeScript Strictness",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "3. Firebase Safety",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "4. Gemini AI Quality",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "5. UI/UX Consistency",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "6. Dual-Mode Architecture",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "Review Format",
+          "level": 2,
+          "line": 62
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": ".agents/skills/design-review/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 98,
+      "nonEmptyLines": 78,
+      "sections": [
+        {
+          "heading": "Design Review — StatSarthi",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Review Dimensions (Rate 0-10)",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "1. Government Credibility (Target: 8+)",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "2. Information Hierarchy (Target: 8+)",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "3. Accessibility (Target: 7+)",
+          "level": 3,
+          "line": 28
+        },
+        {
+          "heading": "4. Responsive Layout (Target: 7+)",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "5. Data Visualization (Target: 8+)",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "6. User Flow (Target: 8+)",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "7. Quiz/Assessment UX (Target: 9+)",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "Red Flags (Auto-Fail)",
+          "level": 2,
+          "line": 66
+        },
+        {
+          "heading": "Output Format",
+          "level": 2,
+          "line": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": ".agents/skills/gap-finder/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 218,
+      "nonEmptyLines": 184,
+      "sections": [
+        {
+          "heading": "Competency Gap Finder — Pillar 1 (Diagnose)",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "What This Feature Does",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Step 1: Create the Competency Data",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "Step 2: Create Role Selection Component",
+          "level": 2,
+          "line": 116
+        },
+        {
+          "heading": "Step 3: Create Diagnostic Assessment Page",
+          "level": 2,
+          "line": 126
+        },
+        {
+          "heading": "Flow:",
+          "level": 3,
+          "line": 130
+        },
+        {
+          "heading": "Scoring Logic:",
+          "level": 3,
+          "line": 140
+        },
+        {
+          "heading": "Step 4: Create Gap Report Dashboard",
+          "level": 2,
+          "line": 155
+        },
+        {
+          "heading": "The Radar Chart (Hero Visual)",
+          "level": 3,
+          "line": 159
+        },
+        {
+          "heading": "Gap Summary Cards",
+          "level": 3,
+          "line": 181
+        },
+        {
+          "heading": "Step 5: Save to Firebase Firestore",
+          "level": 2,
+          "line": 187
+        },
+        {
+          "heading": "Step 6: Routes (in App.tsx)",
+          "level": 2,
+          "line": 203
+        },
+        {
+          "heading": "Testing",
+          "level": 2,
+          "line": 213
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": ".agents/skills/gov-theme/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 144,
+      "nonEmptyLines": 119,
+      "sections": [
+        {
+          "heading": "Government Theme — Professional Retheme",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Step 1: Update Tailwind Config Colors",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Step 2: Update Background & Base Styles",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "Step 3: Component Style Updates",
+          "level": 2,
+          "line": 82
+        },
+        {
+          "heading": "Cards",
+          "level": 3,
+          "line": 84
+        },
+        {
+          "heading": "Buttons",
+          "level": 3,
+          "line": 95
+        },
+        {
+          "heading": "Headers",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "Badges",
+          "level": 3,
+          "line": 103
+        },
+        {
+          "heading": "Step 4: Typography",
+          "level": 2,
+          "line": 109
+        },
+        {
+          "heading": "Step 5: Logo & Branding",
+          "level": 2,
+          "line": 121
+        },
+        {
+          "heading": "Step 6: Government Trust Signals",
+          "level": 2,
+          "line": 128
+        },
+        {
+          "heading": "Design Principles",
+          "level": 2,
+          "line": 138
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": ".agents/skills/idea-submission/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 128,
+      "nonEmptyLines": 93,
+      "sections": [
+        {
+          "heading": "Idea Submission — SIH 2026 (Deadline: 20 Sept 2026)",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "What the SIH Portal Requires",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Section 1: Problem Understanding",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "Section 2: Proposed Solution — StatSarthi",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "Pillar 1: AI Competency Gap Finder",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "Pillar 2: iGOT Pathway Recommender",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "Pillar 3: AI Quiz/MCQ Generator",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "Section 3: Technical Architecture",
+          "level": 2,
+          "line": 63
+        },
+        {
+          "heading": "Section 4: Feasibility & Innovation",
+          "level": 2,
+          "line": 80
+        },
+        {
+          "heading": "Section 5: Impact & Scalability",
+          "level": 2,
+          "line": 94
+        },
+        {
+          "heading": "Section 6: Team Details",
+          "level": 2,
+          "line": 109
+        },
+        {
+          "heading": "Submission Checklist",
+          "level": 2,
+          "line": 120
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": ".agents/skills/investigate/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 68,
+      "nonEmptyLines": 52,
+      "sections": [
+        {
+          "heading": "Investigate — Debug Methodology",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Iron Rule",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Step 1: Reproduce",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "Step 2: Trace the Data Flow",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "For AI/Gemini Issues",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "For Firebase Issues",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "For UI/Rendering Issues",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "Step 3: Hypothesize",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "Step 4: Verify",
+          "level": 2,
+          "line": 47
+        },
+        {
+          "heading": "Step 5: Fix",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "Step 6: Three-Strike Rule",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "Common StatSarthi Bug Patterns",
+          "level": 2,
+          "line": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": ".agents/skills/learning-pathway/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 161,
+      "nonEmptyLines": 132,
+      "sections": [
+        {
+          "heading": "Learning Pathway — Pillar 2 (Learn)",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "What This Feature Does",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Step 1: Course Catalogs (CRITICAL GROUNDING RULES)",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "Step 2: Build the Recommendation Engine",
+          "level": 2,
+          "line": 73
+        },
+        {
+          "heading": "Step 3: Create Learning Pathway Page",
+          "level": 2,
+          "line": 114
+        },
+        {
+          "heading": "Step 4: Progress Tracking with Firebase",
+          "level": 2,
+          "line": 131
+        },
+        {
+          "heading": "Step 5: Route (in App.tsx)",
+          "level": 2,
+          "line": 148
+        },
+        {
+          "heading": "Testing",
+          "level": 2,
+          "line": 155
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": ".agents/skills/perf-audit/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 63,
+      "nonEmptyLines": 51,
+      "sections": [
+        {
+          "heading": "Performance Audit — StatSarthi",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Audit Areas",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "1. Bundle Size",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "2. Code Splitting",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "3. Gemini API Performance",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "4. Firebase/Firestore Query Performance",
+          "level": 3,
+          "line": 38
+        },
+        {
+          "heading": "5. Rendering Performance",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "6. Image & Asset Optimization",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "Quick Wins If Slow",
+          "level": 2,
+          "line": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": ".agents/skills/plan-review/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 89,
+      "nonEmptyLines": 68,
+      "sections": [
+        {
+          "heading": "Plan Review — Architecture Check",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Forcing Questions",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "1. Data Flow",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "2. Component Boundaries",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "3. AI Integration Points",
+          "level": 3,
+          "line": 30
+        },
+        {
+          "heading": "4. Edge Cases",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "5. User Flow",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "6. Dual-Mode Check",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "Plan Document Template",
+          "level": 2,
+          "line": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": ".agents/skills/quiz-generator/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 147,
+      "nonEmptyLines": 118,
+      "sections": [
+        {
+          "heading": "Quiz Generator — Pillar 3 (Assess)",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "What This Feature Does",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Step 1: Create the Page",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "UI Layout",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "Step 2: Copy the PDF Upload Pattern",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "Step 3: Call the Gemini Method",
+          "level": 2,
+          "line": 82
+        },
+        {
+          "heading": "Step 4: Build the Question Editor",
+          "level": 2,
+          "line": 95
+        },
+        {
+          "heading": "Step 5: Export Functionality",
+          "level": 2,
+          "line": 105
+        },
+        {
+          "heading": "PDF Export",
+          "level": 3,
+          "line": 107
+        },
+        {
+          "heading": "CSV Export",
+          "level": 3,
+          "line": 110
+        },
+        {
+          "heading": "Step 6: Save to Firebase Firestore",
+          "level": 2,
+          "line": 117
+        },
+        {
+          "heading": "Step 7: Route (in App.tsx)",
+          "level": 2,
+          "line": 134
+        },
+        {
+          "heading": "Testing",
+          "level": 2,
+          "line": 141
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": ".agents/skills/security-audit/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 92,
+      "nonEmptyLines": 75,
+      "sections": [
+        {
+          "heading": "Security Audit — StatSarthi",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Audit Areas",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "1. API Key Exposure (CRITICAL)",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "2. Firebase Security Rules (CRITICAL)",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "3. XSS & Content Injection",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "4. Auth & Session Security",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "5. Data Privacy (Government Compliance)",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "6. Input Validation",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "Audit Output Format",
+          "level": 2,
+          "line": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": ".agents/skills/ship/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 97,
+      "nonEmptyLines": 80,
+      "sections": [
+        {
+          "heading": "Ship — Pre-Deploy Checklist",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Pre-Deploy Checks",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "1. Build Verification",
+          "level": 3,
+          "line": 15
+        },
+        {
+          "heading": "2. Route Verification",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "3. AI Feature Verification",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "4. Firebase Verification",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "5. Security Final Check",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "6. Mobile Check",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "7. Performance",
+          "level": 3,
+          "line": 70
+        },
+        {
+          "heading": "Deploy",
+          "level": 2,
+          "line": 78
+        },
+        {
+          "heading": "Option A: Firebase Hosting (Recommended)",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "Option B: Vercel",
+          "level": 3,
+          "line": 88
+        },
+        {
+          "heading": "Post-Deploy",
+          "level": 3,
+          "line": 93
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": ".agents/skills/strip-and-fork/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 112,
+      "nonEmptyLines": 94,
+      "sections": [
+        {
+          "heading": "Hide & Fork — Prepare StatSarthi Alongside EduResources",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "When to Use",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "Step 1: Read Context",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Step 2: Create StatSarthi Directory Structure",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Step 3: Comment Out Unused Routes in App.tsx",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Step 4: Update Navbar (Preserve Original)",
+          "level": 2,
+          "line": 66
+        },
+        {
+          "heading": "Step 5: Set Up Firebase",
+          "level": 2,
+          "line": 75
+        },
+        {
+          "heading": "Step 6: Update .env (Append, Don't Replace)",
+          "level": 2,
+          "line": 81
+        },
+        {
+          "heading": "Step 7: Update index.html",
+          "level": 2,
+          "line": 84
+        },
+        {
+          "heading": "Step 8: Update package.json Name",
+          "level": 2,
+          "line": 88
+        },
+        {
+          "heading": "Step 9: Verify Build",
+          "level": 2,
+          "line": 96
+        },
+        {
+          "heading": "What NOT to Touch",
+          "level": 2,
+          "line": 104
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": ".agents/skills/understand-chat/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 70,
+      "nonEmptyLines": 56,
+      "sections": [
+        {
+          "heading": "/understand-chat",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "Graph Structure Reference",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "How to Read Efficiently",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Instructions",
+          "level": 2,
+          "line": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": ".agents/skills/understand-dashboard/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 155,
+      "nonEmptyLines": 133,
+      "sections": [
+        {
+          "heading": "/understand-dashboard",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "Instructions",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Notes",
+          "level": 2,
+          "line": 150
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": ".agents/skills/understand-diff/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 85,
+      "nonEmptyLines": 70,
+      "sections": [
+        {
+          "heading": "/understand-diff",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "Graph Structure Reference",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "How to Read Efficiently",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "Instructions",
+          "level": 2,
+          "line": 31
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": ".agents/skills/understand-domain/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 160,
+      "nonEmptyLines": 130,
+      "sections": [
+        {
+          "heading": "/understand-domain",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "How It Works",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Instructions",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Phase 0: Resolve `PROJECT_ROOT`",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "Phase 1: Detect Existing Graph",
+          "level": 3,
+          "line": 95
+        },
+        {
+          "heading": "Phase 2: Lightweight Scan (Path 1)",
+          "level": 3,
+          "line": 115
+        },
+        {
+          "heading": "Phase 3: Derive from Existing Graph (Path 2)",
+          "level": 3,
+          "line": 132
+        },
+        {
+          "heading": "Phase 4: Domain Analysis",
+          "level": 3,
+          "line": 143
+        },
+        {
+          "heading": "Phase 5: Validate and Save",
+          "level": 3,
+          "line": 149
+        },
+        {
+          "heading": "Phase 6: Launch Dashboard",
+          "level": 3,
+          "line": 157
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": ".agents/skills/understand-domain/extract-domain-context.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 435,
+      "nonEmptyLines": 361,
+      "functions": [
+        {
+          "name": "resolve_ua_dir",
+          "startLine": 24,
+          "endLine": 27,
+          "params": [
+            "root"
+          ]
+        },
+        {
+          "name": "parse_gitignore",
+          "startLine": 126,
+          "endLine": 145,
+          "params": [
+            "project_root"
+          ]
+        },
+        {
+          "name": "is_ignored",
+          "startLine": 148,
+          "endLine": 153,
+          "params": [
+            "rel_path",
+            "gitignore_patterns"
+          ]
+        },
+        {
+          "name": "scan_file_tree",
+          "startLine": 158,
+          "endLine": 199,
+          "params": [
+            "root",
+            "gitignore_patterns",
+            "max_depth"
+          ]
+        },
+        {
+          "name": "detect_entry_points",
+          "startLine": 204,
+          "endLine": 246,
+          "params": [
+            "root",
+            "file_paths"
+          ]
+        },
+        {
+          "name": "extract_file_signatures",
+          "startLine": 251,
+          "endLine": 308,
+          "params": [
+            "root",
+            "file_paths"
+          ]
+        },
+        {
+          "name": "extract_metadata",
+          "startLine": 313,
+          "endLine": 345,
+          "params": [
+            "root"
+          ]
+        },
+        {
+          "name": "_truncate_to_fit",
+          "startLine": 350,
+          "endLine": 380,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 383,
+          "endLine": 431,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "resolve_ua_dir",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "parse_gitignore",
+          "line": 126,
+          "isDefault": false
+        },
+        {
+          "name": "is_ignored",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "scan_file_tree",
+          "line": 158,
+          "isDefault": false
+        },
+        {
+          "name": "detect_entry_points",
+          "line": 204,
+          "isDefault": false
+        },
+        {
+          "name": "extract_file_signatures",
+          "line": 251,
+          "isDefault": false
+        },
+        {
+          "name": "extract_metadata",
+          "line": 313,
+          "isDefault": false
+        },
+        {
+          "name": "_truncate_to_fit",
+          "line": 350,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 383,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "resolve_ua_dir",
+          "callee": "legacy.is_dir",
+          "lineNumber": 27
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "gitignore.exists",
+          "lineNumber": 130
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "gitignore.read_text(encoding=\"utf-8\", errors=\"replace\").splitlines",
+          "lineNumber": 133
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "gitignore.read_text",
+          "lineNumber": 133
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "line.strip",
+          "lineNumber": 134
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "line.startswith",
+          "lineNumber": 135
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "line.replace(\".\", r\"\\.\").replace(\"**/\", \"(.*/)?\").replace(\"*\", \"[^/]*\").replace",
+          "lineNumber": 138
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "line.replace(\".\", r\"\\.\").replace(\"**/\", \"(.*/)?\").replace",
+          "lineNumber": 138
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "line.replace(\".\", r\"\\.\").replace",
+          "lineNumber": 138
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "line.replace",
+          "lineNumber": 138
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "line.endswith",
+          "lineNumber": 139
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "regex.rstrip",
+          "lineNumber": 140
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "patterns.append",
+          "lineNumber": 142
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "re.compile",
+          "lineNumber": 142
+        },
+        {
+          "caller": "parse_gitignore",
+          "callee": "print",
+          "lineNumber": 144
+        },
+        {
+          "caller": "is_ignored",
+          "callee": "pattern.search",
+          "lineNumber": 151
+        },
+        {
+          "caller": "_walk",
+          "callee": "len",
+          "lineNumber": 167
+        },
+        {
+          "caller": "_walk",
+          "callee": "sorted",
+          "lineNumber": 170
+        },
+        {
+          "caller": "_walk",
+          "callee": "dir_path.iterdir",
+          "lineNumber": 170
+        },
+        {
+          "caller": "_walk",
+          "callee": "e.is_dir",
+          "lineNumber": 170
+        },
+        {
+          "caller": "_walk",
+          "callee": "e.name.lower",
+          "lineNumber": 170
+        },
+        {
+          "caller": "_walk",
+          "callee": "len",
+          "lineNumber": 176
+        },
+        {
+          "caller": "_walk",
+          "callee": "entry.is_symlink",
+          "lineNumber": 179
+        },
+        {
+          "caller": "_walk",
+          "callee": "str",
+          "lineNumber": 181
+        },
+        {
+          "caller": "_walk",
+          "callee": "entry.relative_to",
+          "lineNumber": 181
+        },
+        {
+          "caller": "_walk",
+          "callee": "entry.is_dir",
+          "lineNumber": 182
+        },
+        {
+          "caller": "_walk",
+          "callee": "is_ignored",
+          "lineNumber": 185
+        },
+        {
+          "caller": "_walk",
+          "callee": "_walk",
+          "lineNumber": 187
+        },
+        {
+          "caller": "_walk",
+          "callee": "entry.is_file",
+          "lineNumber": 188
+        },
+        {
+          "caller": "_walk",
+          "callee": "is_ignored",
+          "lineNumber": 193
+        },
+        {
+          "caller": "_walk",
+          "callee": "result.append",
+          "lineNumber": 195
+        },
+        {
+          "caller": "scan_file_tree",
+          "callee": "_walk",
+          "lineNumber": 198
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "re.compile",
+          "lineNumber": 209
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "len",
+          "lineNumber": 212
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "test_patterns.search",
+          "lineNumber": 214
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "full_path.read_text",
+          "lineNumber": 218
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "content.splitlines",
+          "lineNumber": 222
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "pattern.finditer",
+          "lineNumber": 224
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "content[:match.start()].count",
+          "lineNumber": 226
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "match.start",
+          "lineNumber": 226
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "max",
+          "lineNumber": 228
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "min",
+          "lineNumber": 229
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "len",
+          "lineNumber": 229
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "\"\\n\".join",
+          "lineNumber": 230
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "entry_points.append",
+          "lineNumber": 232
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "match.group",
+          "lineNumber": 237
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "len",
+          "lineNumber": 241
+        },
+        {
+          "caller": "detect_entry_points",
+          "callee": "len",
+          "lineNumber": 243
+        },
+        {
+          "caller": "priority_score",
+          "callee": "path.lower",
+          "lineNumber": 265
+        },
+        {
+          "caller": "extract_file_signatures",
+          "callee": "sorted",
+          "lineNumber": 272
+        },
+        {
+          "caller": "extract_file_signatures",
+          "callee": "full_path.read_text",
+          "lineNumber": 277
+        },
+        {
+          "caller": "extract_file_signatures",
+          "callee": "content.splitlines",
+          "lineNumber": 281
+        },
+        {
+          "caller": "extract_file_signatures",
+          "callee": "\"\\n\".join",
+          "lineNumber": 282
+        },
+        {
+          "caller": "extract_file_signatures",
+          "callee": "re.findall",
+          "lineNumber": 285
+        },
+        {
+          "caller": "extract_file_signatures",
+          "callee": "re.findall",
+          "lineNumber": 291
+        },
+        {
+          "caller": "extract_file_signatures",
+          "callee": "re.findall",
+          "lineNumber": 294
+        },
+        {
+          "caller": "extract_file_signatures",
+          "callee": "signatures.append",
+          "lineNumber": 300
+        },
+        {
+          "caller": "extract_file_signatures",
+          "callee": "len",
+          "lineNumber": 304
+        },
+        {
+          "caller": "extract_file_signatures",
+          "callee": "content.splitlines",
+          "lineNumber": 304
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "filepath.exists",
+          "lineNumber": 319
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "filepath.read_text",
+          "lineNumber": 322
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "json.loads",
+          "lineNumber": 328
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "pkg.get",
+          "lineNumber": 330
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "pkg.get",
+          "lineNumber": 331
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "list",
+          "lineNumber": 332
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "(pkg.get(\"scripts\") or {}).keys",
+          "lineNumber": 332
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "pkg.get",
+          "lineNumber": 332
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "list",
+          "lineNumber": 333
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "(pkg.get(\"dependencies\") or {}).keys",
+          "lineNumber": 333
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "pkg.get",
+          "lineNumber": 333
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "list",
+          "lineNumber": 334
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "(pkg.get(\"devDependencies\") or {}).keys",
+          "lineNumber": 334
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "pkg.get",
+          "lineNumber": 334
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "filename.endswith",
+          "lineNumber": 338
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "filename.endswith",
+          "lineNumber": 340
+        },
+        {
+          "caller": "extract_metadata",
+          "callee": "filename.endswith",
+          "lineNumber": 342
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "json.dumps",
+          "lineNumber": 352
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "len",
+          "lineNumber": 353
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "output.encode",
+          "lineNumber": 353
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "json.dumps",
+          "lineNumber": 358
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "len",
+          "lineNumber": 359
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "output.encode",
+          "lineNumber": 359
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "context.get",
+          "lineNumber": 363
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "json.dumps",
+          "lineNumber": 365
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "len",
+          "lineNumber": 366
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "output.encode",
+          "lineNumber": 366
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "context.get",
+          "lineNumber": 370
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "json.dumps",
+          "lineNumber": 372
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "len",
+          "lineNumber": 373
+        },
+        {
+          "caller": "_truncate_to_fit",
+          "callee": "output.encode",
+          "lineNumber": 373
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 384
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 385
+        },
+        {
+          "caller": "main",
+          "callee": "sys.exit",
+          "lineNumber": 386
+        },
+        {
+          "caller": "main",
+          "callee": "Path(sys.argv[1]).resolve",
+          "lineNumber": 388
+        },
+        {
+          "caller": "main",
+          "callee": "Path",
+          "lineNumber": 388
+        },
+        {
+          "caller": "main",
+          "callee": "project_root.is_dir",
+          "lineNumber": 389
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 390
+        },
+        {
+          "caller": "main",
+          "callee": "sys.exit",
+          "lineNumber": 391
+        },
+        {
+          "caller": "main",
+          "callee": "resolve_ua_dir",
+          "lineNumber": 395
+        },
+        {
+          "caller": "main",
+          "callee": "output_dir.mkdir",
+          "lineNumber": 396
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 399
+        },
+        {
+          "caller": "main",
+          "callee": "parse_gitignore",
+          "lineNumber": 401
+        },
+        {
+          "caller": "main",
+          "callee": "scan_file_tree",
+          "lineNumber": 402
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 403
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 403
+        },
+        {
+          "caller": "main",
+          "callee": "detect_entry_points",
+          "lineNumber": 405
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 406
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 406
+        },
+        {
+          "caller": "main",
+          "callee": "extract_file_signatures",
+          "lineNumber": 408
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 409
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 409
+        },
+        {
+          "caller": "main",
+          "callee": "extract_metadata",
+          "lineNumber": 411
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 412
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 412
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 415
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 416
+        },
+        {
+          "caller": "main",
+          "callee": "_truncate_to_fit",
+          "lineNumber": 423
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 424
+        },
+        {
+          "caller": "main",
+          "callee": "output_path.write_text",
+          "lineNumber": 425
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 426
+        },
+        {
+          "caller": "main",
+          "callee": "output.encode",
+          "lineNumber": 426
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 427
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 430
+        },
+        {
+          "caller": "main",
+          "callee": "sys.exit",
+          "lineNumber": 431
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 9,
+        "classCount": 0
+      }
+    },
+    {
+      "path": ".agents/skills/understand-explain/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 73,
+      "nonEmptyLines": 58,
+      "sections": [
+        {
+          "heading": "/understand-explain",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "Graph Structure Reference",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "How to Read Efficiently",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Instructions",
+          "level": 2,
+          "line": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": ".agents/skills/understand-figma/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 69,
+      "nonEmptyLines": 50,
+      "sections": [
+        {
+          "heading": "/understand-figma",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "Prerequisites",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Phase 0 — Pre-flight",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Phase 1 — FETCH & PARSE (deterministic)",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "Phase 2 — ANALYZE (LLM enrichment)",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "Phase 3 — MERGE",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "Phase 4 — SAVE & LAUNCH",
+          "level": 2,
+          "line": 61
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": ".agents/skills/understand-figma/figma-merge.mjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 38,
+      "functions": [
+        {
+          "name": "uaDir",
+          "startLine": 8,
+          "endLine": 8,
+          "params": [
+            "root"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "uaDir",
+          "callee": "join",
+          "lineNumber": 8
+        },
+        {
+          "caller": "uaDir",
+          "callee": "existsSync",
+          "lineNumber": 8
+        },
+        {
+          "caller": "uaDir",
+          "callee": "join",
+          "lineNumber": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": ".agents/skills/understand-figma/figma-scan.mjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 105,
+      "nonEmptyLines": 94,
+      "functions": [
+        {
+          "name": "uaDir",
+          "startLine": 8,
+          "endLine": 8,
+          "params": [
+            "root"
+          ]
+        },
+        {
+          "name": "count",
+          "startLine": 75,
+          "endLine": 75,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "refreshThumbnailsInPlace",
+          "startLine": 89,
+          "endLine": 105,
+          "params": [
+            "projectRoot",
+            "source"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "uaDir",
+          "callee": "join",
+          "lineNumber": 8
+        },
+        {
+          "caller": "uaDir",
+          "callee": "existsSync",
+          "lineNumber": 8
+        },
+        {
+          "caller": "uaDir",
+          "callee": "join",
+          "lineNumber": 8
+        },
+        {
+          "caller": "count",
+          "callee": "nodes.filter",
+          "lineNumber": 75
+        },
+        {
+          "caller": "refreshThumbnailsInPlace",
+          "callee": "join",
+          "lineNumber": 90
+        },
+        {
+          "caller": "refreshThumbnailsInPlace",
+          "callee": "uaDir",
+          "lineNumber": 90
+        },
+        {
+          "caller": "refreshThumbnailsInPlace",
+          "callee": "existsSync",
+          "lineNumber": 91
+        },
+        {
+          "caller": "refreshThumbnailsInPlace",
+          "callee": "JSON.parse",
+          "lineNumber": 93
+        },
+        {
+          "caller": "refreshThumbnailsInPlace",
+          "callee": "readFileSync",
+          "lineNumber": 93
+        },
+        {
+          "caller": "refreshThumbnailsInPlace",
+          "callee": "(graph.nodes ?? []).filter",
+          "lineNumber": 94
+        },
+        {
+          "caller": "refreshThumbnailsInPlace",
+          "callee": "source.renderImages",
+          "lineNumber": 98
+        },
+        {
+          "caller": "refreshThumbnailsInPlace",
+          "callee": "screens.map",
+          "lineNumber": 98
+        },
+        {
+          "caller": "refreshThumbnailsInPlace",
+          "callee": "applyScreenThumbnails",
+          "lineNumber": 99
+        },
+        {
+          "caller": "refreshThumbnailsInPlace",
+          "callee": "writeFileSync",
+          "lineNumber": 100
+        },
+        {
+          "caller": "refreshThumbnailsInPlace",
+          "callee": "JSON.stringify",
+          "lineNumber": 100
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": ".agents/skills/understand-knowledge/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 137,
+      "nonEmptyLines": 102,
+      "sections": [
+        {
+          "heading": "/understand-knowledge",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "What It Detects",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Instructions",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "Phase 1: DETECT",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "Phase 2: SCAN (already done)",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "Phase 3: ANALYZE",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "Phase 4: MERGE",
+          "level": 3,
+          "line": 73
+        },
+        {
+          "heading": "Phase 5: SAVE",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "Notes",
+          "level": 2,
+          "line": 132
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": ".agents/skills/understand-knowledge/merge-knowledge-graph.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 426,
+      "nonEmptyLines": 364,
+      "functions": [
+        {
+          "name": "resolve_ua_dir",
+          "startLine": 28,
+          "endLine": 31,
+          "params": [
+            "root"
+          ]
+        },
+        {
+          "name": "_find_markdown_case_insensitive",
+          "startLine": 34,
+          "endLine": 50,
+          "params": [
+            "parent",
+            "name"
+          ]
+        },
+        {
+          "name": "normalize_node_type",
+          "startLine": 101,
+          "endLine": 103,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "normalize_edge_type",
+          "startLine": 106,
+          "endLine": 108,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "normalize_entity_name",
+          "startLine": 111,
+          "endLine": 113,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "merge",
+          "startLine": 120,
+          "endLine": 409,
+          "params": [
+            "root"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 412,
+          "endLine": 422,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "resolve_ua_dir",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "_find_markdown_case_insensitive",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "normalize_node_type",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "normalize_edge_type",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "normalize_entity_name",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "merge",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 412,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "resolve_ua_dir",
+          "callee": "legacy.is_dir",
+          "lineNumber": 31
+        },
+        {
+          "caller": "_find_markdown_case_insensitive",
+          "callee": "candidate.is_file",
+          "lineNumber": 42
+        },
+        {
+          "caller": "_find_markdown_case_insensitive",
+          "callee": "parent.is_dir",
+          "lineNumber": 44
+        },
+        {
+          "caller": "_find_markdown_case_insensitive",
+          "callee": "name.lower",
+          "lineNumber": 46
+        },
+        {
+          "caller": "_find_markdown_case_insensitive",
+          "callee": "sorted",
+          "lineNumber": 47
+        },
+        {
+          "caller": "_find_markdown_case_insensitive",
+          "callee": "parent.iterdir",
+          "lineNumber": 47
+        },
+        {
+          "caller": "_find_markdown_case_insensitive",
+          "callee": "child.is_file",
+          "lineNumber": 48
+        },
+        {
+          "caller": "_find_markdown_case_insensitive",
+          "callee": "child.name.lower",
+          "lineNumber": 48
+        },
+        {
+          "caller": "normalize_node_type",
+          "callee": "t.lower().strip",
+          "lineNumber": 102
+        },
+        {
+          "caller": "normalize_node_type",
+          "callee": "t.lower",
+          "lineNumber": 102
+        },
+        {
+          "caller": "normalize_node_type",
+          "callee": "NODE_TYPE_ALIASES.get",
+          "lineNumber": 103
+        },
+        {
+          "caller": "normalize_edge_type",
+          "callee": "t.lower().strip",
+          "lineNumber": 107
+        },
+        {
+          "caller": "normalize_edge_type",
+          "callee": "t.lower",
+          "lineNumber": 107
+        },
+        {
+          "caller": "normalize_edge_type",
+          "callee": "EDGE_TYPE_ALIASES.get",
+          "lineNumber": 108
+        },
+        {
+          "caller": "normalize_entity_name",
+          "callee": "re.sub",
+          "lineNumber": 113
+        },
+        {
+          "caller": "normalize_entity_name",
+          "callee": "name.strip().lower",
+          "lineNumber": 113
+        },
+        {
+          "caller": "normalize_entity_name",
+          "callee": "name.strip",
+          "lineNumber": 113
+        },
+        {
+          "caller": "merge",
+          "callee": "resolve_ua_dir",
+          "lineNumber": 121
+        },
+        {
+          "caller": "merge",
+          "callee": "manifest_path.is_file",
+          "lineNumber": 124
+        },
+        {
+          "caller": "merge",
+          "callee": "print",
+          "lineNumber": 125
+        },
+        {
+          "caller": "merge",
+          "callee": "sys.exit",
+          "lineNumber": 127
+        },
+        {
+          "caller": "merge",
+          "callee": "json.loads",
+          "lineNumber": 130
+        },
+        {
+          "caller": "merge",
+          "callee": "manifest_path.read_text",
+          "lineNumber": 130
+        },
+        {
+          "caller": "merge",
+          "callee": "list",
+          "lineNumber": 132
+        },
+        {
+          "caller": "merge",
+          "callee": "len",
+          "lineNumber": 134
+        },
+        {
+          "caller": "merge",
+          "callee": "len",
+          "lineNumber": 134
+        },
+        {
+          "caller": "merge",
+          "callee": "sorted",
+          "lineNumber": 139
+        },
+        {
+          "caller": "merge",
+          "callee": "intermediate.glob",
+          "lineNumber": 139
+        },
+        {
+          "caller": "merge",
+          "callee": "json.loads",
+          "lineNumber": 146
+        },
+        {
+          "caller": "merge",
+          "callee": "bf.read_text",
+          "lineNumber": 146
+        },
+        {
+          "caller": "merge",
+          "callee": "print",
+          "lineNumber": 148
+        },
+        {
+          "caller": "merge",
+          "callee": "batch.get",
+          "lineNumber": 152
+        },
+        {
+          "caller": "merge",
+          "callee": "normalize_node_type",
+          "lineNumber": 153
+        },
+        {
+          "caller": "merge",
+          "callee": "node.get",
+          "lineNumber": 153
+        },
+        {
+          "caller": "merge",
+          "callee": "print",
+          "lineNumber": 155
+        },
+        {
+          "caller": "merge",
+          "callee": "node.get",
+          "lineNumber": 155
+        },
+        {
+          "caller": "merge",
+          "callee": "node.get",
+          "lineNumber": 160
+        },
+        {
+          "caller": "merge",
+          "callee": "normalize_entity_name",
+          "lineNumber": 164
+        },
+        {
+          "caller": "merge",
+          "callee": "node.get",
+          "lineNumber": 164
+        },
+        {
+          "caller": "merge",
+          "callee": "node.setdefault",
+          "lineNumber": 176
+        },
+        {
+          "caller": "merge",
+          "callee": "node.get",
+          "lineNumber": 176
+        },
+        {
+          "caller": "merge",
+          "callee": "node.setdefault",
+          "lineNumber": 177
+        },
+        {
+          "caller": "merge",
+          "callee": "node.setdefault",
+          "lineNumber": 178
+        },
+        {
+          "caller": "merge",
+          "callee": "batch.get",
+          "lineNumber": 183
+        },
+        {
+          "caller": "merge",
+          "callee": "normalize_edge_type",
+          "lineNumber": 184
+        },
+        {
+          "caller": "merge",
+          "callee": "edge.get",
+          "lineNumber": 184
+        },
+        {
+          "caller": "merge",
+          "callee": "print",
+          "lineNumber": 186
+        },
+        {
+          "caller": "merge",
+          "callee": "edge.get",
+          "lineNumber": 186
+        },
+        {
+          "caller": "merge",
+          "callee": "edge.setdefault",
+          "lineNumber": 191
+        },
+        {
+          "caller": "merge",
+          "callee": "edge.setdefault",
+          "lineNumber": 192
+        },
+        {
+          "caller": "merge",
+          "callee": "dedup_remap.get",
+          "lineNumber": 195
+        },
+        {
+          "caller": "merge",
+          "callee": "edge.get",
+          "lineNumber": 195
+        },
+        {
+          "caller": "merge",
+          "callee": "edge.get",
+          "lineNumber": 195
+        },
+        {
+          "caller": "merge",
+          "callee": "dedup_remap.get",
+          "lineNumber": 196
+        },
+        {
+          "caller": "merge",
+          "callee": "edge.get",
+          "lineNumber": 196
+        },
+        {
+          "caller": "merge",
+          "callee": "edge.get",
+          "lineNumber": 196
+        },
+        {
+          "caller": "merge",
+          "callee": "edges.append",
+          "lineNumber": 200
+        },
+        {
+          "caller": "merge",
+          "callee": "set",
+          "lineNumber": 206
+        },
+        {
+          "caller": "merge",
+          "callee": "seen.add",
+          "lineNumber": 211
+        },
+        {
+          "caller": "merge",
+          "callee": "final_edges.append",
+          "lineNumber": 212
+        },
+        {
+          "caller": "merge",
+          "callee": "manifest.get",
+          "lineNumber": 215
+        },
+        {
+          "caller": "merge",
+          "callee": "cat_name.lower().replace",
+          "lineNumber": 221
+        },
+        {
+          "caller": "merge",
+          "callee": "cat_name.lower",
+          "lineNumber": 221
+        },
+        {
+          "caller": "merge",
+          "callee": "members.append",
+          "lineNumber": 227
+        },
+        {
+          "caller": "merge",
+          "callee": "nodes.get(edge[\"source\"], {}).get",
+          "lineNumber": 236
+        },
+        {
+          "caller": "merge",
+          "callee": "nodes.get",
+          "lineNumber": 236
+        },
+        {
+          "caller": "merge",
+          "callee": "nodes.get(edge[\"target\"], {}).get",
+          "lineNumber": 237
+        },
+        {
+          "caller": "merge",
+          "callee": "nodes.get",
+          "lineNumber": 237
+        },
+        {
+          "caller": "merge",
+          "callee": "child_to_article.setdefault",
+          "lineNumber": 240
+        },
+        {
+          "caller": "merge",
+          "callee": "child_to_article.setdefault",
+          "lineNumber": 242
+        },
+        {
+          "caller": "merge",
+          "callee": "nid.startswith",
+          "lineNumber": 249
+        },
+        {
+          "caller": "merge",
+          "callee": "nid.split",
+          "lineNumber": 251
+        },
+        {
+          "caller": "merge",
+          "callee": "nid.replace",
+          "lineNumber": 251
+        },
+        {
+          "caller": "merge",
+          "callee": "nodes.items",
+          "lineNumber": 254
+        },
+        {
+          "caller": "merge",
+          "callee": "nid.split",
+          "lineNumber": 258
+        },
+        {
+          "caller": "merge",
+          "callee": "raw.split",
+          "lineNumber": 259
+        },
+        {
+          "caller": "merge",
+          "callee": "bare_to_article.items",
+          "lineNumber": 268
+        },
+        {
+          "caller": "merge",
+          "callee": "bare.endswith",
+          "lineNumber": 274
+        },
+        {
+          "caller": "merge",
+          "callee": "bare.endswith",
+          "lineNumber": 274
+        },
+        {
+          "caller": "merge",
+          "callee": "node.get",
+          "lineNumber": 280
+        },
+        {
+          "caller": "merge",
+          "callee": "node[\"name\"].lower",
+          "lineNumber": 281
+        },
+        {
+          "caller": "merge",
+          "callee": "nodes.items",
+          "lineNumber": 282
+        },
+        {
+          "caller": "merge",
+          "callee": "aid.startswith",
+          "lineNumber": 283
+        },
+        {
+          "caller": "merge",
+          "callee": "anode.get(\"name\", \"\").lower",
+          "lineNumber": 286
+        },
+        {
+          "caller": "merge",
+          "callee": "anode.get",
+          "lineNumber": 286
+        },
+        {
+          "caller": "merge",
+          "callee": "anode.get",
+          "lineNumber": 291
+        },
+        {
+          "caller": "merge",
+          "callee": "(meta.get(\"content\") or \"\").lower",
+          "lineNumber": 292
+        },
+        {
+          "caller": "merge",
+          "callee": "meta.get",
+          "lineNumber": 292
+        },
+        {
+          "caller": "merge",
+          "callee": "len",
+          "lineNumber": 293
+        },
+        {
+          "caller": "merge",
+          "callee": "child_to_article.items",
+          "lineNumber": 299
+        },
+        {
+          "caller": "merge",
+          "callee": "article_layer_map.get",
+          "lineNumber": 300
+        },
+        {
+          "caller": "merge",
+          "callee": "layer_members[layer_id].append",
+          "lineNumber": 302
+        },
+        {
+          "caller": "merge",
+          "callee": "cat_name.lower().replace",
+          "lineNumber": 309
+        },
+        {
+          "caller": "merge",
+          "callee": "cat_name.lower",
+          "lineNumber": 309
+        },
+        {
+          "caller": "merge",
+          "callee": "list",
+          "lineNumber": 311
+        },
+        {
+          "caller": "merge",
+          "callee": "dict.fromkeys",
+          "lineNumber": 311
+        },
+        {
+          "caller": "merge",
+          "callee": "layer_members.get",
+          "lineNumber": 311
+        },
+        {
+          "caller": "merge",
+          "callee": "layers.append",
+          "lineNumber": 312
+        },
+        {
+          "caller": "merge",
+          "callee": "len",
+          "lineNumber": 315
+        },
+        {
+          "caller": "merge",
+          "callee": "set",
+          "lineNumber": 320
+        },
+        {
+          "caller": "merge",
+          "callee": "categorized_ids.update",
+          "lineNumber": 322
+        },
+        {
+          "caller": "merge",
+          "callee": "layers.append",
+          "lineNumber": 325
+        },
+        {
+          "caller": "merge",
+          "callee": "len",
+          "lineNumber": 328
+        },
+        {
+          "caller": "merge",
+          "callee": "enumerate",
+          "lineNumber": 334
+        },
+        {
+          "caller": "merge",
+          "callee": "cat[\"name\"].lower().replace",
+          "lineNumber": 335
+        },
+        {
+          "caller": "merge",
+          "callee": "cat[\"name\"].lower",
+          "lineNumber": 335
+        },
+        {
+          "caller": "merge",
+          "callee": "tour.append",
+          "lineNumber": 343
+        },
+        {
+          "caller": "merge",
+          "callee": "_find_markdown_case_insensitive",
+          "lineNumber": 354
+        },
+        {
+          "caller": "merge",
+          "callee": "index_path.is_file",
+          "lineNumber": 355
+        },
+        {
+          "caller": "merge",
+          "callee": "_find_markdown_case_insensitive",
+          "lineNumber": 356
+        },
+        {
+          "caller": "merge",
+          "callee": "index_path.is_file",
+          "lineNumber": 357
+        },
+        {
+          "caller": "merge",
+          "callee": "index_path.read_text",
+          "lineNumber": 358
+        },
+        {
+          "caller": "merge",
+          "callee": "re.search",
+          "lineNumber": 359
+        },
+        {
+          "caller": "merge",
+          "callee": "h1_match.group(1).strip",
+          "lineNumber": 361
+        },
+        {
+          "caller": "merge",
+          "callee": "h1_match.group",
+          "lineNumber": 361
+        },
+        {
+          "caller": "merge",
+          "callee": "datetime.now(timezone.utc).isoformat",
+          "lineNumber": 372
+        },
+        {
+          "caller": "merge",
+          "callee": "datetime.now",
+          "lineNumber": 372
+        },
+        {
+          "caller": "merge",
+          "callee": "list",
+          "lineNumber": 375
+        },
+        {
+          "caller": "merge",
+          "callee": "nodes.values",
+          "lineNumber": 375
+        },
+        {
+          "caller": "merge",
+          "callee": "subprocess.run",
+          "lineNumber": 384
+        },
+        {
+          "caller": "merge",
+          "callee": "str",
+          "lineNumber": 386
+        },
+        {
+          "caller": "merge",
+          "callee": "result.stdout.strip",
+          "lineNumber": 389
+        },
+        {
+          "caller": "merge",
+          "callee": "out_path.write_text",
+          "lineNumber": 395
+        },
+        {
+          "caller": "merge",
+          "callee": "json.dumps",
+          "lineNumber": 395
+        },
+        {
+          "caller": "merge",
+          "callee": "print",
+          "lineNumber": 398
+        },
+        {
+          "caller": "merge",
+          "callee": "print",
+          "lineNumber": 401
+        },
+        {
+          "caller": "merge",
+          "callee": "print",
+          "lineNumber": 405
+        },
+        {
+          "caller": "merge",
+          "callee": "len",
+          "lineNumber": 405
+        },
+        {
+          "caller": "merge",
+          "callee": "len",
+          "lineNumber": 405
+        },
+        {
+          "caller": "merge",
+          "callee": "len",
+          "lineNumber": 406
+        },
+        {
+          "caller": "merge",
+          "callee": "len",
+          "lineNumber": 406
+        },
+        {
+          "caller": "merge",
+          "callee": "print",
+          "lineNumber": 407
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 413
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 414
+        },
+        {
+          "caller": "main",
+          "callee": "sys.exit",
+          "lineNumber": 415
+        },
+        {
+          "caller": "main",
+          "callee": "Path(sys.argv[1]).resolve",
+          "lineNumber": 417
+        },
+        {
+          "caller": "main",
+          "callee": "Path",
+          "lineNumber": 417
+        },
+        {
+          "caller": "main",
+          "callee": "root.is_dir",
+          "lineNumber": 418
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 419
+        },
+        {
+          "caller": "main",
+          "callee": "sys.exit",
+          "lineNumber": 420
+        },
+        {
+          "caller": "main",
+          "callee": "merge",
+          "lineNumber": 422
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    }
+  ]
+}

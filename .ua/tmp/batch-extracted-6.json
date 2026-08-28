@@ -1,0 +1,572 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 10,
+  "filesSkipped": [
+    "index.html"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 10,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 10
+    }
+  },
+  "results": [
+    {
+      "path": ".env",
+      "language": "config",
+      "fileCategory": "config",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "definitions": [
+        {
+          "name": "VITE_SUPABASE_PROJECT_ID",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "name": "VITE_SUPABASE_PUBLISHABLE_KEY",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 2,
+          "endLine": 2
+        },
+        {
+          "name": "VITE_SUPABASE_URL",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 3,
+          "endLine": 3
+        },
+        {
+          "name": "VITE_GEMINI_API_KEY",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 4,
+          "endLine": 4
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 4
+      }
+    },
+    {
+      "path": ".env.example",
+      "language": "config",
+      "fileCategory": "config",
+      "totalLines": 10,
+      "nonEmptyLines": 9,
+      "definitions": [
+        {
+          "name": "VITE_FIREBASE_API_KEY",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 2,
+          "endLine": 2
+        },
+        {
+          "name": "VITE_FIREBASE_AUTH_DOMAIN",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 3,
+          "endLine": 3
+        },
+        {
+          "name": "VITE_FIREBASE_PROJECT_ID",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 4,
+          "endLine": 4
+        },
+        {
+          "name": "VITE_FIREBASE_STORAGE_BUCKET",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 5,
+          "endLine": 5
+        },
+        {
+          "name": "VITE_FIREBASE_MESSAGING_SENDER_ID",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 6,
+          "endLine": 6
+        },
+        {
+          "name": "VITE_FIREBASE_APP_ID",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 7,
+          "endLine": 7
+        },
+        {
+          "name": "VITE_GEMINI_API_KEY",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 10,
+          "endLine": 10
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 7
+      }
+    },
+    {
+      "path": "PROJECT_CONTEXT.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 156,
+      "nonEmptyLines": 129,
+      "sections": [
+        {
+          "heading": "EduResources Pro: Comprehensive Project Context & AI Handover Document",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "🚀 Project Overview & Vision",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "🛠️ Technology Stack & Dependencies",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "📁 Core Directory Architecture (`src/`)",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "🗺️ Route Map (`App.tsx`)",
+          "level": 2,
+          "line": 77
+        },
+        {
+          "heading": "💡 Key Feature Implementations",
+          "level": 2,
+          "line": 94
+        },
+        {
+          "heading": "1. The Interactive Coding Practice Arena (`/practice` & `/practice/:problemId`)",
+          "level": 3,
+          "line": 96
+        },
+        {
+          "heading": "2. The AI Study Companion & Syllabus Grounding (`/ai-tutor`)",
+          "level": 3,
+          "line": 112
+        },
+        {
+          "heading": "🗄️ Database & Storage (`Supabase`)",
+          "level": 2,
+          "line": 127
+        },
+        {
+          "heading": "⚡ Quick Start & Commands for Developers / AI",
+          "level": 2,
+          "line": 134
+        },
+        {
+          "heading": "📌 Guidelines for Next AI Chat Sessions",
+          "level": 2,
+          "line": 152
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 53,
+      "nonEmptyLines": 39,
+      "sections": [
+        {
+          "heading": "EduResources - Your Complete Study Resource Hub",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Features",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Tech Stack",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Getting Started",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "Prerequisites",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "Installation & Local Development",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "License",
+          "level": 2,
+          "line": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "SIH26101_CONTEXT.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 322,
+      "nonEmptyLines": 266,
+      "sections": [
+        {
+          "heading": "SIH26101 — StatSarthi Build Context (Handover Document)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Who Is Building This",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "The Problem Statement (SIH26101)",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "The Solution: \"StatSarthi\"",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "3 Core Pillars",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "Why We're Forking EduResources (Not Building From Scratch)",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "What We KEEP (Untouched)",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "What We HIDE (Not Delete — Comment Out Routes)",
+          "level": 3,
+          "line": 63
+        },
+        {
+          "heading": "What We BUILD NEW (in `statsarthi/` directories)",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "MoSPI Competency Domains (4 Domains, 30+ Areas — as per Official PS)",
+          "level": 2,
+          "line": 95
+        },
+        {
+          "heading": "Domain 1: Statistical Competencies",
+          "level": 3,
+          "line": 97
+        },
+        {
+          "heading": "Domain 2: Technical Competencies",
+          "level": 3,
+          "line": 108
+        },
+        {
+          "heading": "Domain 3: Digital Governance",
+          "level": 3,
+          "line": 118
+        },
+        {
+          "heading": "Domain 4: Behavioural & Managerial",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "Key Government Ecosystem Context",
+          "level": 2,
+          "line": 135
+        },
+        {
+          "heading": "iGOT Karmayogi",
+          "level": 3,
+          "line": 137
+        },
+        {
+          "heading": "NSSTA TPAC (Training Programme Advisory Committee)",
+          "level": 3,
+          "line": 146
+        },
+        {
+          "heading": "FRAC (Framework of Roles, Activities, and Competencies)",
+          "level": 3,
+          "line": 155
+        },
+        {
+          "heading": "SQAF (Statistical Quality Assessment Framework)",
+          "level": 3,
+          "line": 166
+        },
+        {
+          "heading": "MoSPI Training Infrastructure",
+          "level": 3,
+          "line": 171
+        },
+        {
+          "heading": "Technical Data Model",
+          "level": 2,
+          "line": 178
+        },
+        {
+          "heading": "Demo Flow for Judges",
+          "level": 2,
+          "line": 284
+        },
+        {
+          "heading": "Build Order",
+          "level": 2,
+          "line": 296
+        },
+        {
+          "heading": "Stack Summary",
+          "level": 2,
+          "line": 310
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 24
+      }
+    },
+    {
+      "path": "components.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 20,
+      "nonEmptyLines": 20,
+      "sections": [
+        {
+          "heading": "$schema",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "style",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "rsc",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "tsx",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "tailwind",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "aliases",
+          "level": 1,
+          "line": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 106,
+      "nonEmptyLines": 106,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "private",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "type",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "scripts",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "devDependencies",
+          "level": 1,
+          "line": 75
+        },
+        {
+          "heading": "lint-staged",
+          "level": 1,
+          "line": 92
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "tsconfig.app.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 32,
+      "nonEmptyLines": 32,
+      "sections": [
+        {
+          "heading": "compilerOptions",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "include",
+          "level": 1,
+          "line": 29
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 24,
+      "nonEmptyLines": 24,
+      "sections": [
+        {
+          "heading": "files",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "references",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "compilerOptions",
+          "level": 1,
+          "line": 11
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "tsconfig.node.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 22,
+      "nonEmptyLines": 20,
+      "sections": [
+        {
+          "heading": "compilerOptions",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "include",
+          "level": 1,
+          "line": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    }
+  ]
+}

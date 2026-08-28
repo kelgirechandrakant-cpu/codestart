@@ -1,0 +1,3526 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 25,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 24,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  "results": [
+    {
+      "path": "src/pages/PYQs.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 98,
+      "nonEmptyLines": 91,
+      "functions": [
+        {
+          "name": "PYQs",
+          "startLine": 9,
+          "endLine": 98,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PYQs",
+          "line": 9,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PYQs",
+          "callee": "useState",
+          "lineNumber": 10
+        },
+        {
+          "caller": "PYQs",
+          "callee": "useState",
+          "lineNumber": 11
+        },
+        {
+          "caller": "PYQs",
+          "callee": "useState",
+          "lineNumber": 12
+        },
+        {
+          "caller": "PYQs",
+          "callee": "useState",
+          "lineNumber": 13
+        },
+        {
+          "caller": "PYQs",
+          "callee": "useEffect",
+          "lineNumber": 15
+        },
+        {
+          "caller": "PYQs",
+          "callee": "fetchResources",
+          "lineNumber": 16
+        },
+        {
+          "caller": "PYQs",
+          "callee": "useEffect",
+          "lineNumber": 19
+        },
+        {
+          "caller": "PYQs",
+          "callee": "resources.filter",
+          "lineNumber": 21
+        },
+        {
+          "caller": "PYQs",
+          "callee": "resource.title.toLowerCase().includes",
+          "lineNumber": 23
+        },
+        {
+          "caller": "PYQs",
+          "callee": "resource.title.toLowerCase",
+          "lineNumber": 23
+        },
+        {
+          "caller": "PYQs",
+          "callee": "searchTerm.toLowerCase",
+          "lineNumber": 23
+        },
+        {
+          "caller": "PYQs",
+          "callee": "resource.subject.toLowerCase().includes",
+          "lineNumber": 24
+        },
+        {
+          "caller": "PYQs",
+          "callee": "resource.subject.toLowerCase",
+          "lineNumber": 24
+        },
+        {
+          "caller": "PYQs",
+          "callee": "searchTerm.toLowerCase",
+          "lineNumber": 24
+        },
+        {
+          "caller": "PYQs",
+          "callee": "setFilteredResources",
+          "lineNumber": 26
+        },
+        {
+          "caller": "PYQs",
+          "callee": "setFilteredResources",
+          "lineNumber": 28
+        },
+        {
+          "caller": "fetchResources",
+          "callee": "supabase\n        .from('resources')\n        .select('*')\n        .eq('resource_type', 'pyq')\n        .order",
+          "lineNumber": 34
+        },
+        {
+          "caller": "fetchResources",
+          "callee": "supabase\n        .from('resources')\n        .select('*')\n        .eq",
+          "lineNumber": 34
+        },
+        {
+          "caller": "fetchResources",
+          "callee": "supabase\n        .from('resources')\n        .select",
+          "lineNumber": 34
+        },
+        {
+          "caller": "fetchResources",
+          "callee": "supabase\n        .from",
+          "lineNumber": 34
+        },
+        {
+          "caller": "fetchResources",
+          "callee": "setResources",
+          "lineNumber": 41
+        },
+        {
+          "caller": "fetchResources",
+          "callee": "setFilteredResources",
+          "lineNumber": 42
+        },
+        {
+          "caller": "fetchResources",
+          "callee": "console.error",
+          "lineNumber": 44
+        },
+        {
+          "caller": "fetchResources",
+          "callee": "setLoading",
+          "lineNumber": 46
+        },
+        {
+          "caller": "PYQs",
+          "callee": "setSearchTerm",
+          "lineNumber": 66
+        },
+        {
+          "caller": "PYQs",
+          "callee": "filteredResources.map",
+          "lineNumber": 79
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/PracticeDirectory.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 247,
+      "nonEmptyLines": 228,
+      "functions": [
+        {
+          "name": "PracticeDirectory",
+          "startLine": 15,
+          "endLine": 247,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PracticeDirectory",
+          "line": 15,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PracticeDirectory",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "useState",
+          "lineNumber": 19
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "useEffect",
+          "lineNumber": 26
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "localStorage.getItem",
+          "lineNumber": 27
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "localStorage.getItem",
+          "lineNumber": 28
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "localStorage.getItem",
+          "lineNumber": 29
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "setScore",
+          "lineNumber": 30
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "parseInt",
+          "lineNumber": 30
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "setStreak",
+          "lineNumber": 31
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "parseInt",
+          "lineNumber": 31
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "setLives",
+          "lineNumber": 32
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "parseInt",
+          "lineNumber": 32
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "codingQuestions.filter",
+          "lineNumber": 39
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "searchQuery.trim",
+          "lineNumber": 43
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "q.question.toLowerCase().includes",
+          "lineNumber": 44
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "q.question.toLowerCase",
+          "lineNumber": 44
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "searchQuery.toLowerCase",
+          "lineNumber": 44
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "q.topic.toLowerCase().includes",
+          "lineNumber": 45
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "q.topic.toLowerCase",
+          "lineNumber": 45
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "searchQuery.toLowerCase",
+          "lineNumber": 45
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "setSearchQuery",
+          "lineNumber": 121
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "languages.map",
+          "lineNumber": 130
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "setSelectedLanguage",
+          "lineNumber": 135
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "difficulties.map",
+          "lineNumber": 152
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "setSelectedDifficulty",
+          "lineNumber": 157
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "topics.slice(0, 6).map",
+          "lineNumber": 172
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "topics.slice",
+          "lineNumber": 172
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "setSelectedTopic",
+          "lineNumber": 176
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "filteredQuestions.map",
+          "lineNumber": 203
+        },
+        {
+          "caller": "PracticeDirectory",
+          "callee": "getDifficultyColor",
+          "lineNumber": 231
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/PrivacyPolicy.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 170,
+      "nonEmptyLines": 158,
+      "functions": [
+        {
+          "name": "PrivacyPolicy",
+          "startLine": 5,
+          "endLine": 170,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PrivacyPolicy",
+          "line": 5,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/ProblemArena.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 442,
+      "nonEmptyLines": 410,
+      "functions": [
+        {
+          "name": "ProblemArena",
+          "startLine": 21,
+          "endLine": 442,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ProblemArena",
+          "line": 21,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ProblemArena",
+          "callee": "useParams",
+          "lineNumber": 22
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useNavigate",
+          "lineNumber": 23
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 28
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 29
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 30
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 33
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 34
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 35
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 38
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 41
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 42
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useState",
+          "lineNumber": 43
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useRef",
+          "lineNumber": 44
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useEffect",
+          "lineNumber": 46
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "codingQuestions.find",
+          "lineNumber": 48
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "item.id.toString",
+          "lineNumber": 48
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "setQuestion",
+          "lineNumber": 50
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "setExecutionOutput",
+          "lineNumber": 51
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "toast.error",
+          "lineNumber": 53
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "navigate",
+          "lineNumber": 54
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useEffect",
+          "lineNumber": 59
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "localStorage.getItem",
+          "lineNumber": 60
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "localStorage.getItem",
+          "lineNumber": 61
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "localStorage.getItem",
+          "lineNumber": 62
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "setScore",
+          "lineNumber": 63
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "parseInt",
+          "lineNumber": 63
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "setStreak",
+          "lineNumber": 64
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "parseInt",
+          "lineNumber": 64
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "setLives",
+          "lineNumber": 65
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "parseInt",
+          "lineNumber": 65
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "useEffect",
+          "lineNumber": 68
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "chatBottomRef.current?.scrollIntoView",
+          "lineNumber": 69
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "setIsRunning",
+          "lineNumber": 82
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "setExecutionOutput",
+          "lineNumber": 83
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "setTimeout",
+          "lineNumber": 86
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "setIsRunning",
+          "lineNumber": 87
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "question.testCases.map",
+          "lineNumber": 89
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "userCode.trim",
+          "lineNumber": 91
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "userCode.includes",
+          "lineNumber": 91
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "testResults.every",
+          "lineNumber": 99
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "setExecutionOutput",
+          "lineNumber": 100
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "toast.success",
+          "lineNumber": 106
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "toast.warning",
+          "lineNumber": 108
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "setExecutionOutput",
+          "lineNumber": 112
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "userCode.slice",
+          "lineNumber": 114
+        },
+        {
+          "caller": "handleRunCode",
+          "callee": "toast.success",
+          "lineNumber": 116
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "setIsSubmitting",
+          "lineNumber": 122
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "setExecutionOutput",
+          "lineNumber": 123
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "geminiService.evaluateAnswer",
+          "lineNumber": 127
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "setIsSubmitting",
+          "lineNumber": 128
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "setScore",
+          "lineNumber": 133
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "setStreak",
+          "lineNumber": 134
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "localStorage.setItem",
+          "lineNumber": 135
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "newScore.toString",
+          "lineNumber": 135
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "localStorage.setItem",
+          "lineNumber": 136
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "newStreak.toString",
+          "lineNumber": 136
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "setExecutionOutput",
+          "lineNumber": 138
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "toast.success",
+          "lineNumber": 142
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "Math.max",
+          "lineNumber": 144
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "setLives",
+          "lineNumber": 145
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "localStorage.setItem",
+          "lineNumber": 146
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "newLives.toString",
+          "lineNumber": 146
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "setExecutionOutput",
+          "lineNumber": 148
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "toast.error",
+          "lineNumber": 152
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "setIsSubmitting",
+          "lineNumber": 155
+        },
+        {
+          "caller": "handleSubmitCode",
+          "callee": "setExecutionOutput",
+          "lineNumber": 156
+        },
+        {
+          "caller": "handleSendMessage",
+          "callee": "chatInput.trim",
+          "lineNumber": 164
+        },
+        {
+          "caller": "handleSendMessage",
+          "callee": "chatInput.trim",
+          "lineNumber": 165
+        },
+        {
+          "caller": "handleSendMessage",
+          "callee": "setChatMessages",
+          "lineNumber": 166
+        },
+        {
+          "caller": "handleSendMessage",
+          "callee": "setChatInput",
+          "lineNumber": 167
+        },
+        {
+          "caller": "handleSendMessage",
+          "callee": "setIsAiTyping",
+          "lineNumber": 168
+        },
+        {
+          "caller": "handleSendMessage",
+          "callee": "setChatMessages",
+          "lineNumber": 172
+        },
+        {
+          "caller": "handleSendMessage",
+          "callee": "geminiService.sendMessageStream",
+          "lineNumber": 174
+        },
+        {
+          "caller": "handleSendMessage",
+          "callee": "setChatMessages",
+          "lineNumber": 179
+        },
+        {
+          "caller": "handleSendMessage",
+          "callee": "setIsAiTyping",
+          "lineNumber": 187
+        },
+        {
+          "caller": "handleSendMessage",
+          "callee": "setIsAiTyping",
+          "lineNumber": 189
+        },
+        {
+          "caller": "handleSendMessage",
+          "callee": "toast.error",
+          "lineNumber": 190
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "getDifficultyColor",
+          "lineNumber": 216
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "question.options.map",
+          "lineNumber": 305
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "String.fromCharCode",
+          "lineNumber": 307
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "chatMessages.map",
+          "lineNumber": 320
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "setComprehensionMode",
+          "lineNumber": 358
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "setComprehensionMode",
+          "lineNumber": 368
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "setComprehensionMode",
+          "lineNumber": 379
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "setComprehensionMode",
+          "lineNumber": 390
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "setChatInput",
+          "lineNumber": 407
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "handleSendMessage",
+          "lineNumber": 408
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "chatInput.trim",
+          "lineNumber": 415
+        },
+        {
+          "caller": "ProblemArena",
+          "callee": "setExecutionOutput",
+          "lineNumber": 433
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/Resources.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 24,
+      "functions": [
+        {
+          "name": "Resources",
+          "startLine": 6,
+          "endLine": 26,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Resources",
+          "line": 6,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/UserAuth.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 275,
+      "nonEmptyLines": 249,
+      "functions": [
+        {
+          "name": "UserAuth",
+          "startLine": 13,
+          "endLine": 275,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UserAuth",
+          "line": 13,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "UserAuth",
+          "callee": "useNavigate",
+          "lineNumber": 14
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "useEffect",
+          "lineNumber": 20
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "supabase.auth.getSession().then",
+          "lineNumber": 22
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "supabase.auth.getSession",
+          "lineNumber": 22
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "navigate",
+          "lineNumber": 24
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "supabase.auth.onAuthStateChange",
+          "lineNumber": 29
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "toast.success",
+          "lineNumber": 31
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "navigate",
+          "lineNumber": 32
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "subscription.unsubscribe",
+          "lineNumber": 36
+        },
+        {
+          "caller": "handleGoogleSignIn",
+          "callee": "setGoogleLoading",
+          "lineNumber": 40
+        },
+        {
+          "caller": "handleGoogleSignIn",
+          "callee": "supabase.auth.signInWithOAuth",
+          "lineNumber": 42
+        },
+        {
+          "caller": "handleGoogleSignIn",
+          "callee": "console.error",
+          "lineNumber": 51
+        },
+        {
+          "caller": "handleGoogleSignIn",
+          "callee": "toast.error",
+          "lineNumber": 52
+        },
+        {
+          "caller": "handleGoogleSignIn",
+          "callee": "setGoogleLoading",
+          "lineNumber": 53
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "e.preventDefault",
+          "lineNumber": 58
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "toast.error",
+          "lineNumber": 61
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "setLoading",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "supabase.auth.signInWithPassword",
+          "lineNumber": 68
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "toast.success",
+          "lineNumber": 75
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "console.error",
+          "lineNumber": 77
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "error.message.includes",
+          "lineNumber": 78
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "toast.error",
+          "lineNumber": 79
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "toast.error",
+          "lineNumber": 81
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "setLoading",
+          "lineNumber": 84
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "e.preventDefault",
+          "lineNumber": 89
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "toast.error",
+          "lineNumber": 92
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "toast.error",
+          "lineNumber": 97
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "toast.error",
+          "lineNumber": 102
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "/[A-Z]/.test",
+          "lineNumber": 105
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "toast.error",
+          "lineNumber": 106
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "/[0-9]/.test",
+          "lineNumber": 109
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "toast.error",
+          "lineNumber": 110
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "setLoading",
+          "lineNumber": 114
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "supabase.auth.signUp",
+          "lineNumber": 117
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "toast.success",
+          "lineNumber": 127
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "setSignupData",
+          "lineNumber": 128
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "console.error",
+          "lineNumber": 130
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "error.message.includes",
+          "lineNumber": 131
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "toast.error",
+          "lineNumber": 132
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "toast.error",
+          "lineNumber": 134
+        },
+        {
+          "caller": "handleSignup",
+          "callee": "setLoading",
+          "lineNumber": 137
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "setLoginData",
+          "lineNumber": 208
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "setLoginData",
+          "lineNumber": 219
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "setSignupData",
+          "lineNumber": 238
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "setSignupData",
+          "lineNumber": 249
+        },
+        {
+          "caller": "UserAuth",
+          "callee": "setSignupData",
+          "lineNumber": 260
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/statsarthi/AboutMission.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 155,
+      "nonEmptyLines": 144,
+      "functions": [
+        {
+          "name": "AboutMission",
+          "startLine": 4,
+          "endLine": 155,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AboutMission",
+          "line": 4,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AboutMission",
+          "callee": "[\n                    { level: 1, name: 'Aware', desc: 'Basic knowledge, requires supervision' },\n                    { level: 2, name: 'Apply', desc: 'Can perform tasks with some guidance' },\n                    { level: 3, name: 'Advise', desc: 'Independent expert, can guide others' },\n                    { level: 4, name: 'Expert', desc: 'Deep expertise, handles complex issues' },\n                    { level: 5, name: 'Ustad', desc: 'Thought leader, shapes policy and frameworks' },\n                  ].map",
+          "lineNumber": 84
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/statsarthi/AdminDashboard.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 252,
+      "nonEmptyLines": 226,
+      "functions": [
+        {
+          "name": "AdminDashboard",
+          "startLine": 7,
+          "endLine": 252,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AdminDashboard",
+          "line": 7,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AdminDashboard",
+          "callee": "useState",
+          "lineNumber": 8
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "useEffect",
+          "lineNumber": 22
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "localStorage.getItem",
+          "lineNumber": 24
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "localStorage.getItem",
+          "lineNumber": 25
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "JSON.parse",
+          "lineNumber": 28
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "JSON.parse",
+          "lineNumber": 31
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "latest.domainScores\n          .flatMap(d => d.areas)\n          .filter",
+          "lineNumber": 34
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "latest.domainScores\n          .flatMap",
+          "lineNumber": 34
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "latest.roleId.toUpperCase",
+          "lineNumber": 41
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "setRecentAssessments",
+          "lineNumber": 46
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "prev.slice",
+          "lineNumber": 46
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "setStats",
+          "lineNumber": 49
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "Number",
+          "lineNumber": 51
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "((3.2 * 1248 + latest.overallLevel) / 1249).toFixed",
+          "lineNumber": 51
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "stats.totalOfficials.toLocaleString",
+          "lineNumber": 80
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "stats.criticalGaps.toLocaleString",
+          "lineNumber": 102
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "stats.coursesAssigned.toLocaleString",
+          "lineNumber": 113
+        },
+        {
+          "caller": "AdminDashboard",
+          "callee": "recentAssessments.map",
+          "lineNumber": 165
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/statsarthi/DiagnosticAssessment.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 234,
+      "nonEmptyLines": 217,
+      "functions": [
+        {
+          "name": "DiagnosticAssessment",
+          "startLine": 17,
+          "endLine": 234,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DiagnosticAssessment",
+          "line": 17,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "useNavigate",
+          "lineNumber": 18
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "useState",
+          "lineNumber": 19
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "useState",
+          "lineNumber": 20
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "useState",
+          "lineNumber": 21
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "setRole",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "setLoading",
+          "lineNumber": 30
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "setLoadingText",
+          "lineNumber": 31
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "domain.areas.find",
+          "lineNumber": 39
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "setLoadingText",
+          "lineNumber": 47
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "localStorage.getItem",
+          "lineNumber": 49
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "JSON.parse",
+          "lineNumber": 50
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "geminiService.generateDiagnosticQuestions",
+          "lineNumber": 52
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "setQuestions",
+          "lineNumber": 63
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "toast.error",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "setRole",
+          "lineNumber": 66
+        },
+        {
+          "caller": "handleRoleSelect",
+          "callee": "setLoading",
+          "lineNumber": 68
+        },
+        {
+          "caller": "handleSelectOption",
+          "callee": "setAnswers",
+          "lineNumber": 73
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setLoading",
+          "lineNumber": 77
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setLoadingText",
+          "lineNumber": 78
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "computeGapReport",
+          "lineNumber": 81
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "localStorage.setItem",
+          "lineNumber": 84
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "JSON.stringify",
+          "lineNumber": 84
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "localStorage.getItem",
+          "lineNumber": 87
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "JSON.parse",
+          "lineNumber": 88
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "history.push",
+          "lineNumber": 89
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "localStorage.setItem",
+          "lineNumber": 90
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "JSON.stringify",
+          "lineNumber": 90
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "toast.success",
+          "lineNumber": 92
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "navigate",
+          "lineNumber": 93
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "toast.error",
+          "lineNumber": 95
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setLoading",
+          "lineNumber": 97
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "Math.round",
+          "lineNumber": 162
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "currentQ.options.map",
+          "lineNumber": 180
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "handleSelectOption",
+          "lineNumber": 183
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "String.fromCharCode",
+          "lineNumber": 196
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "setCurrentIdx",
+          "lineNumber": 208
+        },
+        {
+          "caller": "DiagnosticAssessment",
+          "callee": "setCurrentIdx",
+          "lineNumber": 224
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/statsarthi/Landing.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 101,
+      "nonEmptyLines": 91,
+      "functions": [
+        {
+          "name": "Landing",
+          "startLine": 5,
+          "endLine": 101,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Landing",
+          "line": 5,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/statsarthi/LearnerDashboard.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 279,
+      "nonEmptyLines": 262,
+      "functions": [
+        {
+          "name": "LearnerDashboard",
+          "startLine": 11,
+          "endLine": 278,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LearnerDashboard",
+          "line": 11,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LearnerDashboard",
+          "callee": "useNavigate",
+          "lineNumber": 12
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "useState",
+          "lineNumber": 13
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "useState",
+          "lineNumber": 14
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "useEffect",
+          "lineNumber": 17
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "localStorage.getItem",
+          "lineNumber": 18
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "navigate",
+          "lineNumber": 20
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "setProfile",
+          "lineNumber": 23
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "JSON.parse",
+          "lineNumber": 23
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "localStorage.getItem",
+          "lineNumber": 25
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "setReport",
+          "lineNumber": 27
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "JSON.parse",
+          "lineNumber": 27
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "localStorage.getItem",
+          "lineNumber": 29
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "JSON.parse",
+          "lineNumber": 31
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "setPreviousReport",
+          "lineNumber": 33
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "navigate",
+          "lineNumber": 47
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "report.domainScores.flatMap",
+          "lineNumber": 55
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "domain.areas.map",
+          "lineNumber": 56
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "a.competencyName.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join",
+          "lineNumber": 57
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "a.competencyName.split('-').map",
+          "lineNumber": 57
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "a.competencyName.split",
+          "lineNumber": 57
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "w.charAt(0).toUpperCase",
+          "lineNumber": 57
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "w.charAt",
+          "lineNumber": 57
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "w.slice",
+          "lineNumber": 57
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "report.domainScores.flatMap(d => d.areas).filter",
+          "lineNumber": 63
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "report.domainScores.flatMap",
+          "lineNumber": 63
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "new Date(report.assessedAt).toLocaleDateString",
+          "lineNumber": 73
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "window.print",
+          "lineNumber": 92
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "report.domainScores.flatMap(d => d.areas).map",
+          "lineNumber": 133
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "report.domainScores.flatMap",
+          "lineNumber": 133
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "previousReport.domainScores.flatMap(d => d.areas).find",
+          "lineNumber": 134
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "previousReport.domainScores.flatMap",
+          "lineNumber": 134
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "area.competencyName.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join",
+          "lineNumber": 139
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "area.competencyName.split('-').map",
+          "lineNumber": 139
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "area.competencyName.split",
+          "lineNumber": 139
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "w.charAt(0).toUpperCase",
+          "lineNumber": 139
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "w.charAt",
+          "lineNumber": 139
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "w.slice",
+          "lineNumber": 139
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "report.domainScores.flatMap(d => d.areas).filter(a => a.gap > 0).map",
+          "lineNumber": 172
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "report.domainScores.flatMap(d => d.areas).filter",
+          "lineNumber": 172
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "report.domainScores.flatMap",
+          "lineNumber": 172
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "area.competencyName.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join",
+          "lineNumber": 177
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "area.competencyName.split('-').map",
+          "lineNumber": 177
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "area.competencyName.split",
+          "lineNumber": 177
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "w.charAt(0).toUpperCase",
+          "lineNumber": 177
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "w.charAt",
+          "lineNumber": 177
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "w.slice",
+          "lineNumber": 177
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "getGapSeverity",
+          "lineNumber": 187
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "getGapSeverity",
+          "lineNumber": 189
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "getGapSeverity",
+          "lineNumber": 191
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "getGapSeverity",
+          "lineNumber": 194
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "navigate",
+          "lineNumber": 243
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "new Date(previousReport.assessedAt).toLocaleDateString",
+          "lineNumber": 248
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "new Date(report.assessedAt).toLocaleDateString",
+          "lineNumber": 265
+        },
+        {
+          "caller": "LearnerDashboard",
+          "callee": "new Date(report.assessedAt).toLocaleDateString",
+          "lineNumber": 269
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/statsarthi/LearningPathway.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 113,
+      "nonEmptyLines": 103,
+      "functions": [
+        {
+          "name": "LearningPathway",
+          "startLine": 12,
+          "endLine": 113,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LearningPathway",
+          "line": 12,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LearningPathway",
+          "callee": "useNavigate",
+          "lineNumber": 13
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "useState",
+          "lineNumber": 14
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "useEffect",
+          "lineNumber": 17
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "localStorage.getItem",
+          "lineNumber": 18
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "JSON.parse",
+          "lineNumber": 20
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "setReport",
+          "lineNumber": 21
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "setPathway",
+          "lineNumber": 22
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "generateLearningPathway",
+          "lineNumber": 22
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "navigate",
+          "lineNumber": 34
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "pathway.map",
+          "lineNumber": 67
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "step.competencyArea.replace",
+          "lineNumber": 79
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "step.recommendedCourses.igot.map",
+          "lineNumber": 95
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "igotCourses.find",
+          "lineNumber": 96
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "step.recommendedCourses.nssta.map",
+          "lineNumber": 100
+        },
+        {
+          "caller": "LearningPathway",
+          "callee": "nsstaCourses.find",
+          "lineNumber": 101
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/statsarthi/Login.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 85,
+      "functions": [
+        {
+          "name": "Login",
+          "startLine": 12,
+          "endLine": 90,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Login",
+          "line": 12,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Login",
+          "callee": "useNavigate",
+          "lineNumber": 13
+        },
+        {
+          "caller": "Login",
+          "callee": "useState",
+          "lineNumber": 14
+        },
+        {
+          "caller": "Login",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Login",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "e.preventDefault",
+          "lineNumber": 19
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "setLoading",
+          "lineNumber": 20
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "signInWithEmailAndPassword",
+          "lineNumber": 23
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "toast.success",
+          "lineNumber": 24
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "navigate",
+          "lineNumber": 25
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "toast.error",
+          "lineNumber": 27
+        },
+        {
+          "caller": "handleLogin",
+          "callee": "setLoading",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Login",
+          "callee": "setEmail",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Login",
+          "callee": "setPassword",
+          "lineNumber": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/statsarthi/Onboarding.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 137,
+      "nonEmptyLines": 128,
+      "functions": [
+        {
+          "name": "Onboarding",
+          "startLine": 10,
+          "endLine": 137,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Onboarding",
+          "line": 10,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Onboarding",
+          "callee": "useNavigate",
+          "lineNumber": 11
+        },
+        {
+          "caller": "Onboarding",
+          "callee": "useState",
+          "lineNumber": 12
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "e.preventDefault",
+          "lineNumber": 23
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "localStorage.setItem",
+          "lineNumber": 24
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "JSON.stringify",
+          "lineNumber": 24
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "navigate",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Onboarding",
+          "callee": "setFormData",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Onboarding",
+          "callee": "setFormData",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Onboarding",
+          "callee": "setFormData",
+          "lineNumber": 79
+        },
+        {
+          "caller": "Onboarding",
+          "callee": "setFormData",
+          "lineNumber": 85
+        },
+        {
+          "caller": "Onboarding",
+          "callee": "setFormData",
+          "lineNumber": 104
+        },
+        {
+          "caller": "Onboarding",
+          "callee": "setFormData",
+          "lineNumber": 114
+        },
+        {
+          "caller": "Onboarding",
+          "callee": "setFormData",
+          "lineNumber": 124
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/pages/statsarthi/QuizGenerator.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 295,
+      "nonEmptyLines": 275,
+      "functions": [
+        {
+          "name": "QuizGenerator",
+          "startLine": 16,
+          "endLine": 295,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "QuizGenerator",
+          "line": 16,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "QuizGenerator",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "useState",
+          "lineNumber": 19
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "useRef",
+          "lineNumber": 20
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "useState",
+          "lineNumber": 28
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "useState",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleFileUpload",
+          "callee": "toast.error",
+          "lineNumber": 36
+        },
+        {
+          "caller": "handleFileUpload",
+          "callee": "toast.error",
+          "lineNumber": 40
+        },
+        {
+          "caller": "handleFileUpload",
+          "callee": "setFile",
+          "lineNumber": 44
+        },
+        {
+          "caller": "handleFileUpload",
+          "callee": "dataUrl.match",
+          "lineNumber": 48
+        },
+        {
+          "caller": "handleFileUpload",
+          "callee": "setMimeType",
+          "lineNumber": 50
+        },
+        {
+          "caller": "handleFileUpload",
+          "callee": "setFileData",
+          "lineNumber": 51
+        },
+        {
+          "caller": "handleFileUpload",
+          "callee": "toast.success",
+          "lineNumber": 52
+        },
+        {
+          "caller": "handleFileUpload",
+          "callee": "reader.readAsDataURL",
+          "lineNumber": 55
+        },
+        {
+          "caller": "removeFile",
+          "callee": "setFile",
+          "lineNumber": 59
+        },
+        {
+          "caller": "removeFile",
+          "callee": "setFileData",
+          "lineNumber": 60
+        },
+        {
+          "caller": "removeFile",
+          "callee": "setMimeType",
+          "lineNumber": 61
+        },
+        {
+          "caller": "toggleBlooms",
+          "callee": "setSelectedBlooms",
+          "lineNumber": 68
+        },
+        {
+          "caller": "toggleBlooms",
+          "callee": "prev.includes",
+          "lineNumber": 69
+        },
+        {
+          "caller": "toggleBlooms",
+          "callee": "prev.filter",
+          "lineNumber": 69
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "toast.error",
+          "lineNumber": 75
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "toast.error",
+          "lineNumber": 79
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "setIsGenerating",
+          "lineNumber": 83
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "setGeneratedQuestions",
+          "lineNumber": 84
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "geminiService.generateMCQsFromDocument",
+          "lineNumber": 86
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "parseInt",
+          "lineNumber": 87
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "mcqs.filter",
+          "lineNumber": 95
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "toast.warning",
+          "lineNumber": 109
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "setGeneratedQuestions",
+          "lineNumber": 112
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "toast.success",
+          "lineNumber": 113
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "toast.error",
+          "lineNumber": 115
+        },
+        {
+          "caller": "handleGenerate",
+          "callee": "setIsGenerating",
+          "lineNumber": 117
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "fileInputRef.current?.click",
+          "lineNumber": 143
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "(file.size / 1024 / 1024).toFixed",
+          "lineNumber": 157
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "setCompetencyArea",
+          "lineNumber": 221
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "BLOOMS_LEVELS.map",
+          "lineNumber": 245
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "selectedBlooms.includes",
+          "lineNumber": 249
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "toggleBlooms",
+          "lineNumber": 250
+        },
+        {
+          "caller": "QuizGenerator",
+          "callee": "setGeneratedQuestions",
+          "lineNumber": 289
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/services/gapUtils.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 273,
+      "nonEmptyLines": 243,
+      "functions": [
+        {
+          "name": "getGapSeverity",
+          "startLine": 58,
+          "endLine": 65,
+          "params": [
+            "gap",
+            "maxLevel"
+          ]
+        },
+        {
+          "name": "scoreToFRACLevel",
+          "startLine": 67,
+          "endLine": 73,
+          "params": [
+            "scorePercent"
+          ]
+        },
+        {
+          "name": "computeGapReport",
+          "startLine": 75,
+          "endLine": 273,
+          "params": [
+            "questions",
+            "answers",
+            "role",
+            "competencyDomains"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GAP_SEVERITY_CONFIG",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "getGapSeverity",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "scoreToFRACLevel",
+          "line": 67,
+          "isDefault": false
+        },
+        {
+          "name": "computeGapReport",
+          "line": 75,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "findCompetencyInfo",
+          "callee": "competencyKey.trim().toLowerCase",
+          "lineNumber": 83
+        },
+        {
+          "caller": "findCompetencyInfo",
+          "callee": "competencyKey.trim",
+          "lineNumber": 83
+        },
+        {
+          "caller": "findCompetencyInfo",
+          "callee": "domain.areas.find",
+          "lineNumber": 85
+        },
+        {
+          "caller": "findCompetencyInfo",
+          "callee": "a.id.toLowerCase",
+          "lineNumber": 87
+        },
+        {
+          "caller": "findCompetencyInfo",
+          "callee": "a.name.toLowerCase",
+          "lineNumber": 88
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "questions.forEach",
+          "lineNumber": 108
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "findCompetencyInfo",
+          "lineNumber": 109
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "questionsByCompetency.has",
+          "lineNumber": 112
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "questionsByCompetency.set",
+          "lineNumber": 113
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "questionsByCompetency.get",
+          "lineNumber": 120
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "role.requiredCompetencies.forEach",
+          "lineNumber": 130
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "requiredMap.set",
+          "lineNumber": 131
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "role.requiredCompetencies.forEach",
+          "lineNumber": 136
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "allCompetencyIds.add",
+          "lineNumber": 136
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "questionsByCompetency.forEach",
+          "lineNumber": 137
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "allCompetencyIds.add",
+          "lineNumber": 137
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "allCompetencyIds.forEach",
+          "lineNumber": 154
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "findCompetencyInfo",
+          "lineNumber": 155
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "requiredMap.get",
+          "lineNumber": 159
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "questionsByCompetency.get",
+          "lineNumber": 161
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "Math.round",
+          "lineNumber": 169
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "scoreToFRACLevel",
+          "lineNumber": 170
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "Math.max",
+          "lineNumber": 178
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "evaluatedAreas.push",
+          "lineNumber": 180
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "competencyDomains.forEach",
+          "lineNumber": 210
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "domainScoresMap.set",
+          "lineNumber": 211
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "evaluatedAreas.forEach",
+          "lineNumber": 218
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "domainScoresMap.has",
+          "lineNumber": 219
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "domainScoresMap.set",
+          "lineNumber": 220
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "domainScoresMap.get(area.domainId)!.areas.push",
+          "lineNumber": 227
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "domainScoresMap.get",
+          "lineNumber": 227
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "Array.from(domainScoresMap.values()).filter",
+          "lineNumber": 237
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "Array.from",
+          "lineNumber": 237
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "domainScoresMap.values",
+          "lineNumber": 237
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "questions.forEach",
+          "lineNumber": 245
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "Math.round",
+          "lineNumber": 254
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "Math.round",
+          "lineNumber": 256
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "evaluatedAreas.reduce",
+          "lineNumber": 257
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "scoreToFRACLevel",
+          "lineNumber": 262
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "Date.now",
+          "lineNumber": 265
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "Math.random().toString(36).substring",
+          "lineNumber": 265
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "Math.random().toString",
+          "lineNumber": 265
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "Math.random",
+          "lineNumber": 265
+        },
+        {
+          "caller": "computeGapReport",
+          "callee": "new Date().toISOString",
+          "lineNumber": 268
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/services/geminiService.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 619,
+      "nonEmptyLines": 537,
+      "classes": [
+        {
+          "name": "GeminiService",
+          "startLine": 4,
+          "endLine": 617,
+          "methods": [
+            "getAI",
+            "setApiKey",
+            "createChat",
+            "sendMessageStream",
+            "generateNotebookLMPodcast",
+            "generateDeepDiveGuide",
+            "generateSocraticFAQ",
+            "generateQuizQuestion",
+            "evaluateAnswer",
+            "createStatSarthiChat",
+            "generateDiagnosticQuestions",
+            "generateMCQsFromDocument",
+            "evaluateCompetency",
+            "askTrainingAdvisor"
+          ],
+          "properties": [
+            "ai",
+            "chatInstance",
+            "currentPdfData"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GeminiService",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "geminiService",
+          "line": 619,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getAI",
+          "callee": "localStorage.getItem",
+          "lineNumber": 11
+        },
+        {
+          "caller": "getAI",
+          "callee": "console.warn",
+          "lineNumber": 13
+        },
+        {
+          "caller": "setApiKey",
+          "callee": "localStorage.setItem",
+          "lineNumber": 21
+        },
+        {
+          "caller": "createChat",
+          "callee": "this.getAI",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createChat",
+          "callee": "history.map",
+          "lineNumber": 30
+        },
+        {
+          "caller": "createChat",
+          "callee": "pdfData.match",
+          "lineNumber": 36
+        },
+        {
+          "caller": "createChat",
+          "callee": "formattedHistory.unshift",
+          "lineNumber": 38
+        },
+        {
+          "caller": "createChat",
+          "callee": "formattedHistory.splice",
+          "lineNumber": 45
+        },
+        {
+          "caller": "createChat",
+          "callee": "ai.chats.create",
+          "lineNumber": 74
+        },
+        {
+          "caller": "sendMessageStream",
+          "callee": "this.createChat",
+          "lineNumber": 84
+        },
+        {
+          "caller": "sendMessageStream",
+          "callee": "imageData.match",
+          "lineNumber": 100
+        },
+        {
+          "caller": "sendMessageStream",
+          "callee": "messageContent.push",
+          "lineNumber": 102
+        },
+        {
+          "caller": "sendMessageStream",
+          "callee": "this.chatInstance!.sendMessageStream",
+          "lineNumber": 106
+        },
+        {
+          "caller": "sendMessageStream",
+          "callee": "onChunk",
+          "lineNumber": 112
+        },
+        {
+          "caller": "sendMessageStream",
+          "callee": "console.error",
+          "lineNumber": 117
+        },
+        {
+          "caller": "generateNotebookLMPodcast",
+          "callee": "this.getAI",
+          "lineNumber": 123
+        },
+        {
+          "caller": "generateNotebookLMPodcast",
+          "callee": "activeData.match",
+          "lineNumber": 135
+        },
+        {
+          "caller": "generateNotebookLMPodcast",
+          "callee": "contents.push",
+          "lineNumber": 137
+        },
+        {
+          "caller": "generateNotebookLMPodcast",
+          "callee": "ai.models.generateContent",
+          "lineNumber": 142
+        },
+        {
+          "caller": "generateDeepDiveGuide",
+          "callee": "this.getAI",
+          "lineNumber": 151
+        },
+        {
+          "caller": "generateDeepDiveGuide",
+          "callee": "activeData.match",
+          "lineNumber": 171
+        },
+        {
+          "caller": "generateDeepDiveGuide",
+          "callee": "contents.push",
+          "lineNumber": 173
+        },
+        {
+          "caller": "generateDeepDiveGuide",
+          "callee": "ai.models.generateContent",
+          "lineNumber": 178
+        },
+        {
+          "caller": "generateSocraticFAQ",
+          "callee": "this.getAI",
+          "lineNumber": 187
+        },
+        {
+          "caller": "generateSocraticFAQ",
+          "callee": "activeData.match",
+          "lineNumber": 202
+        },
+        {
+          "caller": "generateSocraticFAQ",
+          "callee": "contents.push",
+          "lineNumber": 204
+        },
+        {
+          "caller": "generateSocraticFAQ",
+          "callee": "ai.models.generateContent",
+          "lineNumber": 209
+        },
+        {
+          "caller": "generateQuizQuestion",
+          "callee": "this.getAI",
+          "lineNumber": 218
+        },
+        {
+          "caller": "generateQuizQuestion",
+          "callee": "pdfData.match",
+          "lineNumber": 227
+        },
+        {
+          "caller": "generateQuizQuestion",
+          "callee": "contents.push",
+          "lineNumber": 229
+        },
+        {
+          "caller": "generateQuizQuestion",
+          "callee": "ai.models.generateContent",
+          "lineNumber": 233
+        },
+        {
+          "caller": "generateQuizQuestion",
+          "callee": "JSON.parse",
+          "lineNumber": 253
+        },
+        {
+          "caller": "generateQuizQuestion",
+          "callee": "console.error",
+          "lineNumber": 255
+        },
+        {
+          "caller": "evaluateAnswer",
+          "callee": "this.getAI",
+          "lineNumber": 261
+        },
+        {
+          "caller": "evaluateAnswer",
+          "callee": "ai.models.generateContent",
+          "lineNumber": 262
+        },
+        {
+          "caller": "evaluateAnswer",
+          "callee": "JSON.parse",
+          "lineNumber": 292
+        },
+        {
+          "caller": "evaluateAnswer",
+          "callee": "console.error",
+          "lineNumber": 294
+        },
+        {
+          "caller": "createStatSarthiChat",
+          "callee": "this.getAI",
+          "lineNumber": 304
+        },
+        {
+          "caller": "createStatSarthiChat",
+          "callee": "history.map",
+          "lineNumber": 306
+        },
+        {
+          "caller": "createStatSarthiChat",
+          "callee": "pdfData.match",
+          "lineNumber": 312
+        },
+        {
+          "caller": "createStatSarthiChat",
+          "callee": "formattedHistory.unshift",
+          "lineNumber": 314
+        },
+        {
+          "caller": "createStatSarthiChat",
+          "callee": "formattedHistory.splice",
+          "lineNumber": 321
+        },
+        {
+          "caller": "createStatSarthiChat",
+          "callee": "ai.chats.create",
+          "lineNumber": 356
+        },
+        {
+          "caller": "generateDiagnosticQuestions",
+          "callee": "this.getAI",
+          "lineNumber": 367
+        },
+        {
+          "caller": "generateDiagnosticQuestions",
+          "callee": "subCompetencies.join",
+          "lineNumber": 381
+        },
+        {
+          "caller": "generateDiagnosticQuestions",
+          "callee": "ai.models.generateContent",
+          "lineNumber": 408
+        },
+        {
+          "caller": "generateDiagnosticQuestions",
+          "callee": "JSON.parse",
+          "lineNumber": 435
+        },
+        {
+          "caller": "generateDiagnosticQuestions",
+          "callee": "console.error",
+          "lineNumber": 437
+        },
+        {
+          "caller": "generateMCQsFromDocument",
+          "callee": "this.getAI",
+          "lineNumber": 453
+        },
+        {
+          "caller": "generateMCQsFromDocument",
+          "callee": "options.bloomsLevels.join",
+          "lineNumber": 459
+        },
+        {
+          "caller": "generateMCQsFromDocument",
+          "callee": "ai.models.generateContent",
+          "lineNumber": 473
+        },
+        {
+          "caller": "generateMCQsFromDocument",
+          "callee": "JSON.parse",
+          "lineNumber": 500
+        },
+        {
+          "caller": "generateMCQsFromDocument",
+          "callee": "console.error",
+          "lineNumber": 502
+        },
+        {
+          "caller": "evaluateCompetency",
+          "callee": "this.getAI",
+          "lineNumber": 512
+        },
+        {
+          "caller": "evaluateCompetency",
+          "callee": "questions.map",
+          "lineNumber": 516
+        },
+        {
+          "caller": "evaluateCompetency",
+          "callee": "Math.round",
+          "lineNumber": 527
+        },
+        {
+          "caller": "evaluateCompetency",
+          "callee": "JSON.stringify",
+          "lineNumber": 534
+        },
+        {
+          "caller": "evaluateCompetency",
+          "callee": "ai.models.generateContent",
+          "lineNumber": 539
+        },
+        {
+          "caller": "evaluateCompetency",
+          "callee": "JSON.parse",
+          "lineNumber": 560
+        },
+        {
+          "caller": "evaluateCompetency",
+          "callee": "console.error",
+          "lineNumber": 562
+        },
+        {
+          "caller": "askTrainingAdvisor",
+          "callee": "this.getAI",
+          "lineNumber": 572
+        },
+        {
+          "caller": "askTrainingAdvisor",
+          "callee": "history.map",
+          "lineNumber": 574
+        },
+        {
+          "caller": "askTrainingAdvisor",
+          "callee": "JSON.stringify",
+          "lineNumber": 592
+        },
+        {
+          "caller": "askTrainingAdvisor",
+          "callee": "JSON.stringify",
+          "lineNumber": 593
+        },
+        {
+          "caller": "askTrainingAdvisor",
+          "callee": "ai.chats.create",
+          "lineNumber": 609
+        },
+        {
+          "caller": "askTrainingAdvisor",
+          "callee": "chat.sendMessage",
+          "lineNumber": 610
+        },
+        {
+          "caller": "askTrainingAdvisor",
+          "callee": "console.error",
+          "lineNumber": 613
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/services/recommendationEngine.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 64,
+      "functions": [
+        {
+          "name": "scoreCourse",
+          "startLine": 6,
+          "endLine": 32,
+          "params": [
+            "course",
+            "gapSize",
+            "targetLevel"
+          ]
+        },
+        {
+          "name": "generateLearningPathway",
+          "startLine": 34,
+          "endLine": 76,
+          "params": [
+            "report"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "generateLearningPathway",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "scoreCourse",
+          "callee": "course.title.toLowerCase().includes",
+          "lineNumber": 26
+        },
+        {
+          "caller": "scoreCourse",
+          "callee": "course.title.toLowerCase",
+          "lineNumber": 26
+        },
+        {
+          "caller": "scoreCourse",
+          "callee": "course.title.toLowerCase().includes",
+          "lineNumber": 26
+        },
+        {
+          "caller": "scoreCourse",
+          "callee": "course.title.toLowerCase",
+          "lineNumber": 26
+        },
+        {
+          "caller": "scoreCourse",
+          "callee": "course.title.toLowerCase().includes",
+          "lineNumber": 28
+        },
+        {
+          "caller": "scoreCourse",
+          "callee": "course.title.toLowerCase",
+          "lineNumber": 28
+        },
+        {
+          "caller": "scoreCourse",
+          "callee": "course.title.toLowerCase().includes",
+          "lineNumber": 28
+        },
+        {
+          "caller": "scoreCourse",
+          "callee": "course.title.toLowerCase",
+          "lineNumber": 28
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "report.domainScores.flatMap",
+          "lineNumber": 38
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "d.areas\n      .filter(a => a.gap > 0)\n      .map",
+          "lineNumber": 39
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "d.areas\n      .filter",
+          "lineNumber": 39
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "gaps.sort",
+          "lineNumber": 45
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "gaps.forEach",
+          "lineNumber": 47
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "igotCourses\n      .filter(c => c.competencyTags.includes(gap.competencyId))\n      .map(c => ({ id: c.id, score: scoreCourse(c, gap.gap, gap.requiredLevel) }))\n      .sort",
+          "lineNumber": 49
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "igotCourses\n      .filter(c => c.competencyTags.includes(gap.competencyId))\n      .map",
+          "lineNumber": 49
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "igotCourses\n      .filter",
+          "lineNumber": 49
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "c.competencyTags.includes",
+          "lineNumber": 50
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "scoreCourse",
+          "lineNumber": 51
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "nsstaCourses\n      .filter(c => c.competencyTags.includes(gap.competencyId))\n      .map(c => ({ id: c.id, score: scoreCourse(c, gap.gap, gap.requiredLevel) }))\n      .sort",
+          "lineNumber": 55
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "nsstaCourses\n      .filter(c => c.competencyTags.includes(gap.competencyId))\n      .map",
+          "lineNumber": 55
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "nsstaCourses\n      .filter",
+          "lineNumber": 55
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "c.competencyTags.includes",
+          "lineNumber": 56
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "scoreCourse",
+          "lineNumber": 57
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "steps.push",
+          "lineNumber": 60
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "scoredIgot.slice(0, 2).map",
+          "lineNumber": 68
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "scoredIgot.slice",
+          "lineNumber": 68
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "scoredNssta.slice(0, 2).map",
+          "lineNumber": 69
+        },
+        {
+          "caller": "generateLearningPathway",
+          "callee": "scoredNssta.slice",
+          "lineNumber": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/setupTests.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/types/coding.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 53,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/types/statsarthi.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 173,
+      "nonEmptyLines": 158,
+      "exports": [
+        {
+          "name": "FRAC_LEVEL_LABELS",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "supabase/config.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 4,
+      "nonEmptyLines": 3,
+      "sections": [
+        {
+          "heading": "functions.study-assistant",
+          "level": 2,
+          "line": 3
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "supabase/functions/download-resource/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 116,
+      "nonEmptyLines": 95,
+      "functions": [
+        {
+          "name": "getEnv",
+          "startLine": 6,
+          "endLine": 10,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "getAnonKey",
+          "startLine": 12,
+          "endLine": 14,
+          "params": []
+        },
+        {
+          "name": "sanitizeFilename",
+          "startLine": 16,
+          "endLine": 23,
+          "params": [
+            "input"
+          ]
+        },
+        {
+          "name": "contentDisposition",
+          "startLine": 25,
+          "endLine": 30,
+          "params": [
+            "filename"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getEnv",
+          "callee": "Deno.env.get",
+          "lineNumber": 7
+        },
+        {
+          "caller": "getAnonKey",
+          "callee": "Deno.env.get",
+          "lineNumber": 13
+        },
+        {
+          "caller": "getAnonKey",
+          "callee": "Deno.env.get",
+          "lineNumber": 13
+        },
+        {
+          "caller": "sanitizeFilename",
+          "callee": "input\n    .replace(/[\\\\/]/g, \"-\")\n    .replace(/[\\u0000-\\u001f\\u007f]/g, \"\")\n    .trim",
+          "lineNumber": 18
+        },
+        {
+          "caller": "sanitizeFilename",
+          "callee": "input\n    .replace(/[\\\\/]/g, \"-\")\n    .replace",
+          "lineNumber": 18
+        },
+        {
+          "caller": "sanitizeFilename",
+          "callee": "input\n    .replace",
+          "lineNumber": 18
+        },
+        {
+          "caller": "contentDisposition",
+          "callee": "filename.replace",
+          "lineNumber": 27
+        },
+        {
+          "caller": "contentDisposition",
+          "callee": "encodeURIComponent",
+          "lineNumber": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "supabase/functions/study-assistant/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 136,
+      "nonEmptyLines": 121,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

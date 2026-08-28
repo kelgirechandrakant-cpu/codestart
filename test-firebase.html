@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+    const app = initializeApp({ apiKey: "AIzaSyTestKey123" });
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+    } catch (e) {
+      console.log("ERROR MESSAGE:", e.message);
+      document.body.innerText = e.message;
+    }
+  </script>
+</head>
+<body>Loading...</body>
+</html>

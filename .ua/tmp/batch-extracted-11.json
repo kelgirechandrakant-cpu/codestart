@@ -1,0 +1,1007 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 25,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 25,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/components/ui/progress.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "exports": [
+        {
+          "name": "Progress",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/radio-group.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 32,
+      "exports": [
+        {
+          "name": "RadioGroup",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "RadioGroupItem",
+          "line": 36,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/resizable.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "ResizablePanelGroup",
+          "startLine": 6,
+          "endLine": 11,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "ResizableHandle",
+          "startLine": 15,
+          "endLine": 35,
+          "params": [
+            "{\n  withHandle,\n  className,\n  ...props\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ResizablePanelGroup",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "ResizablePanel",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "ResizableHandle",
+          "line": 37,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ResizablePanelGroup",
+          "callee": "cn",
+          "lineNumber": 8
+        },
+        {
+          "caller": "ResizableHandle",
+          "callee": "cn",
+          "lineNumber": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/scroll-area.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 34,
+      "exports": [
+        {
+          "name": "ScrollArea",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "ScrollBar",
+          "line": 38,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/select.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 143,
+      "nonEmptyLines": 130,
+      "exports": [
+        {
+          "name": "Select",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "SelectGroup",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "SelectValue",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "SelectTrigger",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "SelectContent",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "SelectLabel",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "SelectItem",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "SelectSeparator",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "SelectScrollUpButton",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "SelectScrollDownButton",
+          "line": 132,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/separator.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 17,
+      "exports": [
+        {
+          "name": "Separator",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/sheet.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 107,
+      "nonEmptyLines": 93,
+      "functions": [
+        {
+          "name": "SheetHeader",
+          "startLine": 70,
+          "endLine": 72,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "SheetFooter",
+          "startLine": 75,
+          "endLine": 77,
+          "params": [
+            "{ className, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Sheet",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "SheetClose",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "SheetContent",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "SheetDescription",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "SheetFooter",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "SheetHeader",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "SheetOverlay",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "SheetPortal",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "SheetTitle",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "SheetTrigger",
+          "line": 96,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SheetHeader",
+          "callee": "cn",
+          "lineNumber": 71
+        },
+        {
+          "caller": "SheetFooter",
+          "callee": "cn",
+          "lineNumber": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/sidebar.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 637,
+      "nonEmptyLines": 584,
+      "functions": [
+        {
+          "name": "useSidebar",
+          "startLine": 34,
+          "endLine": 41,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Sidebar",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarContent",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarFooter",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarGroup",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarGroupAction",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarGroupContent",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarGroupLabel",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarHeader",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarInput",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarInset",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarMenu",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarMenuAction",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarMenuBadge",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarMenuButton",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarMenuItem",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarMenuSkeleton",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarMenuSub",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarMenuSubButton",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarMenuSubItem",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarProvider",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarRail",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarSeparator",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "SidebarTrigger",
+          "line": 612,
+          "isDefault": false
+        },
+        {
+          "name": "useSidebar",
+          "line": 612,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useSidebar",
+          "callee": "React.useContext",
+          "lineNumber": 35
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "event.preventDefault",
+          "lineNumber": 82
+        },
+        {
+          "caller": "handleKeyDown",
+          "callee": "toggleSidebar",
+          "lineNumber": 83
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 24,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/skeleton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 5,
+      "functions": [
+        {
+          "name": "Skeleton",
+          "startLine": 3,
+          "endLine": 5,
+          "params": [
+            "{ className, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Skeleton",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Skeleton",
+          "callee": "cn",
+          "lineNumber": 4
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/slider.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "exports": [
+        {
+          "name": "Slider",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/sonner.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 23,
+      "functions": [
+        {
+          "name": "Toaster",
+          "startLine": 6,
+          "endLine": 25,
+          "params": [
+            "{ ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Toaster",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "toast",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Toaster",
+          "callee": "useTheme",
+          "lineNumber": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/switch.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 24,
+      "exports": [
+        {
+          "name": "Switch",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/table.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 72,
+      "nonEmptyLines": 62,
+      "exports": [
+        {
+          "name": "Table",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "TableHeader",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "TableBody",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "TableFooter",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "TableHead",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "TableRow",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "TableCell",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "TableCaption",
+          "line": 72,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/tabs.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 47,
+      "exports": [
+        {
+          "name": "Tabs",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "TabsList",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "TabsTrigger",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "TabsContent",
+          "line": 53,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/textarea.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 17,
+      "exports": [
+        {
+          "name": "Textarea",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/toast.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 111,
+      "nonEmptyLines": 99,
+      "exports": [
+        {
+          "name": "ToastProps",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "ToastActionElement",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "ToastProvider",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "ToastViewport",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "Toast",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "ToastTitle",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "ToastDescription",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "ToastClose",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "ToastAction",
+          "line": 101,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 9,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/toaster.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 22,
+      "functions": [
+        {
+          "name": "Toaster",
+          "startLine": 4,
+          "endLine": 24,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Toaster",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Toaster",
+          "callee": "useToast",
+          "lineNumber": 5
+        },
+        {
+          "caller": "Toaster",
+          "callee": "toasts.map",
+          "lineNumber": 9
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/toggle-group.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 41,
+      "exports": [
+        {
+          "name": "ToggleGroup",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "ToggleGroupItem",
+          "line": 49,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/toggle.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 32,
+      "exports": [
+        {
+          "name": "Toggle",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "toggleVariants",
+          "line": 37,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/tooltip.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 22,
+      "exports": [
+        {
+          "name": "Tooltip",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "TooltipTrigger",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "TooltipContent",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "TooltipProvider",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ui/use-toast.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 3,
+      "nonEmptyLines": 2,
+      "exports": [
+        {
+          "name": "useToast",
+          "line": 3,
+          "isDefault": false
+        },
+        {
+          "name": "toast",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/data/codingQuestions.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 108,
+      "nonEmptyLines": 98,
+      "exports": [
+        {
+          "name": "codingQuestions",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/data/competencyFramework.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 228,
+      "nonEmptyLines": 227,
+      "exports": [
+        {
+          "name": "competencyDomains",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/data/igotCourses.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 183,
+      "nonEmptyLines": 181,
+      "exports": [
+        {
+          "name": "igotCourses",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/data/nsstaCourses.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 187,
+      "nonEmptyLines": 185,
+      "exports": [
+        {
+          "name": "nsstaCourses",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

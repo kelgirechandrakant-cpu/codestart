@@ -1,0 +1,351 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": ".agents/AGENTS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 175,
+      "nonEmptyLines": 135,
+      "sections": [
+        {
+          "heading": "AGENTS.md — StatSarthi (SIH26101)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Project Overview",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "2. Architecture",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "Dual-Mode File Structure",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "The 3 Pillars",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "Existing Code to Reuse",
+          "level": 3,
+          "line": 71
+        },
+        {
+          "heading": "Code to HIDE (Not Delete)",
+          "level": 3,
+          "line": 81
+        },
+        {
+          "heading": "3. Data Grounding Rules (CRITICAL — Prevents Hallucination)",
+          "level": 2,
+          "line": 89
+        },
+        {
+          "heading": "iGOT Karmayogi Courses",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "NSSTA TPAC Training Programmes",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "FRAC Competency Levels",
+          "level": 3,
+          "line": 106
+        },
+        {
+          "heading": "SQAF",
+          "level": 3,
+          "line": 112
+        },
+        {
+          "heading": "4. Code Quality Rules",
+          "level": 2,
+          "line": 118
+        },
+        {
+          "heading": "Gemini API Key",
+          "level": 3,
+          "line": 120
+        },
+        {
+          "heading": "Firebase",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "Supabase (Preserved)",
+          "level": 3,
+          "line": 132
+        },
+        {
+          "heading": "UI Theme",
+          "level": 3,
+          "line": 137
+        },
+        {
+          "heading": "TypeScript",
+          "level": 3,
+          "line": 142
+        },
+        {
+          "heading": "5. Voice",
+          "level": 2,
+          "line": 149
+        },
+        {
+          "heading": "6. Key Context Files",
+          "level": 2,
+          "line": 158
+        },
+        {
+          "heading": "7. Restoring EduResources After SIH",
+          "level": 2,
+          "line": 171
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 21
+      }
+    },
+    {
+      "path": ".agents/DEBUGGING.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 34,
+      "nonEmptyLines": 26,
+      "sections": [
+        {
+          "heading": "The Debugging Protocol",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Stop Doing This:",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "Start Doing This (The 9-Step Methodology):",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Examples in Practice",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "Example 1: API Timeout (504 Error)",
+          "level": 3,
+          "line": 22
+        },
+        {
+          "heading": "Example 2: Frontend State Bug",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "Example 3: Database Rule Rejection",
+          "level": 3,
+          "line": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": ".agents/gstack_README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 537,
+      "nonEmptyLines": 377,
+      "sections": [
+        {
+          "heading": "gstack",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Quick start",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "Install — 30 seconds",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "Step 1: Install on your machine",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Step 2: Team mode — auto-update for shared repos (recommended)",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "OpenClaw",
+          "level": 3,
+          "line": 65
+        },
+        {
+          "heading": "Native OpenClaw Skills (via ClawHub)",
+          "level": 3,
+          "line": 84
+        },
+        {
+          "heading": "Other AI Agents",
+          "level": 3,
+          "line": 102
+        },
+        {
+          "heading": "See it work",
+          "level": 2,
+          "line": 139
+        },
+        {
+          "heading": "The sprint",
+          "level": 2,
+          "line": 182
+        },
+        {
+          "heading": "Which review should I use?",
+          "level": 3,
+          "line": 223
+        },
+        {
+          "heading": "Power tools",
+          "level": 3,
+          "line": 232
+        },
+        {
+          "heading": "Standalone binaries",
+          "level": 3,
+          "line": 249
+        },
+        {
+          "heading": "Continuous checkpoint mode (opt-in, local by default)",
+          "level": 3,
+          "line": 283
+        },
+        {
+          "heading": "Domain skills + raw CDP escape hatch",
+          "level": 3,
+          "line": 287
+        },
+        {
+          "heading": "Karpathy's four failure modes? Already covered.",
+          "level": 3,
+          "line": 298
+        },
+        {
+          "heading": "Parallel sprints",
+          "level": 2,
+          "line": 302
+        },
+        {
+          "heading": "10-15 parallel sprints",
+          "level": 2,
+          "line": 338
+        },
+        {
+          "heading": "Voice input (AquaVoice, Whisper, etc.)",
+          "level": 3,
+          "line": 346
+        },
+        {
+          "heading": "Uninstall",
+          "level": 2,
+          "line": 352
+        },
+        {
+          "heading": "Option 1: Run the uninstall script",
+          "level": 3,
+          "line": 354
+        },
+        {
+          "heading": "Option 2: Manual removal (no local repo)",
+          "level": 3,
+          "line": 364
+        },
+        {
+          "heading": "Clean up CLAUDE.md",
+          "level": 3,
+          "line": 418
+        },
+        {
+          "heading": "Playwright",
+          "level": 3,
+          "line": 422
+        },
+        {
+          "heading": "GBrain — persistent knowledge for your coding agent",
+          "level": 2,
+          "line": 436
+        },
+        {
+          "heading": "Docs",
+          "level": 2,
+          "line": 475
+        },
+        {
+          "heading": "Privacy & Telemetry",
+          "level": 2,
+          "line": 489
+        },
+        {
+          "heading": "Troubleshooting",
+          "level": 2,
+          "line": 504
+        },
+        {
+          "heading": "License",
+          "level": 2,
+          "line": 535
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 29
+      }
+    }
+  ]
+}

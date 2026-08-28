@@ -1,0 +1,4 @@
+project_id = "iqajiuzuugynlmgfopfp"
+
+[functions.study-assistant]
+verify_jwt = false
