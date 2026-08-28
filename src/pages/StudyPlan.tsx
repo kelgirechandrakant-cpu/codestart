@@ -173,7 +173,7 @@ export default function StudyPlanPage() {
 
         <div className="space-y-6">
           {plan.weeks.map((week) => (
-            <div key={week.weekNumber} className="bg-card rounded-[2rem] overflow-hidden border border-border/40 shadow-sm transition-all hover:border-border/80">
+            <div key={week.weekNumber} className="bg-card rounded-xl overflow-hidden border border-border/40 shadow-sm transition-all hover:border-border/80">
               <div 
                 className="p-6 md:p-8 cursor-pointer flex items-start sm:items-center justify-between gap-6 hover:bg-muted/20 transition-colors"
                 onClick={() => setExpandedWeek(expandedWeek === week.weekNumber ? null : week.weekNumber)}
@@ -308,7 +308,7 @@ export default function StudyPlanPage() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="bg-card border border-border/40 rounded-[2rem] p-8 md:p-12 shadow-sm">
+              <div className="bg-card border border-border/40 rounded-xl p-8 md:p-12 shadow-sm">
                 <h2 className="text-3xl font-bold tracking-tight mb-2 text-foreground">What's your learning goal?</h2>
                 <p className="text-lg text-muted-foreground mb-8">Be specific (e.g., "Master DSA for GATE", "Learn Python from scratch")</p>
                 
@@ -341,7 +341,7 @@ export default function StudyPlanPage() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="bg-card border border-border/40 rounded-[2rem] p-8 md:p-12 shadow-sm">
+              <div className="bg-card border border-border/40 rounded-xl p-8 md:p-12 shadow-sm">
                 <h2 className="text-3xl font-bold tracking-tight mb-2 text-foreground">What's your current level?</h2>
                 <p className="text-lg text-muted-foreground mb-8">Where are you starting from?</p>
                 
@@ -386,7 +386,7 @@ export default function StudyPlanPage() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="bg-card border border-border/40 rounded-[2rem] p-8 md:p-12 shadow-sm">
+              <div className="bg-card border border-border/40 rounded-xl p-8 md:p-12 shadow-sm">
                 <h2 className="text-3xl font-bold tracking-tight mb-2 text-foreground">How many hours per day can you commit?</h2>
                 <p className="text-lg text-muted-foreground mb-8">Be realistic to avoid burnout.</p>
                 
@@ -425,7 +425,7 @@ export default function StudyPlanPage() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="bg-card border border-border/40 rounded-[2rem] p-8 md:p-12 shadow-sm">
+              <div className="bg-card border border-border/40 rounded-xl p-8 md:p-12 shadow-sm">
                 <h2 className="text-3xl font-bold tracking-tight mb-2 text-foreground">What's your deadline?</h2>
                 <p className="text-lg text-muted-foreground mb-8">How long do you have to achieve this goal?</p>
                 
@@ -478,7 +478,7 @@ export default function StudyPlanPage() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="bg-card border border-border/40 rounded-[2rem] p-8 md:p-12 shadow-sm">
+              <div className="bg-card border border-border/40 rounded-xl p-8 md:p-12 shadow-sm">
                 <h2 className="text-3xl font-bold tracking-tight mb-2 text-foreground">What have you tried before?</h2>
                 <p className="text-lg text-muted-foreground mb-8">Optional: Tell us what didn't work so we can avoid it.</p>
                 
